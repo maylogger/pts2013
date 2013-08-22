@@ -66,9 +66,21 @@
       line-height: rhythm(2) - $border-size;
       padding: 0 $base-line-height / 2;
       color: rgba(black, .5);
+      @include transition( all .2s );
+      &:after {
+        content: "→";
+        float: right;
+        position: relative;
+        right: -2em;
+        @include transition( all .2s );
+      }
       &:hover {
-        background-color: #fff;
+        background-color: rgba(white, .3);
         text-decoration: none;
+        padding-left: 2em;
+        &:after {
+          right: 0;
+        }
       }
     }
   }
