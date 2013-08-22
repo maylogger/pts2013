@@ -1,0 +1,51 @@
+$header-height: 48px;
+
+.header {
+  background-color: #fff;
+  @include pie-clearfix;
+  height: $header-height;
+  border-bottom: 1px solid #ccc;
+
+  a {
+    @include link-colors( $header-text, $header-hover-text );
+    @include unstyled-link;
+    cursor: pointer;
+  }
+  @include at-breakpoint($desktop) {
+    padding-right: 3px;
+  }
+
+}
+
+.logo {
+  @include adjust-font-size-to(24px);
+  text-align: center;
+  padding-right: 48px;
+  @include at-breakpoint($desktop) {
+    padding-right: 0;
+  };
+}
+
+.menu-btn {
+  float: left;
+  cursor: pointer;
+  display: block;
+  padding: 15px 12px;
+  width: 48px;
+  border: 0;
+  background-color: transparent;
+  @include at-breakpoint($desktop) {
+    display: none;
+  }
+}
+
+.menu-btn-bar {
+  $margin-width: 6px;
+  display: block;
+  height: 2px;
+  background-color: $header-text;
+  & + & {
+    margin-top: $margin-width;
+  }
+  @include box-shadow( 0 1px 0 rgba(black, .5) );
+}

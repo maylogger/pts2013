@@ -2,7 +2,10 @@ doctype 5
 html lang="zh-TW"
   head
     meta charset="utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
     title untitled project
+    / = stylesheet_link_tag "/vender/bootstrap"
+    / = render "/vender/twbs-cdn-css"
     = stylesheet_link_tag "all"
     /[if IE]
       = stylesheet_link_tag "ie"
@@ -10,7 +13,17 @@ html lang="zh-TW"
       = javascript_include_tag "//html5shim.googlecode.com/svn/trunk/html5.js"
 
   body
-    = yield
+    .container
+      .off-canvas-menu
+        = render "/partials/off-canvas-menu"
+
+      .off-canvas-main
+        = render "/partials/header"
+        = yield
+        = render "/partials/footer"
+
+
+
 
     = javascript_include_tag \
       "//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js", \

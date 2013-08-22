@@ -1,0 +1,20 @@
+$color-red: #a00;
+$color-white: #eeeeef;
+$color-black: #393333;
+
+// nav header
+$header: $color-white;
+$header-light: lighten($header, 7%);
+$header-text: rgba(black, 1);
+$header-hover-text: rgba(black, .6);
+$header-divider: darken($color-black, 5%);
+$header-divider-light: lighten($header-light, 5%);
+$header-search-bg: darken( $header, 10%);
+
+// dropdown
+$dropdown-btn: black;
+$dropdown-btn-text: white;
+$dropdown-menu: black;
+$dropdown-text: $header-text;
+$dropdown-hover-text: $color-white;
+$dropdown-hover-text-bg: $color-black;

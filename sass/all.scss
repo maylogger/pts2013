@@ -10,6 +10,42 @@ $grid-background-baseline-height: $base-line-height;
 @import "normalize";
 @include establish-baseline;
 
+// colors
+@import "colors";
+
 @import "layout";
-@import "typography";
 @import "baseline";
+
+@import "basic/basic";
+
+
+// partials
+@import "partials/header";
+@import "partials/footer";
+@import "partials/off-canvas-menu";
+
+
+// 隱藏工具
+.hide-mobile {
+  display: none;
+}
+
+@include at-breakpoint($pad) {
+  .hide-mobile {
+     display: block;
+  }
+  .hide-pad {
+    display: none;
+  }
+}
+
+@include at-breakpoint($desktop) {
+  .hide-mobile {
+     display: block;
+  }
+  .hide-pad {
+    display: block;
+  }
+}
+
+
