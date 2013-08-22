@@ -1,35 +1,30 @@
 .off-canvas-menu {
   @include at-breakpoint($desktop) {
-    padding-top: $header-height + 12px;
+    padding-top: $base-line-height * 4;
   }
   .search {
     position: relative;
     @include pie-clearfix;
-    @include trailer(1);
-    border-top: 2px solid #999;
-    border-bottom: 2px solid #999;
-    color: #777;
     label {
       position: absolute;
-      top: 0;
+      top: -2px;
       right: 12px;
-      padding-left: 12px;
-      line-height: 48px;
-      font-size: 20px;
-
+      @include adjust-font-size-to(16px, 2);
+      color: rgba(white, .7);
     }
     .search-input {
+      $height: 2;
       display: block;
       width: 100%;
-      height: 48px;
-      color: #777;
+      height: $base-line-height * $height;
       border: 0;
-      padding-left: 12px;
-      background-color: transparent;
+      padding-left: $base-line-height / 2;
+      @include input-placeholder-color( #999 );
+      color: white;
+      background-color: rgba(black, .5);
     }
-
   }
-
+}
 
 %navigation-title {
   color: white;
@@ -48,25 +43,20 @@
 
 .main-navigation {
   .main-navigation-title {
-    @include adjust-font-size-to(14px);
-    padding: 6px 12px;
-    color: #777;
-    border-bottom: 2px solid #999;
-    @include at-breakpoint($desktop) {
-      padding: 0px 12px 6px;
-    }
+    @include navigation-title;
   }
-
   .main-navigation-list {
-    @include padding-trailer(1);
-    li + li {
-      border-top: 1px solid #dddddf;
+    li {
+      border-bottom: 1px solid rgba(black, .1);
     }
     a {
-      @include adjust-font-size-to(14px);
-      color: #999;
       display: block;
-      padding: 12px;
+      $border-size: 1px;
+      $font-size: 13px;
+      font-size: $font-size;
+      line-height: rhythm(2) - $border-size;
+      padding: 0 $base-line-height / 2;
+      color: rgba(black, .5);
       &:hover {
         background-color: #fff;
         text-decoration: none;
@@ -78,43 +68,61 @@
   }
 }
 
-
-
-
 .now {
-  @include trailer(.5);
-  padding: 0 12px;
-  text-align: right;
-  time {
-    @include adjust-font-size-to(60px);
+  padding: 0 $base-line-height / 2;
+  @include nowrap;
+  overflow: hidden;
+  small {
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    @include adjust-font-size-to(12px);
+    margin-right: -1px;
+    opacity: .5;
   }
-
+  time {
+    font-family: "HelveticaNeue-UltraLight", "Helvetica Neue Ultra Light", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 100;
+    letter-spacing: -2px;
+    @include adjust-font-size-to(64px);
+  }
 }
 
 .now-playing {
   .now-playing-title {
-    @include adjust-font-size-to(14px);
-    padding: 6px 12px;
-    color: #777;
-    border-bottom: 2px solid #999;
+    @include navigation-title;
   }
-
   .now-playing-list {
-    color: #777;
+    @include adjust-font-size-to(13px);
+    color: rgba(black, .5);
+    $padding: 1/2;
     li {
-      padding: 12px 12px;
+      padding: 0 $base-line-height / 2;
+      @include padding-leader($padding);
+      @include padding-trailer($padding);
+      margin-top: -1px;
     }
     li + li {
-      border-top: 1px solid #cccccf;
+      @include leading-border(1px, $padding);
+      @include padding-trailer($padding);
+      border-color: rgba(black, .1);
+      margin-top: 0;
+    }
+    time {
+      float: left;
+      margin-right: 5px;
+      font-weight: bold;
+      color: #a00;
+    }
+    .channel, p {
+      margin: 0;
+      font-weight: bold;
+      color: black;
     }
     .show {
-      .title {
-        @include ellipsis;
-      }
+      display: block;
+      color: rgba(black, .5);
+      @include ellipsis;
     }
-    .next-show {
-      color: #aaa;
-    }
-
   }
 }
