@@ -1,10 +1,19 @@
 .off-canvas-menu {
+  padding-top: $base-line-height * 2;
   @include at-breakpoint($desktop) {
     padding-top: $base-line-height * 4;
   }
   .search {
+    width: 100%;
     position: relative;
     @include pie-clearfix;
+    position: absolute;
+    top: 0;
+    @include box-shadow(inset 0 -1px 0 rgba(black, .1) );
+    @include at-breakpoint($desktop) {
+      position: static;
+      @include box-shadow( none );
+    }
     label {
       position: absolute;
       top: -2px;
@@ -13,12 +22,14 @@
       color: rgba(white, .7);
     }
     .search-input {
+      @include border-box-sizing;
       $height: 2;
       display: block;
       width: 100%;
       height: $base-line-height * $height;
       border: 0;
       padding-left: $base-line-height / 2;
+      padding-right: 36px;
       @include input-placeholder-color( #999 );
       color: white;
       background-color: rgba(black, .5);
