@@ -4,19 +4,22 @@
     @include unstyled-link;
     cursor: pointer;
   }
+  background-color: rgba(black, .1);
 }
 
 .logo {
   text-align: center;
+  @include adjust-font-size-to(24px, 2);
   a {
-    // outline: 1px solid red;
     display: inline;
-    @include adjust-font-size-to(24px);
-    @include at-breakpoint($desktop) {
+  }
+  @include at-breakpoint($desktop) {
+    @include adjust-font-size-to(30px, 4);
+    a {
+      height: auto;
       background: white;
       display: block;
       margin: 0 -5px;
-      @include adjust-font-size-to(30px, 4);
     };
   }
 }
@@ -29,6 +32,7 @@
   display: block;
   padding: 15px 12px;
   width: 48px;
+  height: 48px;
   border: 0;
   background-color: transparent;
   @include at-breakpoint($desktop) {
