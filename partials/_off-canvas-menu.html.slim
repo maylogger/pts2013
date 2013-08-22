@@ -2,8 +2,8 @@
   h3.main-navigation-title 電視頻道
   ul.main-navigation-list.channel
     li.pts: a.active href="" 公視
-    li.pts2: a href="" 公視2
-    li.pts-hd: a href="" 公視HD
+    li.pts2: a href="" 公視 2
+    li.pts-hd: a href="" 公視 HD
   h3.main-navigation-title 其他連結
   ul.main-navigation-list.links
     li: a href="" 節目表
@@ -12,35 +12,36 @@
 
 form.search
   label.glyphicon.glyphicon-search for="search"
-  input.search-input#search placeholder="請輸入關鍵字"
+  input.search-input#search placeholder="站內搜尋"
 
 .now.hide-mobile.hide-pad
-  time 15:45
+  small Now
+  time 21:45
 
 .now-playing.hide-mobile.hide-pad
   .now-playing-title 現正播映
   ul.now-playing-list
     li
+      time 15:30
       .channel 公視
-      .show
-        time 15:30
-        .title= zh_lorem_sentence
+      a.show href="#"= zh_lorem_sentence
       .next-show
         time 17:00
-        .title= zh_lorem_sentence
+        p 下一個節目
+        a.show href="#"= zh_lorem_sentence
     li
-      .channel 公視2
-      .show
-        time 15:00
-        .title= zh_lorem_sentence
+      time 15:00
+      .channel 公視 2
+      a.show href="#"= zh_lorem_sentence
       .next-show
         time 17:30
-        .title= zh_lorem_sentence
+        p 下一個節目
+        a.show href="#"= zh_lorem_sentence
     li
-      .channel 公視HD
-      .show
-        time 15:30
-        .title= zh_lorem_sentence
+      time 15:30
+      .channel 公視 HD
+      a.show href="#"= zh_lorem_sentence
       .next-show
         time 17:00
-        .title= zh_lorem_sentence
+        p 下一個節目
+        a.show href="#"= zh_lorem_sentence
