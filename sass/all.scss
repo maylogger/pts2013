@@ -30,6 +30,11 @@ $grid-background-baseline-height: $base-line-height;
   display: none;
 }
 
+// 消鋸齒工具
+%antialiased {
+  -webkit-font-smoothing: antialiased;
+}
+
 @include at-breakpoint($pad) {
   .hide-mobile {
      display: block;
