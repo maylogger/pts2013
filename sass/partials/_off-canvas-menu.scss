@@ -32,6 +32,11 @@
   background: rgba(black, .5);
 }
 
+%tile { // 讓 menu 呈現專塊塊狀
+  border-color: rgba(black, .1);
+  @include box-shadow( inset 0 1px rgba(white, .7) );
+}
+
 @mixin navigation-title($font-size: 12px, $border-size: 1px) {
   font-size: $font-size;
   line-height: rhythm(1) - $border-size * 2;
@@ -47,7 +52,11 @@
   }
   .main-navigation-list {
     li {
-      border-bottom: 1px solid rgba(black, .1);
+      border-bottom: {
+        width: 1px;
+        style: solid;
+      }
+      @extend %tile;
     }
     a {
       display: block;
@@ -105,7 +114,7 @@
     li + li {
       @include leading-border(1px, $padding);
       @include padding-trailer($padding);
-      border-color: rgba(black, .1);
+      @extend %tile;
       margin-top: 0;
     }
     time {
