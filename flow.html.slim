@@ -1,0 +1,135 @@
+style
+  | body { padding: 50px; }
+
+h1 公共電視首頁資料流
+ul
+  li
+    | .header
+    ul
+      li 公視logo .logo
+      li
+        | 總導覽 .main-navigation
+        ul
+          li
+            | 頻道 .channel
+            ul
+              li 公視 .pts
+              li 公視2 .pts-2
+              li 公視HD .pts-hd
+          li
+            | 其他連結 .links
+            ul
+              li 節目表
+              li 討論區
+              li 線上隨選視訊 VOD
+      li 搜尋 .search
+      li 現在時間 .now (hide on phone, pad)
+      li
+        | 現正播映 .now-playing (hide on phone, pad)
+        ul
+          li
+            | 頻道 .channel
+            ul
+              li 頻道名稱 .channel-name
+              li
+                | 現在節目 .show
+                ul
+                  li 時間 &lt;time&gt;
+                  li 節目名稱 .show
+              li
+                | 下一個節目 .next-show
+                ul
+                  li 時間 &lt;time&gt;
+                  li 節目名稱 .show
+ul
+  li
+    | .main
+    ul
+      li
+        | 節目列表 .shows
+        ul
+          li 節目類型 .style
+          li
+            | 節目子列表 .shows-collapse
+            ul
+              li 時間 &lt;time&gt;
+              li 節目名稱 .show
+      li
+        | 主要內容 .content
+        ul
+          li
+            | 頭條 .hero
+            ul
+              li 主要資訊曝光區 .hero-tile
+              li 次要資訊曝光區 .hero-tile
+          li
+            | 現正播映 (hide on desktop)
+            ul
+              li
+                | 頻道
+                ul
+                  li 頻道名稱
+                  li 現在節目 .now-playing
+                  li 下一個節目 .next-show
+              li 現在時間 .now
+          li
+            | 影片宣傳區&nbsp; .videos
+            ul
+              li 影片列表 .video
+          li
+            | 新聞區 .news
+            ul
+              li
+                | .nav-tabs
+                ul
+                  li 公視新聞 .tab
+                  li 公民新聞 .tab
+              li
+                | .tab-content
+                ul
+                  li 公視新聞列表 .tab-pane
+                  li 公民新聞列表 .tab-pane
+          li
+            | 特殊活動或特殊節目區 .campaign
+            ul
+              li .banner
+              li .banner
+              li ...
+          li
+            | 公告區 . announcement
+            ul
+              li
+                | .nav-tabs
+                ul
+                  li 節目異動 .tab
+                  li 公告 .tab
+                  li 招標訊息 .tab
+              li
+                | .tabs-content
+                ul
+                  li 節目異動列表 .tab-pane
+                  li 公告列表 .tab-pane
+                  li 招標訊息列表 .tab-pane
+ul
+  li
+    | .sidebar
+    ul
+      li
+        | 其他連結區 .tabs-item
+        ul
+          li
+            | .nav-tabs
+            ul
+              li 網路商城
+              li 贊助公視
+              li 公視之友
+          li
+            | .tab-content
+            ul
+              li .tab-pane
+              li .tab-pane
+              li .tab-pane
+      li 公行部業務 banner（先留）
+      li 大型商業贊助廣告（先留）
+ul
+  li .footer
