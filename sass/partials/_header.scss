@@ -34,6 +34,9 @@
   @include at-breakpoint($desktop) {
     display: none;
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 .menu-btn-bar {
