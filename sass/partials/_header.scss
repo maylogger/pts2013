@@ -22,7 +22,9 @@
 }
 
 .menu-btn {
-  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
   cursor: pointer;
   display: block;
   padding: 15px 12px;
