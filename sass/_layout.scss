@@ -24,24 +24,26 @@ $ex-wide-desktop-break    : 1440px;
 $ex-wide-desktop: $ex-wide-desktop-break $ex-wide-desktop-columns;
 
 // debug-grid
-// body {
-//   @include baseline-grid-background;
-// }
-// .container {
-//   @include susy-grid-background;
-//   @include at-breakpoint($pad) {
-//     @include susy-grid-background;
-//   }
-//   @include at-breakpoint($desktop) {
-//     @include susy-grid-background;
-//   }
-//   @include at-breakpoint($wide-desktop) {
-//     @include susy-grid-background;
-//   }
-//   @include at-breakpoint($ex-wide-desktop) {
-//     @include susy-grid-background;
-//   }
-// }
+$grid-background-column-color: rgba(red,.03);
+$grid-background-baseline-color: rgba(blue,.05);
+body {
+  @include baseline-grid-background;
+}
+.container {
+  @include susy-grid-background;
+  @include at-breakpoint($pad) {
+    @include susy-grid-background;
+  }
+  @include at-breakpoint($desktop) {
+    @include susy-grid-background;
+  }
+  @include at-breakpoint($wide-desktop) {
+    @include susy-grid-background;
+  }
+  @include at-breakpoint($ex-wide-desktop) {
+    @include susy-grid-background;
+  }
+}
 
 // demo 用
 .main, .sidebar, .footer {
@@ -60,6 +62,7 @@ $ex-wide-desktop: $ex-wide-desktop-break $ex-wide-desktop-columns;
   @include box-sizing(border-box);
   padding: 12px;
 }
+
 .content {
   min-height: 600px;
 }
@@ -68,9 +71,6 @@ $ex-wide-desktop: $ex-wide-desktop-break $ex-wide-desktop-columns;
   min-height: 100px;
   clear: both;
 }
-
-
-
 
 body {
   background-color: $color-white;
@@ -84,7 +84,7 @@ $container-style: fluid;
 }
 
 // off-canvas 設定
-$off-canvas-menu-columns   : 4;
+$off-canvas-menu-columns: 4;
 
 .off-canvas-menu {
   position: absolute;
@@ -96,6 +96,7 @@ $off-canvas-menu-columns   : 4;
 
 .off-canvas-main {
   position: relative;
+  right: 0; // for firefox
   z-index: 2;
   @include box-shadow(0 0 5px rgba(#000, 0.25) );
   background-color: #fff;
@@ -106,23 +107,17 @@ $off-canvas-menu-columns   : 4;
   }
 }
 
-
 @include at-breakpoint($pad) {
   $off-canvas-menu-columns: 4;
-
   .off-canvas-menu {
     width: columns($off-canvas-menu-columns) + gutter($total-columns);
   }
-
   .off-canvas-main {
     .show-menu & {
       right: - space($off-canvas-menu-columns);
     }
   }
-
 }
-
-
 
 @include at-breakpoint($desktop) {
   $off-canvas-menu-columns: 3;
@@ -144,15 +139,14 @@ $off-canvas-menu-columns   : 4;
   .header {
     position: absolute;
     top: 0;
-    left: - space($off-canvas-menu-columns, $off-canvas-main);
+    right: 100%;
     width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
   }
 
 }
 
-
 @include at-breakpoint($wide-desktop) {
-  $off-canvas-menu-columns: 3;
+  $off-canvas-menu-columns: 4;
   $off-canvas-main: $total-columns - $off-canvas-menu-columns;
   $main-columns: 12;
   $sidebar-columns: $off-canvas-main - $main-columns;
@@ -165,7 +159,6 @@ $off-canvas-menu-columns   : 4;
     @include span-columns($off-canvas-main omega);
   }
   .header {
-    left: - space($off-canvas-menu-columns, $off-canvas-main);
     width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
   }
   .main {
@@ -176,9 +169,8 @@ $off-canvas-menu-columns   : 4;
   }
 }
 
-
 @include at-breakpoint($ex-wide-desktop) {
-  $off-canvas-menu-columns: 3;
+  $off-canvas-menu-columns: 4;
   $off-canvas-main: $total-columns - $off-canvas-menu-columns;
   $main-columns: 15;
   $sidebar-columns: $off-canvas-main - $main-columns;
