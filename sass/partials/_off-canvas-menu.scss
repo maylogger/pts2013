@@ -31,8 +31,20 @@
   }
 
 
+%navigation-title {
+  color: white;
+  font-weight: bold;
+  background: rgba(black, .5);
 }
 
+@mixin navigation-title($font-size: 12px, $border-size: 1px) {
+  font-size: $font-size;
+  line-height: rhythm(1) - $border-size * 2;
+  border-bottom: $border-size solid rgba(black, .5);
+  padding: $border-size ($base-line-height / 2) 0;
+  @extend %navigation-title;
+  @extend %antialiased;
+}
 
 .main-navigation {
   .main-navigation-title {
