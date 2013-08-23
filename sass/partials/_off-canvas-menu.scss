@@ -78,6 +78,9 @@
       padding: 0 $base-line-height / 2;
       color: rgba(black, .5);
       @include transition( all .2s );
+      @media (max-height: 380px) {
+        line-height: rhythm(1.5) - $border-size;
+      }
       &:after {
         content: "→";
         float: right;
