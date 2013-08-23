@@ -1,0 +1,60 @@
+.shows {
+  > li {
+    border-bottom: {
+      width: 1px;
+      style: solid;
+    }
+    // 引用 _off-canvas-menu 內的 %tile
+    @extend %tile;
+  }
+  .style {
+    display: block;
+    $border-size: 1px;
+    $font-size: 13px;
+    font-size: $font-size;
+    line-height: rhythm(2) - $border-size;
+    padding: 0 $base-line-height / 2;
+    color: rgba(black, .5);
+    // background-color: rgba(white, .3);
+    @include transition( all .2s );
+    &:after {
+      content: "▾";
+      float: right;
+    }
+    &:hover {
+      background-color: rgba(white, .3);
+      text-decoration: none;
+    }
+  }
+
+}
+
+.shows-collapse {
+  background-color: rgba(white, .3);
+  @include adjust-font-size-to(13px);
+}
+
+.shows-collapse-content {
+  border-top: 1px solid rgba(black, .1);
+  margin: 0 $base-line-height / 2;
+  padding: $base-line-height / 2 0 $base-line-height;
+  li {
+    @include ellipsis;
+  }
+  a {
+    color: rgba(black, .5);
+    &:hover {
+      text-decoration: none;
+      opacity: 0.75;
+    }
+  }
+  time {
+    color: #a00;
+    display: inline;
+    margin-right: 6px;
+  }
+  .show {
+    display: inline;
+  }
+
+}

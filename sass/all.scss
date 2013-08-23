@@ -25,14 +25,19 @@ $grid-background-baseline-height: $base-line-height;
 @import "partials/off-canvas-menu";
 
 
-// 隱藏工具
-.hide-mobile {
-  display: none;
-}
+@import "page";
+
+
+
 
 // 消鋸齒工具
 %antialiased {
   -webkit-font-smoothing: antialiased;
+}
+
+// 隱藏/開啓工具
+.hide-mobile {
+  display: none;
 }
 
 @include at-breakpoint($pad) {
@@ -51,6 +56,10 @@ $grid-background-baseline-height: $base-line-height;
   .hide-pad {
     display: block;
   }
+}
+
+.open {
+  display: block;
 }
 
 
