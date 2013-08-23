@@ -93,6 +93,7 @@ $off-canvas-shows-columns: 4;
 
 .off-canvas-main {
   position: relative;
+  left: 0; // for firefox
   right: 0; // for firefox
   z-index: 2;
   @include box-shadow(0 0 20px rgba(#000, 0.25) );
@@ -100,9 +101,11 @@ $off-canvas-shows-columns: 4;
   width: 100%;
   @include transition( right .3s, left .3s );
   .show-menu & {
+    left: space($off-canvas-menu-columns);
     right: - space($off-canvas-menu-columns);
   }
   .show-shows & {
+    right: space($off-canvas-menu-columns);
     left: - space($off-canvas-shows-columns);
   }
 }
