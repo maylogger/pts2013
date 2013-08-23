@@ -1,5 +1,18 @@
 .main
-  .title main
-  .shows.hide-mobile.hide-pad shows
-  .content content
+  ul.shows#shows
+    - 7.times do |i|
+      li.panel
+        a.style href="#" data-target="#shows-collapse#{i}" data-toggle="collapse" data-parent="#shows" 節目類型
+        .shows-collapse.collapse id="shows-collapse#{i}"
+          ul.shows-collapse-content
+            - 5.times do
+              li: a href=""
+                time 13:00
+                .show= zh_lorem_sentence
+
+  .content
+    .hero
+      .hero-tile
+      .hero-tile
+    .now-playing
 .sidebar sidebar
