@@ -22,6 +22,7 @@
     }
     .search-input {
       @include border-box-sizing;
+      @include border-radius(0);
       $height: 2;
       display: block;
       width: 100%;
@@ -78,6 +79,7 @@
       color: rgba(black, .5);
       @include transition( all .2s );
       @media (max-height: 380px) {
+        // 針對過低的瀏覽器高度調整
         line-height: rhythm(1.5) - $border-size;
       }
       &:after {

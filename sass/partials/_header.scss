@@ -25,39 +25,44 @@
   }
 }
 
-.menu-btn {
+%header-btn {
   position: absolute;
   top: 0;
-  left: 0;
   cursor: pointer;
   display: block;
   padding: 0 12px;
-  @include adjust-font-size-to(15px, 2);
+  @include adjust-font-size-to(16px, 2);
   border: 0;
-  background-color: transparent;
+  background-color: rgba(black, 0);
+  @include transition(background-color .3s .4s, padding .3s .4s ease-out);
   @include at-breakpoint($desktop) {
     display: none;
+  }
+  .icon {
+    position: relative;
+    top: -1px;
+    color: rgba(black, .3);
   }
   &:focus {
     outline: none;
   }
 }
 
-.shows-btn {
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-  display: block;
-  padding: 0 12px;
-  @include adjust-font-size-to(15px, 2);
-  border: 0;
-  background-color: transparent;
-  @include at-breakpoint($desktop) {
-    display: none;
+.menu-btn {
+  @extend %header-btn;
+  left: 0;
+  .show-menu & {
+    padding-right: 3em;
+    background: rgba(black, .1);
   }
-  &:focus {
-    outline: none;
+}
+
+.shows-btn {
+  @extend %header-btn;
+  right: 0;
+  .show-shows & {
+    padding-left: 3em;
+    background: rgba(black, .1);
   }
 }
 
