@@ -4,8 +4,6 @@ html lang="zh-TW"
     meta charset="utf-8"
     meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
     title untitled project
-    / = stylesheet_link_tag "/vender/bootstrap"
-    / = render "/vender/twbs-cdn-css"
     = stylesheet_link_tag "all", "/vender/bootstrap/bootstrap-glyphicons.css"
     /[if lt IE 9]
       = javascript_include_tag "//html5shim.googlecode.com/svn/trunk/html5.js"
@@ -25,6 +23,7 @@ html lang="zh-TW"
 
     = javascript_include_tag \
       "//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js", \
+      "/vender/bootstrap/bootstrap-js", \
       "all"
 
     = livereload_js unless ENV["RACK_ENV"] == "production"
