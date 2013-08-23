@@ -43,6 +43,24 @@
   }
 }
 
+.shows-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  display: block;
+  padding: 0 12px;
+  @include adjust-font-size-to(15px, 2);
+  border: 0;
+  background-color: transparent;
+  @include at-breakpoint($desktop) {
+    display: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
 // 暫時先留著
 // .menu-btn-bar {
 //   $margin-width: 6px;
