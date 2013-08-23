@@ -111,16 +111,16 @@ $off-canvas-shows-columns: 4;
   // 使用背景與陰影遮住背後的 off-canvas-menu
   @include box-shadow( inset 0 0px 5px rgba(#000, 0.25) );
   background-color: $color-white;
-
 }
 
 @include at-breakpoint($pad) {
+
   $off-canvas-menu-columns: 4;
   $off-canvas-shows-columns: 4;
+
   .off-canvas-menu {
     width: columns($off-canvas-menu-columns) + gutter($total-columns);
   }
-
   .off-canvas-main {
     .show-menu & {
       right: - space($off-canvas-menu-columns);
@@ -129,7 +129,6 @@ $off-canvas-shows-columns: 4;
       left: - space($off-canvas-menu-columns);
     }
   }
-
   .shows {
     width: columns($off-canvas-shows-columns) + gutter($total-columns);
   }
@@ -137,8 +136,10 @@ $off-canvas-shows-columns: 4;
 }
 
 @include at-breakpoint($desktop) {
+
   $off-canvas-menu-columns: 3;
   $off-canvas-main: $total-columns - $off-canvas-menu-columns;
+
   .off-canvas-menu {
     position: static;
     @include reset-columns;
@@ -175,12 +176,13 @@ $off-canvas-shows-columns: 4;
 }
 
 @include at-breakpoint($wide-desktop) {
+
   $off-canvas-menu-columns: 4;
   $off-canvas-main: $total-columns - $off-canvas-menu-columns;
   $main-columns: 12;
   $sidebar-columns: $off-canvas-main - $main-columns;
+
   .off-canvas-menu {
-    // @include span-columns($off-canvas-menu-columns);
     width: columns($off-canvas-menu-columns) + gutter($total_columns);
     float: left;
   }
@@ -196,17 +198,19 @@ $off-canvas-shows-columns: 4;
   .sidebar {
     @include span-columns($sidebar-columns omega, $off-canvas-main);
   }
+
 }
 
 @include at-breakpoint($ex-wide-desktop) {
+
   $off-canvas-menu-columns: 4;
   $off-canvas-main: $total-columns - $off-canvas-menu-columns;
   $main-columns: 15;
   $sidebar-columns: $off-canvas-main - $main-columns;
   $shows-columns: 3;
   $content-columns: $main-columns - $shows-columns;
+
   .off-canvas-menu {
-    // @include span-columns($off-canvas-menu-columns);
     width: columns($off-canvas-menu-columns) + gutter($total_columns);
     float: left;
   }
@@ -229,4 +233,5 @@ $off-canvas-shows-columns: 4;
   .content {
     @include span-columns($content-columns omega, $main-columns);
   }
+
 }

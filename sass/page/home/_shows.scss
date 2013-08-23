@@ -1,4 +1,5 @@
 .shows {
+
   > li {
     border-bottom: {
       width: 1px;
@@ -7,6 +8,7 @@
     // 引用 _off-canvas-menu 內的 %tile
     @extend %tile;
   }
+
   .style {
     display: block;
     $border-size: 1px;
@@ -15,7 +17,6 @@
     line-height: rhythm(2) - $border-size;
     padding: 0 $base-line-height / 2;
     color: rgba(black, .5);
-    // background-color: rgba(white, .3);
     @include transition( all .2s );
     &:after {
       content: "▾";
