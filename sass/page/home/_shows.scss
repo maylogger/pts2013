@@ -7,6 +7,7 @@
     }
     // 引用 _off-canvas-menu 內的 %tile
     @extend %tile;
+    @include box-shadow(none);
   }
 
   .style {

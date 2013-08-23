@@ -129,10 +129,12 @@ $off-canvas-shows-columns: 4;
   }
   .off-canvas-main {
     .show-menu & {
+      left: space($off-canvas-menu-columns);
       right: - space($off-canvas-menu-columns);
     }
     .show-shows & {
-      left: - space($off-canvas-menu-columns);
+      right: space($off-canvas-menu-columns);
+      left: - space($off-canvas-shows-columns);
     }
   }
   .shows {
