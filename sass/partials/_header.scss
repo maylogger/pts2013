@@ -30,7 +30,7 @@
   top: 0;
   cursor: pointer;
   display: block;
-  padding: 0 12px;
+  padding: 0 3px;
   @include adjust-font-size-to(16px, 2);
   border: 0;
   background-color: rgba(black, 0);
@@ -40,7 +40,7 @@
   }
   .icon {
     position: relative;
-    top: -1px;
+    top: 0px;
     color: rgba(black, .3);
   }
   &:focus {
@@ -55,6 +55,9 @@
     padding-right: 3em;
     background: rgba(black, .1);
   }
+  .icon {
+    margin-right: 2px;
+  }
 }
 
 .shows-btn {
@@ -63,6 +66,9 @@
   .show-shows & {
     padding-left: 3em;
     background: rgba(black, .1);
+  }
+  .icon {
+    margin-left: 2px;
   }
 }
 
