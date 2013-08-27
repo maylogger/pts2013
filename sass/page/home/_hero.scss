@@ -1,0 +1,49 @@
+.hero {
+  @include leader(1);
+  // 統一控制 .block 的 margin-bottom
+  .block {
+    margin-bottom: gutter($total-columns);
+  }
+
+  @include at-breakpoint($pad) {
+    .block {
+      margin-bottom: gutter($total-columns);
+    }
+  }
+
+}
+
+.hero-tile {
+  @include pie-clearfix;
+
+  @include at-breakpoint($pad) {
+  .block {
+      @include span-columns(6);
+      @include nth-omega(2n);
+    }
+  }
+
+}
+
+.hero-sub-tile {
+  @include pie-clearfix;
+  .block {
+    @include span-columns(3);
+    @include nth-omega(2n);
+  }
+
+  @include at-breakpoint($pad) {
+  .block {
+      @include span-columns(4);
+      @include remove-nth-omega(2n);
+      @include nth-omega(3n);
+    }
+  }
+  .block-title {
+    @include adjust-font-size-to(14px, 2/3);
+  }
+  .block-text {
+    @include adjust-font-size-to(12px, 2/3);
+  }
+
+}

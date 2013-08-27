@@ -1,0 +1,14 @@
+.main {
+  @include box-sizing(border-box);
+  padding: 0 gutter($total_columns);
+
+  @include at-breakpoint($pad) {
+    padding: 0 gutter($total_columns);
+  }
+
+  @include at-breakpoint($wide-desktop) {
+    padding-left: gutter(17); // off-canvas-main 的欄數
+    padding-right: 0;
+  }
+
+}
