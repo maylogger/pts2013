@@ -119,6 +119,7 @@ $off-canvas-shows-columns: 4;
   width: columns($off-canvas-shows-columns) + gutter($total-columns);
 }
 
+
 @include at-breakpoint($pad) {
 
   $off-canvas-menu-columns: 4;
@@ -143,6 +144,7 @@ $off-canvas-shows-columns: 4;
 
 }
 
+
 @include at-breakpoint($desktop) {
 
   $off-canvas-menu-columns: 3;
@@ -159,10 +161,12 @@ $off-canvas-shows-columns: 4;
     @include transition(none);
     @include span-columns($off-canvas-main omega);
     .show-menu & {
+      left: 0;
       right: 0;
     }
     .show-shows & {
       left: 0;
+      right: 0;
     }
   }
   .header {
@@ -180,8 +184,12 @@ $off-canvas-shows-columns: 4;
     z-index: 1;
     @include box-shadow(none);
   }
+  .content {
+    clear: both;
+  }
 
 }
+
 
 @include at-breakpoint($wide-desktop) {
 
@@ -208,6 +216,7 @@ $off-canvas-shows-columns: 4;
   }
 
 }
+
 
 @include at-breakpoint($ex-wide-desktop) {
 
@@ -236,10 +245,11 @@ $off-canvas-shows-columns: 4;
     @include span-columns($sidebar-columns omega, $off-canvas-main);
   }
   .shows {
-    @include span-columns($shows-columns, $main-columns);
+    @include span-columns($shows-columns omega, $main-columns);
   }
   .content {
-    @include span-columns($content-columns omega, $main-columns);
+    clear: none;
+    @include span-columns($content-columns, $main-columns);
   }
 
 }

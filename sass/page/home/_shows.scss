@@ -1,5 +1,5 @@
 .shows {
-
+  @include trailer(1);
   > li {
     border-bottom: {
       width: 1px;
@@ -9,7 +9,6 @@
     @extend %tile;
     @include box-shadow(none);
   }
-
   .style {
     display: block;
     $border-size: 1px;
@@ -27,6 +26,47 @@
       background-color: rgba(white, .3);
       text-decoration: none;
     }
+
+
+  }
+
+  @include at-breakpoint($desktop) {
+    float: right;
+    > li {
+      float: left;
+      position: relative;
+    }
+    .style {
+      @include transition(none);
+      background-color: $color-white;
+      &.collapsed {
+        background-color: transparent;
+      }
+      &:after {
+        margin-left: 6px;
+      }
+      &:hover {
+        background-color: $color-white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  @include at-breakpoint($ex-wide-desktop) {
+    > li {
+      float: none;
+    }
+    .style {
+      @include transition( all .2s );
+      background-color: transparent;
+      &:after {
+        margin-left: 0px;
+      }
+      &:hover {
+        background-color: rgba(white, .3);
+        text-decoration: none;
+      }
+    }
   }
 
 }
@@ -34,12 +74,28 @@
 .shows-collapse {
   background-color: rgba(white, .3);
   @include adjust-font-size-to(13px);
+
+  @include at-breakpoint($desktop) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    &.pull-right {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  @include at-breakpoint($ex-wide-desktop) {
+    position: static;
+  }
+
 }
 
 .shows-collapse-content {
-  border-top: 1px solid rgba(black, .1);
   margin: 0 $base-line-height / 2;
-  padding: $base-line-height / 2 0 $base-line-height;
+  border-top: 1px solid rgba(black, .1);
+  padding: ($base-line-height / 2) 0 $base-line-height;
   li {
     @include ellipsis;
   }
@@ -57,6 +113,20 @@
   }
   .show {
     display: inline;
+  }
+
+  @include at-breakpoint($desktop) {
+    background-color: $color-white;
+    margin: 0;
+    border-top: 0;
+    padding: ($base-line-height / 2) ($base-line-height / 2) $base-line-height;
+  }
+
+  @include at-breakpoint($ex-wide-desktop) {
+    background-color: transparent;
+    margin: 0 $base-line-height / 2;
+    border-top: 1px solid rgba(black, .1);
+    padding: $base-line-height / 2 0 $base-line-height;
   }
 
 }
