@@ -1,8 +1,10 @@
 .news {
   @include trailer(1);
+
   .nav-tabs {
+    $border-bottom-width: 2px;
     @include pie-clearfix;
-    border-bottom: 2px solid $color-black;
+    border-bottom: $border-bottom-width solid $color-black;
     li {
       width: 50%;
       float: left;
@@ -13,17 +15,15 @@
       }
     }
     a {
+      $padding-width: 12px;
       display: block;
-      padding: 6px 12px 4px;
+      padding: ($padding-width / 2) $padding-width ($padding-width / 2 - $border-bottom-width);
       @include adjust-font-size-to(13px);
       color: $color-black;
       background-color: $color-white;
       @include border-radius(5px 5px 0 0);
       &:hover {
         text-decoration: none;
-      }
-      @include at-breakpoint($desktop) {
-        padding: 6px 24px 4px;
       }
     }
   }
@@ -36,6 +36,7 @@
       @include adjust-font-size-to(13px);
     }
   }
+
   .news-list {
     li {
       border-bottom: 1px solid $color-white;

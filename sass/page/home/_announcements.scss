@@ -3,8 +3,9 @@
   @include trailer(1);
 
   .nav-pills {
+    $border-bottom-style: 2px solid $color-black;
     @include pie-clearfix;
-    border-bottom: 2px solid $color-black;
+    border-bottom: $border-bottom-style;
     @include at-breakpoint($pad) {
       border-bottom: 0;
     }
@@ -20,13 +21,14 @@
       @include at-breakpoint($pad) {
         @include span-columns(4);
         @include nth-omega(3n);
-        border-bottom: 2px solid $color-black;
+        border-bottom: $border-bottom-style;
         &.active a {
           color: $color-black;
           background-color: transparent;
         }
       }
     }
+
     a {
       display: block;
       padding: 3px 12px;
@@ -37,8 +39,8 @@
         text-decoration: none;
       }
       @include at-breakpoint($pad) {
-        @include adjust-font-size-to(16px);
         padding: 0;
+        @include adjust-font-size-to(16px);
         cursor: default;
       }
     }
@@ -50,24 +52,22 @@
       @include span-columns(4);
       @include nth-omega(3n);
     }
-
     .more {
-      @include adjust-font-size-to(13px);
       float: right;
+      @include adjust-font-size-to(13px);
     }
   }
 
   .announcement-list {
-    @include adjust-font-size-to(13px);
     padding: 12px 0;
     border-bottom: 1px solid $color-black;
+    @include adjust-font-size-to(13px);
     li {
       @include ellipsis;
       a {
         color: #777;
       }
     }
-
   }
 
 }

@@ -5,15 +5,19 @@
 .campaign {
   @include trailer(.25);
   display: block;
+
   &:last-child {
     @include trailer(1); // 破壞 .campaign 垂直節奏
   }
+
   img {
     width: 100%;
     margin-bottom: 0;
   }
+
   @include at-breakpoint($pad) {
     @include isolate-grid(4);
     margin-bottom: gutter($total_columns);
   }
+
 }
