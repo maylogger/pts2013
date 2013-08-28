@@ -1,0 +1,48 @@
+.news {
+  @include trailer(1);
+  .nav-tabs {
+    @include pie-clearfix;
+    border-bottom: 2px solid $color-black;
+    li {
+      width: 50%;
+      float: left;
+      // tab 被選取時的樣式
+      &.active a {
+        color: $color-white;
+        background-color: $color-black;
+      }
+    }
+    a {
+      display: block;
+      padding: 6px 12px 4px;
+      @include adjust-font-size-to(13px);
+      color: $color-black;
+      background-color: $color-white;
+      @include border-radius(5px 5px 0 0);
+      &:hover {
+        text-decoration: none;
+      }
+      @include at-breakpoint($desktop) {
+        padding: 6px 24px 4px;
+      }
+    }
+  }
+
+  .tab-panel {
+    @include pie-clearfix;
+    .more {
+      float: right;
+      @include leader(.25);
+      @include adjust-font-size-to(13px);
+    }
+  }
+  .news-list {
+    li {
+      border-bottom: 1px solid $color-white;
+      a {
+        padding: 12px 0;
+      }
+    }
+  }
+
+}

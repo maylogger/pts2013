@@ -1,0 +1,14 @@
+ul.nav-tabs
+  li.active: a href="#pts-news" data-toggle="tab" 公視新聞
+  li: a href="#peopo-news" data-toggle="tab" 公民新聞
+.tab-content
+  .tab-panel#pts-news.active
+    ul.news-list
+      - 6.times do
+        li= render "/partials/news-item"
+    a.more href="#" 觀看更多公視新聞 →
+  .tab-panel#peopo-news
+    ul.news-list
+      - 6.times do
+        li= render "/partials/news-item"
+    a.more href="#" 觀看更多公民新聞 →
