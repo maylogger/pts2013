@@ -22,8 +22,10 @@ $grid-background-baseline-height: $base-line-height;
 // partials
 @import "partials/header";
 @import "partials/footer";
-@import "partials/off-canvas-menu";
 @import "partials/block";
+@import "partials/off-canvas-menu";
+@import "partials/now-playing"; //一定要在 off-canvas-menu 的下方
+@import "partials/news-item";
 
 
 @import "page";
@@ -49,11 +51,11 @@ $grid-background-baseline-height: $base-line-height;
 }
 
 @include at-breakpoint($desktop) {
-  .hide-mobile {
-     display: block;
-  }
   .hide-pad {
     display: block;
+  }
+  .hide-desktop {
+    display: none;
   }
 }
 
@@ -61,4 +63,6 @@ $grid-background-baseline-height: $base-line-height;
   display: block;
 }
 
-
+.active {
+  display: block;
+}

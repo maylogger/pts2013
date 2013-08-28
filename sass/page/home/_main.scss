@@ -11,4 +11,9 @@
     padding-right: 0;
   }
 
+  @include at-breakpoint($ex-wide-desktop) {
+    padding-left: gutter(21); // off-canvas-main 的欄數
+    padding-right: 0;
+  }
+
 }
