@@ -1,0 +1,73 @@
+.announcements {
+  @include pie-clearfix;
+  @include trailer(1);
+
+  .nav-pills {
+    @include pie-clearfix;
+    border-bottom: 2px solid $color-black;
+    @include at-breakpoint($pad) {
+      border-bottom: 0;
+    }
+
+    li {
+      float: left;
+      padding-bottom: 6px;
+      // pill 被選取時的樣式
+      &.active a {
+        color: $color-white;
+        background-color: $color-black;
+      }
+      @include at-breakpoint($pad) {
+        @include span-columns(4);
+        @include nth-omega(3n);
+        border-bottom: 2px solid $color-black;
+        &.active a {
+          color: $color-black;
+          background-color: transparent;
+        }
+      }
+    }
+    a {
+      display: block;
+      padding: 3px 12px;
+      @include adjust-font-size-to(13px);
+      color: $color-black;
+      @include border-radius(5px);
+      &:hover {
+        text-decoration: none;
+      }
+      @include at-breakpoint($pad) {
+        @include adjust-font-size-to(16px);
+        padding: 0;
+        cursor: default;
+      }
+    }
+  }
+
+  .tab-panel {
+    @include at-breakpoint($pad) {
+      display: block;
+      @include span-columns(4);
+      @include nth-omega(3n);
+    }
+
+    .more {
+      @include adjust-font-size-to(13px);
+      float: right;
+    }
+  }
+
+  .announcement-list {
+    @include adjust-font-size-to(13px);
+    padding: 12px 0;
+    border-bottom: 1px solid $color-black;
+    li {
+      @include ellipsis;
+      a {
+        color: #777;
+      }
+    }
+
+  }
+
+}

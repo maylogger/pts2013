@@ -1,0 +1,20 @@
+ul.nav-pills
+  li.active: a href="#new-message" data-toggle="tab" 最新消息
+  li: a href="#change" data-toggle="tab" 節目異動
+  li: a href="#bidding" data-toggle="tab" 招標訊息
+.tab-content
+  .tab-panel#new-message.active
+    ul.announcement-list
+      - 5.times do
+        li: a href="#"= zh_lorem_words( rand(5) + 15 )
+    a.more href="#" read more →
+  .tab-panel#change
+    ul.announcement-list
+      - 5.times do
+        li: a href="#"= zh_lorem_words( rand(5) + 15 )
+    a.more href="#" read more →
+  .tab-panel#bidding
+    ul.announcement-list
+      - 5.times do
+        li: a href="#"= zh_lorem_words( rand(5) + 15 )
+    a.more href="#" read more →
