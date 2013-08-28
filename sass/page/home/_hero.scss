@@ -1,4 +1,5 @@
 .hero {
+  @include pie-clearfix;
   @include leader(1);
   // 統一控制 .block 的 margin-bottom
   .block {
@@ -14,8 +15,6 @@
 }
 
 .hero-tile {
-  @include pie-clearfix;
-
   @include at-breakpoint($pad) {
   .block {
       @include span-columns(6);
@@ -26,10 +25,12 @@
 }
 
 .hero-sub-tile {
-  @include pie-clearfix;
   .block {
     @include span-columns(3);
     @include nth-omega(2n);
+    &:last-child {
+      @include trailer(1); // 破壞 block 的垂直節奏
+    }
   }
 
   @include at-breakpoint($pad) {

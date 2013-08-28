@@ -3,14 +3,20 @@
     = render "/shows"
 
   .content
-    = render "/hero"
+    .hero
+      = render "/hero"
 
-    .now-playing
+    .now-playing.hide-desktop
+      = render "/partials/now-playing"
 
     .news
+      = render "/news"
 
-    .campaign
+    .campaigns
+      = render "/campaigns"
 
-    .announcement
+
+    .announcements
+      = render "/announcements"
 
 .sidebar sidebar
