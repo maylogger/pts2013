@@ -1,0 +1,40 @@
+.news-item {
+  @include pie-clearfix;
+  display: block;
+  img {
+    float: left;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+  &:hover {
+    text-decoration: none;
+    background-color: #ffe;
+  }
+}
+
+.news-item-content {
+  overflow: hidden;
+}
+
+.news-item-title {
+  // @include adjust-font-size-to(18px);
+  color: $color-black;
+}
+
+.news-item-text {
+  @include adjust-font-size-to(13px);
+  color: #aaa;
+}
+
+.news-item-meta {
+  @include adjust-font-size-to(13px);
+  color: #aaa;
+  .tag {
+    margin-right: 6px;
+    border-right: 1px solid #aaa;
+    padding-right: 6px;
+  }
+  .date {
+
+  }
+}
