@@ -26,6 +26,7 @@ $grid-background-baseline-height: $base-line-height;
 @import "partials/off-canvas-menu";
 @import "partials/now-playing"; //一定要在 off-canvas-menu 的下方
 @import "partials/news-item";
+@import "partials/pills-item";
 
 
 @import "page";
