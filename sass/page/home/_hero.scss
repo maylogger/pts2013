@@ -1,6 +1,5 @@
 .hero {
   @include pie-clearfix;
-  @include leader(1);
   // 統一控制 .block 的 margin-bottom
   .block {
     margin-bottom: gutter($total-columns);
@@ -10,6 +9,10 @@
     .block {
       margin-bottom: gutter($total-columns);
     }
+  }
+
+  @include at-breakpoint($ex-wide-desktop) {
+    @include leader(.5);
   }
 
 }
