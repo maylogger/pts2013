@@ -45,23 +45,6 @@ $ex-wide-desktop: $ex-wide-desktop-break $ex-wide-desktop-columns;
 //   }
 // }
 
-// demo 用
-.sidebar, .footer {
-  min-height: 600px;
-  // outline: 2px dashed black;
-  @include box-sizing(border-box);
-  padding: 12px;
-  margin-bottom: 12px;
-}
-
-.content {
-  min-height: 600px;
-}
-
-.footer {
-  min-height: 100px;
-  clear: both;
-}
 
 body {
   background-color: $color-white;
@@ -96,9 +79,10 @@ $off-canvas-shows-columns: 4;
   left: 0; // for firefox
   right: 0; // for firefox
   z-index: 2;
-  @include box-shadow(0 0 20px rgba(#000, 0.25) );
-  background-color: #fff;
+  @include trailer(1);
   width: 100%;
+  background-color: #fff;
+  @include box-shadow(0 0 20px rgba(#000, 0.25) );
   @include transition( right .3s, left .3s );
   .show-menu & {
     left: space($off-canvas-menu-columns);
@@ -117,6 +101,31 @@ $off-canvas-shows-columns: 4;
   bottom: 0;
   left: 100%;
   width: columns($off-canvas-shows-columns) + gutter($total-columns);
+}
+
+// end off-canvas
+
+.header {
+}
+
+.main {
+  @include box-sizing(border-box);
+  @include trailer(1);
+  padding: $base-line-height gutter($total_columns) 0;
+}
+
+.sidebar {
+  @include box-sizing(border-box);
+  padding: 0 gutter($total_columns);
+}
+
+.content {
+  min-height: 600px;
+}
+
+.footer {
+  min-height: 100px;
+  clear: both;
 }
 
 
@@ -142,6 +151,14 @@ $off-canvas-shows-columns: 4;
     width: columns($off-canvas-shows-columns) + gutter($total-columns);
   }
 
+  .main {
+    padding: $base-line-height gutter($total_columns) 0;
+  }
+
+  .sidebar {
+    padding: 0 gutter($total_columns);
+  }
+
 }
 
 
@@ -158,8 +175,9 @@ $off-canvas-shows-columns: 4;
     min-height: 500px;
   }
   .off-canvas-main {
-    @include transition(none);
     @include span-columns($off-canvas-main omega);
+    @include box-shadow(none);
+    background-color: $color-white;
     .show-menu & {
       left: 0;
       right: 0;
@@ -175,6 +193,15 @@ $off-canvas-shows-columns: 4;
     right: 100%;
     width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
   }
+  .main {
+    padding: 0 gutter($off-canvas-main);
+    background-color: #fff;
+    @include box-shadow(0 0 20px rgba(#000, 0.25) );
+  }
+  .sidebar {
+    padding: 0 gutter($off-canvas-main);
+  }
+
   .shows {
     @include reset-columns;
     position: relative;
@@ -210,9 +237,12 @@ $off-canvas-shows-columns: 4;
   }
   .main {
     @include span-columns($main-columns, $off-canvas-main);
+    padding: 0 gutter($off-canvas-main);
   }
   .sidebar {
     @include span-columns($sidebar-columns omega, $off-canvas-main);
+    padding-right: gutter($off-canvas-main); // off-canvas-main 的欄數
+    padding-left: 0;
   }
 
 }
@@ -240,9 +270,11 @@ $off-canvas-shows-columns: 4;
   }
   .main {
     @include span-columns($main-columns, $off-canvas-main);
+    padding: 0 gutter($off-canvas-main);
   }
   .sidebar {
     @include span-columns($sidebar-columns omega, $off-canvas-main);
+    padding-right: gutter($off-canvas-main);
   }
   .shows {
     @include span-columns($shows-columns omega, $main-columns);
