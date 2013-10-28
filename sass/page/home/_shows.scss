@@ -52,22 +52,22 @@
     }
   }
 
-  @include at-breakpoint($ex-wide-desktop) {
-    > li {
-      float: none;
-    }
-    .style {
-      @include transition( all .2s );
-      background-color: transparent;
-      &:after {
-        margin-left: 0px;
-      }
-      &:hover {
-        background-color: rgba(white, .3);
-        text-decoration: none;
-      }
-    }
-  }
+  // @include at-breakpoint($ex-wide-desktop) {
+  //   > li {
+  //     float: none;
+  //   }
+  //   .style {
+  //     @include transition( all .2s );
+  //     background-color: transparent;
+  //     &:after {
+  //       margin-left: 0px;
+  //     }
+  //     &:hover {
+  //       background-color: rgba(white, .3);
+  //       text-decoration: none;
+  //     }
+  //   }
+  // }
 
 }
 
@@ -86,9 +86,9 @@
     }
   }
 
-  @include at-breakpoint($ex-wide-desktop) {
-    position: static;
-  }
+  // @include at-breakpoint($ex-wide-desktop) {
+  //   position: static;
+  // }
 
 }
 
@@ -122,11 +122,11 @@
     padding: ($base-line-height / 2) ($base-line-height / 2) $base-line-height;
   }
 
-  @include at-breakpoint($ex-wide-desktop) {
-    background-color: transparent;
-    margin: 0 $base-line-height / 2;
-    border-top: 1px solid rgba(black, .1);
-    padding: $base-line-height / 2 0 $base-line-height;
-  }
+  // @include at-breakpoint($ex-wide-desktop) {
+  //   background-color: transparent;
+  //   margin: 0 $base-line-height / 2;
+  //   border-top: 1px solid rgba(black, .1);
+  //   padding: $base-line-height / 2 0 $base-line-height;
+  // }
 
 }

@@ -1,4 +1,5 @@
 .off-canvas-menu {
+  overflow: hidden;
   padding-top: $base-line-height * 2;
   @include at-breakpoint($desktop) {
     padding-top: $base-line-height * 4;
@@ -72,7 +73,7 @@
     a {
       display: block;
       $border-size: 1px;
-      $font-size: 13px;
+      $font-size: 15px;
       font-size: $font-size;
       line-height: rhythm(2) - $border-size;
       padding: 0 $base-line-height / 2;

@@ -24,30 +24,25 @@ $ex-wide-desktop-break    : 1440px;
 $ex-wide-desktop: $ex-wide-desktop-break $ex-wide-desktop-columns;
 
 // debug-grid
-// $grid-background-column-color: rgba(red,.03);
-// $grid-background-baseline-color: rgba(blue,.05);
-// body {
-//   @include baseline-grid-background;
-// }
-// .container {
-//   @include susy-grid-background;
-//   @include at-breakpoint($pad) {
-//     @include susy-grid-background;
-//   }
-//   @include at-breakpoint($desktop) {
-//     @include susy-grid-background;
-//   }
-//   @include at-breakpoint($wide-desktop) {
-//     @include susy-grid-background;
-//   }
-//   @include at-breakpoint($ex-wide-desktop) {
-//     @include susy-grid-background;
-//   }
-// }
-
-
+$grid-background-column-color: rgba(red,.03);
+$grid-background-baseline-color: rgba(blue,.05);
 body {
-  background-color: $color-white;
+  @include baseline-grid-background;
+}
+.container {
+  @include susy-grid-background;
+  @include at-breakpoint($pad) {
+    @include susy-grid-background;
+  }
+  @include at-breakpoint($desktop) {
+    @include susy-grid-background;
+  }
+  @include at-breakpoint($wide-desktop) {
+    @include susy-grid-background;
+  }
+  @include at-breakpoint($ex-wide-desktop) {
+    @include susy-grid-background;
+  }
 }
 
 $container-style: fluid;
@@ -81,8 +76,6 @@ $off-canvas-shows-columns: 4;
   z-index: 2;
   @include trailer(1);
   width: 100%;
-  background-color: #fff;
-  @include box-shadow(0 0 20px rgba(#000, 0.25) );
   @include transition( right .3s, left .3s );
   .show-menu & {
     left: space($off-canvas-menu-columns);
@@ -176,8 +169,6 @@ $off-canvas-shows-columns: 4;
   }
   .off-canvas-main {
     @include span-columns($off-canvas-main omega);
-    @include box-shadow(none);
-    background-color: $color-white;
     .show-menu & {
       left: 0;
       right: 0;
@@ -195,8 +186,7 @@ $off-canvas-shows-columns: 4;
   }
   .main {
     padding: 0 gutter($off-canvas-main);
-    background-color: #fff;
-    @include box-shadow(0 0 20px rgba(#000, 0.25) );
+    // @include box-shadow(0 0 20px rgba(#000, 0.25) );
   }
   .sidebar {
     padding: 0 gutter($off-canvas-main);
@@ -221,9 +211,9 @@ $off-canvas-shows-columns: 4;
 @include at-breakpoint($wide-desktop) {
 
   $off-canvas-menu-columns: 4;
-  $off-canvas-main: $total-columns - $off-canvas-menu-columns;
-  $main-columns: 12;
-  $sidebar-columns: $off-canvas-main - $main-columns;
+  $off-canvas-main: $total-columns - $off-canvas-menu-columns - 1;
+  $main-columns: 11;
+  $sidebar-columns: $off-canvas-main - $main-columns - 1;
 
   .off-canvas-menu {
     width: columns($off-canvas-menu-columns) + gutter($total_columns);
@@ -237,7 +227,7 @@ $off-canvas-shows-columns: 4;
   }
   .main {
     @include span-columns($main-columns, $off-canvas-main);
-    padding: 0 gutter($off-canvas-main);
+    padding: 0;
   }
   .sidebar {
     @include span-columns($sidebar-columns omega, $off-canvas-main);
@@ -248,40 +238,40 @@ $off-canvas-shows-columns: 4;
 }
 
 
-@include at-breakpoint($ex-wide-desktop) {
+// @include at-breakpoint($ex-wide-desktop) {
 
-  $off-canvas-menu-columns: 4;
-  $off-canvas-main: $total-columns - $off-canvas-menu-columns;
-  $main-columns: 15;
-  $sidebar-columns: $off-canvas-main - $main-columns;
-  $shows-columns: 3;
-  $content-columns: $main-columns - $shows-columns;
+//   $off-canvas-menu-columns: 4;
+//   $off-canvas-main: $total-columns - $off-canvas-menu-columns;
+//   $main-columns: 15;
+//   $sidebar-columns: $off-canvas-main - $main-columns;
+//   $shows-columns: 3;
+//   $content-columns: $main-columns - $shows-columns;
 
-  .off-canvas-menu {
-    width: columns($off-canvas-menu-columns) + gutter($total_columns);
-    float: left;
-  }
-  .off-canvas-main {
-    @include span-columns($off-canvas-main omega);
-  }
-  .header {
-    left: - space($off-canvas-menu-columns, $off-canvas-main);
-    width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
-  }
-  .main {
-    @include span-columns($main-columns, $off-canvas-main);
-    padding: 0 gutter($off-canvas-main);
-  }
-  .sidebar {
-    @include span-columns($sidebar-columns omega, $off-canvas-main);
-    padding-right: gutter($off-canvas-main);
-  }
-  .shows {
-    @include span-columns($shows-columns omega, $main-columns);
-  }
-  .content {
-    clear: none;
-    @include span-columns($content-columns, $main-columns);
-  }
+//   .off-canvas-menu {
+//     width: columns($off-canvas-menu-columns) + gutter($total_columns);
+//     float: left;
+//   }
+//   .off-canvas-main {
+//     @include span-columns($off-canvas-main omega);
+//   }
+//   .header {
+//     left: - space($off-canvas-menu-columns, $off-canvas-main);
+//     width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
+//   }
+//   .main {
+//     @include span-columns($main-columns, $off-canvas-main);
+//     padding: 0 gutter($off-canvas-main);
+//   }
+//   .sidebar {
+//     @include span-columns($sidebar-columns omega, $off-canvas-main);
+//     padding-right: gutter($off-canvas-main);
+//   }
+//   .shows {
+//     @include span-columns($shows-columns omega, $main-columns);
+//   }
+//   .content {
+//     clear: none;
+//     @include span-columns($content-columns, $main-columns);
+//   }
 
-}
+// }
