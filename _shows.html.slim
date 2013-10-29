@@ -1,62 +1,55 @@
-li.panel
-  a.style.collapsed href="#shows-collapse" data-toggle="collapse" data-parent="#shows" 新聞 雜誌
-  .shows-collapse.collapse id="shows-collapse"
-    ul.shows-collapse-content
-      - 5.times do
-        li: a href=""
-          time 13:00
-          .show= zh_lorem_words( rand(5) + 13 )
+li
+  a.shows-title href="#" 新聞 雜誌
+  ul.shows-collapse
+    - 5.times do
+      li: a href=""
+        time 13:00
+        .show= zh_lorem_words( rand(5) + 13 )
 
-li.panel
-  a.style.collapsed href="#shows-collapse1" data-toggle="collapse" data-parent="#shows" 兒童 青少年
-  .shows-collapse.collapse id="shows-collapse1"
-    ul.shows-collapse-content
-      - 5.times do
-        li: a href=""
-          time 13:00
-          .show= zh_lorem_words( rand(5) + 13 )
+li
+  a.shows-title href="#" 兒童 青少
+  ul.shows-collapse
+    - 5.times do
+      li: a href=""
+        time 13:00
+        .show= zh_lorem_words( rand(5) + 13 )
 
-li.panel
-  a.style.collapsed href="#shows-collapse2" data-toggle="collapse" data-parent="#shows" 文化 藝術
-  .shows-collapse.collapse id="shows-collapse2"
-    ul.shows-collapse-content
-      - 5.times do
-        li: a href=""
-          time 13:00
-          .show= zh_lorem_words( rand(5) + 13 )
+li
+  a.shows-title href="#" 文化 藝術
+  ul.shows-collapse
+    - 5.times do
+      li: a href=""
+        time 13:00
+        .show= zh_lorem_words( rand(5) + 13 )
 
-li.panel
-    a.style.collapsed href="#shows-collapse3" data-toggle="collapse" data-parent="#shows" 生活休閒
-    .shows-collapse.collapse id="shows-collapse3"
-      ul.shows-collapse-content
-        - 5.times do
-          li: a href=""
-            time 13:00
-            .show= zh_lorem_words( rand(5) + 13 )
+li
+  a.shows-title href="#" 生活休閒
+  ul.shows-collapse
+    - 5.times do
+      li: a href=""
+        time 13:00
+        .show= zh_lorem_words( rand(5) + 13 )
 
-li.panel
-    a.style.collapsed href="#shows-collapse4" data-toggle="collapse" data-parent="#shows" 紀錄片
-    .shows-collapse.collapse id="shows-collapse4"
-      ul.shows-collapse-content
-        - 5.times do
-          li: a href=""
-            time 13:00
-            .show= zh_lorem_words( rand(5) + 13 )
+li
+  a.shows-title href="#" 紀錄片
+  ul.shows-collapse.pull-right
+    - 5.times do
+      li: a href=""
+        time 13:00
+        .show= zh_lorem_words( rand(5) + 13 )
 
-li.panel
-    a.style.collapsed href="#shows-collapse5" data-toggle="collapse" data-parent="#shows" 銀髮族服務
-    .shows-collapse.collapse.pull-right id="shows-collapse5"
-      ul.shows-collapse-content
-        - 5.times do
-          li: a href=""
-            time 13:00
-            .show= zh_lorem_words( rand(5) + 13 )
+li
+  a.shows-title href="#" 銀髮族服務
+  ul.shows-collapse.pull-right
+    - 5.times do
+      li: a href=""
+        time 13:00
+        .show= zh_lorem_words( rand(5) + 13 )
 
-li.panel
-    a.style.collapsed href="#shows-collapse6" data-toggle="collapse" data-parent="#shows" 戲劇 電影
-    .shows-collapse.collapse.pull-right id="shows-collapse6"
-      ul.shows-collapse-content
-        - 5.times do
-          li: a href=""
-            time 13:00
-            .show= zh_lorem_words( rand(5) + 13 )
+li
+  a.shows-title href="#" 戲劇 電影
+  ul.shows-collapse.pull-right
+    - 5.times do
+      li: a href=""
+        time 13:00
+        .show= zh_lorem_words( rand(5) + 13 )

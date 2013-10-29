@@ -5,29 +5,31 @@
       width: 1px;
       style: solid;
     }
-    // 引用 _off-canvas-menu 內的 %tile
-    @extend %tile;
+    @extend %tile; // 引用 _off-canvas-menu 內的 %tile
     @include box-shadow(none);
   }
-  .style {
+
+  .shows-title {
     display: block;
     $border-size: 1px;
     $font-size: 13px;
     font-size: $font-size;
     line-height: rhythm(2) - $border-size;
     padding: 0 $base-line-height / 2;
-    color: rgba(black, .5);
+    color: $shows-link-color;
     @include transition( all .2s );
     &:after {
       content: "▾";
       float: right;
     }
     &:hover {
-      background-color: rgba(white, .3);
+      background-color: lighten($shows-hover-bg, 80%);
       text-decoration: none;
     }
+  } // shows-title end
 
-
+  > .open > .shows-title {
+    background-color: lighten($shows-hover-bg, 80%);
   }
 
   @include at-breakpoint($desktop) {
@@ -36,71 +38,35 @@
       float: left;
       position: relative;
     }
-    .style {
+    .shows-title {
       @include transition(none);
-      background-color: $color-white;
-      &.collapsed {
-        background-color: transparent;
-      }
       &:after {
         margin-left: 6px;
       }
       &:hover {
-        background-color: $color-white;
+        color: lighten($shows-link-color, 35%);
+        background-color: $shows-hover-bg;
         text-decoration: none;
       }
     }
-  }
-
-  // @include at-breakpoint($ex-wide-desktop) {
-  //   > li {
-  //     float: none;
-  //   }
-  //   .style {
-  //     @include transition( all .2s );
-  //     background-color: transparent;
-  //     &:after {
-  //       margin-left: 0px;
-  //     }
-  //     &:hover {
-  //       background-color: rgba(white, .3);
-  //       text-decoration: none;
-  //     }
-  //   }
-  // }
-
-}
-
-.shows-collapse {
-  background-color: rgba(white, .3);
-  @include adjust-font-size-to(13px);
-
-  @include at-breakpoint($desktop) {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 2;
-    &.pull-right {
-      left: auto;
-      right: 0;
+    > .open > .shows-title {
+      color: lighten($shows-link-color, 35%);
+      background-color: $shows-open-bg;
     }
   }
 
-  // @include at-breakpoint($ex-wide-desktop) {
-  //   position: static;
-  // }
+} // show end
 
-}
-
-.shows-collapse-content {
-  margin: 0 $base-line-height / 2;
+.shows-collapse {
+  display: none;
   border-top: 1px solid rgba(black, .1);
-  padding: ($base-line-height / 2) 0 $base-line-height;
-  li {
+  padding: ($base-line-height / 2);
+  @include adjust-font-size-to(13px);
+  > li {
     @include ellipsis;
   }
   a {
-    color: rgba(black, .5);
+    color: $shows-link-color;
     &:hover {
       text-decoration: none;
       opacity: 0.75;
@@ -114,19 +80,26 @@
   .show {
     display: inline;
   }
-
-  @include at-breakpoint($desktop) {
-    background-color: $color-white;
-    margin: 0;
-    border-top: 0;
-    padding: ($base-line-height / 2) ($base-line-height / 2) $base-line-height;
+  .open & {
+    display: block;
   }
 
-  // @include at-breakpoint($ex-wide-desktop) {
-  //   background-color: transparent;
-  //   margin: 0 $base-line-height / 2;
-  //   border-top: 1px solid rgba(black, .1);
-  //   padding: $base-line-height / 2 0 $base-line-height;
-  // }
+  @include at-breakpoint($desktop) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 2;
+    margin: 0;
+    border-top: 0;
+    padding: 16px 24px;
+    background-color: $shows-collapse-bg;
+    &.pull-right {
+      left: auto;
+      right: 0;
+    }
+    a {
+      color: lighten($shows-link-color, 35%);
+    }
+  }
 
-}
+} // show-collapse end
