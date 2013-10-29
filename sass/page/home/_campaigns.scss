@@ -3,8 +3,13 @@
 }
 
 .campaign {
-  @include trailer(.25);
+  @include trailer(1);
   display: block;
+  color: $campaign-color;
+  &:hover {
+    color: $campaign-hover-color;
+    text-decoration: none;
+  }
 
   &:last-child {
     @include trailer(1); // 破壞 .campaign 垂直節奏
@@ -15,9 +20,26 @@
     margin-bottom: 0;
   }
 
+  .campaign-title {
+    text-align: center;
+    @include leader(.25);
+    @include adjust-font-size-to(13px, 2/3);
+  }
+
   @include at-breakpoint($pad) {
-    @include isolate-grid(4);
-    margin-bottom: gutter($total_columns);
+    display: inline-block;
+    vertical-align: top;
+    width: columns(4);
+    margin: 0 gutter($total_columns) gutter($total_columns) 0;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  @include at-breakpoint($wide-desktop) {
+    margin-right: 0;
+    @include trailer(1);
+    width: auto;
   }
 
 }
