@@ -16,7 +16,7 @@ $desktop-break    : 960px;
 $desktop: $desktop-break $desktop-columns;
 
 $wide-desktop-columns  : 21;
-$wide-desktop-break    : 1200px;
+$wide-desktop-break    : 1240px;
 $wide-desktop: $wide-desktop-break $wide-desktop-columns;
 
 $ex-wide-desktop-columns  : 24;
@@ -24,26 +24,26 @@ $ex-wide-desktop-break    : 1440px;
 $ex-wide-desktop: $ex-wide-desktop-break $ex-wide-desktop-columns;
 
 // debug-grid
-$grid-background-column-color: rgba(red,.03);
-$grid-background-baseline-color: rgba(blue,.05);
-body {
-  @include baseline-grid-background;
-}
-.container {
-  @include susy-grid-background;
-  @include at-breakpoint($pad) {
-    @include susy-grid-background;
-  }
-  @include at-breakpoint($desktop) {
-    @include susy-grid-background;
-  }
-  @include at-breakpoint($wide-desktop) {
-    @include susy-grid-background;
-  }
-  @include at-breakpoint($ex-wide-desktop) {
-    @include susy-grid-background;
-  }
-}
+// $grid-background-column-color: rgba(red,.03);
+// $grid-background-baseline-color: rgba(blue,.05);
+// body {
+//   @include baseline-grid-background;
+// }
+// .container {
+//   @include susy-grid-background;
+//   @include at-breakpoint($pad) {
+//     @include susy-grid-background;
+//   }
+//   @include at-breakpoint($desktop) {
+//     @include susy-grid-background;
+//   }
+//   @include at-breakpoint($wide-desktop) {
+//     @include susy-grid-background;
+//   }
+//   @include at-breakpoint($ex-wide-desktop) {
+//     @include susy-grid-background;
+//   }
+// }
 
 $container-style: fluid;
 
@@ -102,6 +102,7 @@ $off-canvas-shows-columns: 4;
 }
 
 .main {
+  @include pie-clearfix;
   @include box-sizing(border-box);
   @include trailer(1);
   padding: $base-line-height gutter($total_columns) 0;
