@@ -21,9 +21,9 @@
   }
 
   .campaign-title {
-    text-align: center;
+    // text-align: center;
     @include leader(.25);
-    @include adjust-font-size-to(13px, 2/3);
+    @include adjust-font-size-to(12px, 2/3);
   }
 
   @include at-breakpoint($pad) {
@@ -38,7 +38,7 @@
 
   @include at-breakpoint($wide-desktop) {
     margin-right: 0;
-    @include trailer(1);
+    @include trailer(.5);
     width: auto;
   }
 

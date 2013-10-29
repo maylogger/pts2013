@@ -22,13 +22,13 @@ $dropdown-hover-text-bg: $color-black;
 // block
 $block-title: white;
 $block-text: rgba($color-white, 0.75);
-$block-content-bg: linear-gradient( rgba(black, 0) 0, rgba(black, .2) 35%, rgba(black, .75) 100% );
+$block-content-bg: linear-gradient( bottom, rgba(black, .5) 0, rgba(black, .25) 15%,rgba(black, 0) 35% );
 
 // shows
-$shows-link-color: #787878;
-$shows-hover-bg: #252525;
-$shows-open-bg: #252525;
-$shows-collapse-bg: #252525;
+$shows-link-color: $color-black;
+$shows-hover-bg: $color-white;
+$shows-open-bg: $color-white;
+$shows-collapse-bg: $color-white;
 
 // news
 $news-list-divider: $color-white;
