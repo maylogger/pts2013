@@ -1,7 +1,0 @@
-.announcements {
-  @include pie-clearfix;
-  @include padding-trailer(1);
-
-  @extend %pills-items-for-pad;
-
-}

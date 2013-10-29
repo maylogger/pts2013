@@ -1,8 +1,38 @@
 .sidebar-pills-item {
   @include pie-clearfix;
-  @include padding-trailer(1);
+  @include trailer(1);
 
-  @extend %pills-items-for-pad;
+  .nav-pills {
+    li {
+      @include at-breakpoint($pad) {
+        @include span-columns(4);
+        @include nth-omega(3n);
+        border-bottom: 2px solid $color-black;
+        &.active a {
+          color: $color-black;
+          background-color: transparent;
+        }
+      }
+    }
+    a {
+      @include at-breakpoint($pad) {
+        padding: 0;
+        @include adjust-font-size-to(16px);
+        cursor: default;
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .pill-panel {
+    @include at-breakpoint($pad) {
+      display: block;
+      @include span-columns(4);
+      @include nth-omega(3n);
+    }
+  }
 
   @include at-breakpoint($wide-desktop) {
     .nav-pills {
