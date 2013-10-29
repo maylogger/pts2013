@@ -1,0 +1,42 @@
+.news-group {
+  @include trailer(1);
+
+  .news {
+    @include trailer(1);
+    @include at-breakpoint($pad) {
+      @include span-columns(6);
+      @include nth-omega(2n);
+    }
+  }
+
+  .news-title {
+    $border-bottom-width: 2px;
+    border-bottom: $border-bottom-width solid $color-black;
+    @include padding-trailer(0.125);
+
+    a {
+      @include adjust-font-size-to(16px);
+      color: $color-black;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  .more {
+    display: inline-block;
+    @include leader(.25);
+    @include adjust-font-size-to(13px);
+  }
+
+
+  .news-list {
+    li {
+      border-bottom: 1px solid $news-list-divider;
+    }
+    a {
+      padding: 12px 0;
+    }
+  }
+
+}

@@ -1,9 +1,5 @@
 a.news-item href="#"
-  = image_tag lorem_image("96x72&text=photo")
+  = image_tag lorem_image("84x64&text=photo")
   .news-item-content
     .news-item-title= zh_lorem_words( rand(3) + 18 )
-    .news-item-text.hide-mobile= zh_lorem_sentences(2)
-    .news-item-meta
-      sapn.tag= zh_lorem_words( rand(3) + 2 )
-      span.date= lorem_date
-
+    .news-item-text= zh_lorem_paragraphs(2)

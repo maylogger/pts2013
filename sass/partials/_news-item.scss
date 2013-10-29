@@ -17,20 +17,14 @@
 }
 
 .news-item-title {
-  color: $color-black;
+  color: $news-item-title-color;
+  @include adjust-font-size-to(13px, 2/3);
 }
 
 .news-item-text {
-  @include adjust-font-size-to(13px);
-  color: #aaa;
+  @include adjust-font-size-to(13px, 2/3);
+  color: $news-item-text-color;
+  height: 2.5em;
+  overflow: hidden;
 }
 
-.news-item-meta {
-  @include adjust-font-size-to(13px);
-  color: #aaa;
-  .tag {
-    margin-right: 6px;
-    border-right: 1px solid #aaa;
-    padding-right: 6px;
-  }
-}
