@@ -552,6 +552,7 @@ html {
   }
 
   .sidebar {
+    padding-top: 24px;
     width: 24.05063%;
     float: right;
     margin-right: 0;

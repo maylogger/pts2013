@@ -231,48 +231,10 @@ $off-canvas-shows-columns: 4;
     padding: 0;
   }
   .sidebar {
+    @include padding-leader(1);
     @include span-columns($sidebar-columns omega, $off-canvas-main);
     padding-right: gutter($off-canvas-main); // off-canvas-main 的欄數
     padding-left: 0;
   }
 
 }
-
-
-// @include at-breakpoint($ex-wide-desktop) {
-
-//   $off-canvas-menu-columns: 4;
-//   $off-canvas-main: $total-columns - $off-canvas-menu-columns;
-//   $main-columns: 15;
-//   $sidebar-columns: $off-canvas-main - $main-columns;
-//   $shows-columns: 3;
-//   $content-columns: $main-columns - $shows-columns;
-
-//   .off-canvas-menu {
-//     width: columns($off-canvas-menu-columns) + gutter($total_columns);
-//     float: left;
-//   }
-//   .off-canvas-main {
-//     @include span-columns($off-canvas-main omega);
-//   }
-//   .header {
-//     left: - space($off-canvas-menu-columns, $off-canvas-main);
-//     width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
-//   }
-//   .main {
-//     @include span-columns($main-columns, $off-canvas-main);
-//     padding: 0 gutter($off-canvas-main);
-//   }
-//   .sidebar {
-//     @include span-columns($sidebar-columns omega, $off-canvas-main);
-//     padding-right: gutter($off-canvas-main);
-//   }
-//   .shows {
-//     @include span-columns($shows-columns omega, $main-columns);
-//   }
-//   .content {
-//     clear: none;
-//     @include span-columns($content-columns, $main-columns);
-//   }
-
-// }
