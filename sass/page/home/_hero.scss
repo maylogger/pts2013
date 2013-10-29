@@ -10,11 +10,6 @@
       margin-bottom: gutter($total-columns);
     }
   }
-
-  @include at-breakpoint($ex-wide-desktop) {
-    @include leader(.5);
-  }
-
 }
 
 .hero-tile {
@@ -43,11 +38,14 @@
       @include nth-omega(3n);
     }
   }
+  .block-content {
+    padding: 0 12px 6px;
+  }
   .block-title {
-    @include adjust-font-size-to(14px, 2/3);
+    @include adjust-font-size-to(14px, 5/6);
   }
   .block-text {
-    @include adjust-font-size-to(12px, 2/3);
+    @include adjust-font-size-to(12px, 5/6);
   }
 
 }
