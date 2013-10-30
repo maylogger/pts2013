@@ -1,0 +1,47 @@
+.footer {
+  @include leader(2);
+  padding: rhythm(2) gutter($total_columns) 0;
+  border-top: 1px solid #ddd;
+}
+
+
+.footer-nav-group {
+  @include pie-clearfix;
+  @include trailer(1);
+}
+.footer-nav {
+  float: left;
+  width: 45%;
+  padding-right: 5%;
+  @include trailer(.5);
+  @include at-breakpoint($pad) {
+    width: 18%;
+    padding-right: 2%;
+  }
+  @include at-breakpoint($desktop) {
+  }
+}
+.footer-nav-title {
+  @include adjust-font-size-to(16px);
+  color: $footer-title-color;
+}
+.footer-nav-list {
+  li {
+    padding: 4px 0;
+    @include adjust-font-size-to(13px, 2/3);
+  }
+  a {
+    color: $footer-list-color;
+  }
+}
+
+.copyright {
+  clear: both;
+  @include padding-trailer(1.5);
+  text-align: center;
+  color: #777;
+  @include adjust-font-size-to(13px, 2/3);
+  span {
+    white-space: nowrap;
+  }
+}
