@@ -27,8 +27,8 @@ $block-content-bg: linear-gradient( bottom, rgba(black, .5) 0, rgba(black, .25) 
 // shows
 $shows-link-color: $color-black;
 $shows-hover-bg: $color-white;
-$shows-open-bg: $color-white;
-$shows-collapse-bg: $color-white;
+$shows-open-bg: $shows-hover-bg;
+$shows-collapse-bg: $shows-open-bg;
 
 // news
 $news-list-divider: $color-white;
@@ -38,3 +38,8 @@ $news-item-text-color: rgba($color-black, 0.45);
 // campaigns
 $campaign-color: rgba($color-black, 0.75);
 $campaign-hover-color: rgba($color-black, 0.5);
+
+
+// footer
+$footer-title-color: $color-black;
+$footer-list-color: rgba($color-black, 0.6);
