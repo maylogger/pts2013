@@ -4,7 +4,7 @@
   }
   .now-playing-title {
     border-bottom: 2px solid $color-black;
-    padding: 0 0 6px;
+    padding: 0;
     @include adjust-font-size-to(16px);
     color: $color-black;
     background-color: transparent;

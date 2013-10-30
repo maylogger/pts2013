@@ -1,5 +1,6 @@
 .campaigns {
   @include pie-clearfix;
+  @include trailer(1);
 }
 
 .campaign {
@@ -11,17 +12,12 @@
     text-decoration: none;
   }
 
-  &:last-child {
-    @include trailer(1); // 破壞 .campaign 垂直節奏
-  }
-
   img {
     width: 100%;
     margin-bottom: 0;
   }
 
   .campaign-title {
-    // text-align: center;
     @include leader(.25);
     @include adjust-font-size-to(12px, 2/3);
   }

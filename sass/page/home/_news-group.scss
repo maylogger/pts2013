@@ -4,6 +4,7 @@
   .news {
     @include trailer(1);
     @include at-breakpoint($pad) {
+      @include trailer(0);
       @include span-columns(6);
       @include nth-omega(2n);
     }
@@ -12,8 +13,6 @@
   .news-title {
     $border-bottom-width: 2px;
     border-bottom: $border-bottom-width solid $color-black;
-    @include padding-trailer(0.125);
-
     a {
       @include adjust-font-size-to(16px);
       color: $color-black;

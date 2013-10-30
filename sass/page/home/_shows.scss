@@ -23,13 +23,13 @@
       float: right;
     }
     &:hover {
-      background-color: lighten($shows-hover-bg, 80%);
+      background-color: $shows-hover-bg;
       text-decoration: none;
     }
   } // shows-title end
 
   > .open > .shows-title {
-    background-color: lighten($shows-hover-bg, 80%);
+    background-color: $shows-hover-bg;
   }
 
   @include at-breakpoint($desktop) {
@@ -40,18 +40,10 @@
     }
     .shows-title {
       @include transition(none);
+      padding: 0 8px;
       &:after {
         margin-left: 6px;
       }
-      &:hover {
-
-        background-color: $shows-hover-bg;
-        text-decoration: none;
-      }
-    }
-    > .open > .shows-title {
-
-      background-color: $shows-open-bg;
     }
   }
 
