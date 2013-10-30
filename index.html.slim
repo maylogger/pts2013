@@ -1,9 +1,9 @@
 /! main
 .main
-  /! shows
+  /! 節目列表
   ul.shows#shows
     = render "/shows"
-  /! shows end
+  /! 節目列表 end
   /! content
   .content
     /! hero
@@ -16,13 +16,18 @@
       = render "/partials/now-playing"
     /! 現正播映 end
 
+    /! 影片區
+    .video-group
+      .video-group-title 影片專區
+      .row
+        = render "/video-group"
+
+    /! 影片區 end
+
     /! 公視新聞 & 公民新聞
     .news-group
       = render "/news"
     /! 公視新聞 & 公民新聞 end
-
-
-
 
   /! content end
 
