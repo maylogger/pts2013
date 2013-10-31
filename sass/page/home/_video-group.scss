@@ -5,9 +5,12 @@
   .video-group-title {
     @include trailer(.5);
     border-bottom: 2px solid $color-black;
-    // @include padding-trailer(.25);
     @include adjust-font-size-to(16px);
-    color: $color-black;
+    a {
+      color: $color-black;
+      @include unstyled-link;
+      cursor: pointer;
+    }
   }
 
   .video {
