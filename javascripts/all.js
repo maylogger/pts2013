@@ -21,3 +21,9 @@ menuItem.click(function(event){
 $(document).click(function(){
   menuItem.removeClass('open');
 });
+
+
+// video-light-box
+$('.popup-youtube').magnificPopup({
+  type: 'iframe'
+});

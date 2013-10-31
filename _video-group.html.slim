@@ -1,13 +1,13 @@
 - 11.times do
-  a.video href="#"
+  a.video.popup-youtube href="https://www.youtube.com/watch?v=wsgsQ_1QFBs"
     .video-thumbnail
-      = image_tag lorem_image("320x180", :text => "Video")
+      = image_tag lorem_image("320x180", :text => "Video", :random_color => true)
       .play-icon
         .glyphicon.glyphicon-play
     .video-title= zh_lorem_words( 14 + rand(20))
-a.video href="#"
+a.video href="https://www.youtube.com/user/pts?feature=watch"
   .video-thumbnail
-    = image_tag lorem_image("320x180", :text => "Read More")
+    = image_tag lorem_image("320x180", :text => "More Video")
     .play-icon
       .glyphicon.glyphicon-play
   .video-title 觀看更多的影片 →
