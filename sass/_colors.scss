@@ -11,14 +11,6 @@ $header-divider: darken($color-black, 5%);
 $header-divider-light: lighten($header-light, 5%);
 $header-search-bg: darken( $header, 10%);
 
-// dropdown
-$dropdown-btn: black;
-$dropdown-btn-text: white;
-$dropdown-menu: black;
-$dropdown-text: $header-text;
-$dropdown-hover-text: $color-white;
-$dropdown-hover-text-bg: $color-black;
-
 // block
 $block-title: white;
 $block-text: rgba($color-white, 0.75);
@@ -39,7 +31,18 @@ $news-item-text-color: rgba($color-black, 0.45);
 $campaign-color: rgba($color-black, 0.75);
 $campaign-hover-color: rgba($color-black, 0.5);
 
-
 // footer
 $footer-title-color: $color-black;
 $footer-list-color: rgba($color-black, 0.6);
+
+// video
+$video-title-color: rgba($color-black, 0.75);
+$video-play-icon-color: rgba(white, 0.75);
+$video-play-icon-bg-color: rgba(black, 0.5);
+$video-play-icon-hover-color: rgba(white, 0.95);
+$video-play-icon-hover-bg-color: rgba(black, 0.75);
+
+// pill-item
+$pill-list-divider-color: $color-white;
+$pill-list-link-color: rgba($color-black, 0.75);
+$pill-list-link-hover-color: rgba($color-black, 0.5);

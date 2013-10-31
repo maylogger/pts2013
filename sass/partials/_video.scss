@@ -9,10 +9,13 @@
     color: rgba(black, 0.75);
     @include leader(.25);
     @include adjust-font-size-to(12px, 2/3);
+    max-height: (2/3) * $base-line-height * 2;
+    overflow: hidden;
   }
 
   .video-thumbnail {
     position: relative;
+
     .play-icon {
       position: absolute;
       top: 50%;
@@ -22,28 +25,29 @@
       width: 40px;
       height: 40px;
       @include border-radius(20px);
-      background-color: rgba(black, .5);
+      background-color: $video-play-icon-bg-color;
       text-align: center;
       @include transition(background-color .3s);
     }
+
     .glyphicon-play {
       position: relative;
       top: 9px;
       left: 1px;
-      color: rgba(white, .45);
+      color: $video-play-icon-color;
       font-size: 18px;
       @include transition(color .3s);
     }
-  }
+  } // .video-thumbnail end
 
-  // 影片 hover 時特效
+  // Video hover 時特效
   &:hover {
     text-decoration: none;
     .play-icon {
-      background-color: rgba(black, .75);
+      background-color: $video-play-icon-hover-bg-color;
     }
     .glyphicon-play {
-      color: rgba(white, 0.75);
+      color: $video-play-icon-hover-color;
     }
   }
 
