@@ -1,14 +1,20 @@
 .news-item {
   @include pie-clearfix;
   display: block;
-  img {
-    float: left;
-    margin-bottom: 0;
-    margin-right: 12px;
-  }
+
   &:hover {
     text-decoration: none;
     background-color: #ffe;
+  }
+}
+
+.news-item-media {
+  float: left;
+  margin-right: 12px;
+  width: 48px;
+  height: 36px;
+  img {
+    margin-bottom: 0;
   }
 }
 
@@ -17,14 +23,10 @@
 }
 
 .news-item-title {
+  padding: 2px 0;
   color: $news-item-title-color;
   @include adjust-font-size-to(13px, 2/3);
-}
-
-.news-item-text {
-  @include adjust-font-size-to(13px, 2/3);
-  color: $news-item-text-color;
-  height: 2.5em;
+  max-height: (2/3) * $base-line-height * 2;
   overflow: hidden;
 }
 
