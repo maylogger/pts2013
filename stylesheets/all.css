@@ -1412,6 +1412,8 @@ select {
   margin-top: 6px;
   font-size: 12px;
   line-height: 16px;
+  max-height: 32px;
+  overflow: hidden;
 }
 .video .video-thumbnail {
   position: relative;
@@ -1440,7 +1442,7 @@ select {
   position: relative;
   top: 9px;
   left: 1px;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.75);
   font-size: 18px;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
@@ -1454,7 +1456,7 @@ select {
   background-color: rgba(0, 0, 0, 0.75);
 }
 .video:hover .glyphicon-play {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .news-item {
@@ -1465,14 +1467,19 @@ select {
   display: table;
   clear: both;
 }
-.news-item img {
-  float: left;
-  margin-bottom: 0;
-  margin-right: 12px;
-}
 .news-item:hover {
   text-decoration: none;
   background-color: #ffe;
+}
+
+.news-item-media {
+  float: left;
+  margin-right: 12px;
+  width: 48px;
+  height: 36px;
+}
+.news-item-media img {
+  margin-bottom: 0;
 }
 
 .news-item-content {
@@ -1480,16 +1487,11 @@ select {
 }
 
 .news-item-title {
+  padding: 2px 0;
   color: #393333;
   font-size: 13px;
   line-height: 16px;
-}
-
-.news-item-text {
-  font-size: 13px;
-  line-height: 16px;
-  color: rgba(57, 51, 51, 0.45);
-  height: 2.5em;
+  max-height: 32px;
   overflow: hidden;
 }
 
@@ -1544,16 +1546,21 @@ select {
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid #eeeeef;
 }
 .pills-item .pill-panel-list li a {
   display: block;
-  color: #777;
   padding: 6px 0 5px;
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  color: rgba(57, 51, 51, 0.75);
+}
+.pills-item .pill-panel-list li a:active, .pills-item .pill-panel-list li a:focus {
+  outline: none;
 }
 .pills-item .pill-panel-list li a:hover {
-  text-decoration: none;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(57, 51, 51, 0.5);
 }
 
 .shows {
@@ -1767,7 +1774,16 @@ select {
   border-bottom: 2px solid #393333;
   font-size: 16px;
   line-height: 24px;
+}
+.video-group .video-group-title a {
   color: #393333;
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  cursor: pointer;
+}
+.video-group .video-group-title a:active, .video-group .video-group-title a:focus {
+  outline: none;
 }
 .video-group .video {
   display: inline-block;
