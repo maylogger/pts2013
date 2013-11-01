@@ -1,10 +1,5 @@
 .video {
   display: block;
-  img {
-    width: 100%;
-    margin-bottom: 0;
-  }
-
   .video-title {
     color: rgba(black, 0.75);
     @include leader(.25);
@@ -15,11 +10,24 @@
 
   .video-thumbnail {
     position: relative;
+    padding-top: 56.25%;
+    width: 100%;
+    height: 0;
+
+    img {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      margin-bottom: 0;
+    }
 
     .play-icon {
       position: absolute;
       top: 50%;
       left: 50%;
+      z-index: 1;
       margin-top: -20px;
       margin-left: -20px;
       width: 40px;
