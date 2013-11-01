@@ -4,13 +4,3 @@
 .hero-sub-tile
   - 3.times do
     = render "/partials/block"
-  a.block.hide-pad.hide-desktop href="#"
-    .block-media
-      = image_tag lorem_image( "400x300", :random_color => true, :text => "Photo" )
-    .block-content-bg
-      .block-content
-        h3.block-title
-          span= zh_lorem_words( rand(3) + 3 )
-          span.begin= " #{lorem_date( "%m/%d" )} "
-          span.date 週二晚間十點
-        p.block-text= zh_lorem_paragraph
