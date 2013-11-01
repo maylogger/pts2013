@@ -2,6 +2,11 @@ $color-red: #a00;
 $color-white: #eeeeef;
 $color-black: #393333;
 
+// global
+$divider-color: $color-white;
+$global-color: black;
+$global-muted-color: rgba(black, .5);
+
 // nav header
 $header: $color-white;
 $header-light: lighten($header, 7%);
@@ -12,8 +17,8 @@ $header-divider-light: lighten($header-light, 5%);
 $header-search-bg: darken( $header, 10%);
 
 // block
-$block-title: white;
-$block-text: rgba($color-white, 0.75);
+$block-title: invert($global-color);
+$block-text: invert($global-muted-color);
 $block-content-bg: linear-gradient( bottom, rgba(black, .5) 0, rgba(black, .25) 15%,rgba(black, 0) 35% );
 
 // shows
@@ -23,26 +28,26 @@ $shows-open-bg: $shows-hover-bg;
 $shows-collapse-bg: $shows-open-bg;
 
 // news
-$news-list-divider: $color-white;
-$news-item-title-color: $color-black;
-$news-item-text-color: rgba($color-black, 0.45);
+$news-list-divider: $divider-color;
+$news-item-title-color: $global-color;
+$news-item-text-color: lighten($global-color, 50%);
 
 // campaigns
-$campaign-color: rgba($color-black, 0.75);
+$campaign-color: $global-color;
 $campaign-hover-color: rgba($color-black, 0.5);
 
 // footer
-$footer-title-color: $color-black;
-$footer-list-color: rgba($color-black, 0.6);
+$footer-title-color: $global-color;
+$footer-list-color: $global-muted-color;
 
 // video
-$video-title-color: rgba($color-black, 0.75);
+$video-title-color: $global-color;
 $video-play-icon-color: rgba(white, 0.75);
 $video-play-icon-bg-color: rgba(black, 0.5);
 $video-play-icon-hover-color: rgba(white, 0.95);
 $video-play-icon-hover-bg-color: rgba(black, 0.75);
 
 // pill-item
-$pill-list-divider-color: $color-white;
-$pill-list-link-color: rgba($color-black, 0.75);
-$pill-list-link-hover-color: rgba($color-black, 0.5);
+$pill-list-divider-color: $divider-color;
+$pill-list-link-color: $global-color;
+$pill-list-link-hover-color: lighten($global-color, 50%);

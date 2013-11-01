@@ -51,7 +51,7 @@
 
 .shows-collapse {
   display: none;
-  border-top: 1px solid rgba(black, .1);
+  border-top: 1px solid $divider-color;
   padding: ($base-line-height / 2);
   @include adjust-font-size-to(13px);
   > li {
