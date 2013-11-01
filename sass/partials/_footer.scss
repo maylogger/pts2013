@@ -1,13 +1,27 @@
 .footer {
   @include leader(2);
-  padding: rhythm(2) gutter($total_columns) 0;
   border-top: 1px solid #ddd;
+  @include padding-leader(2);
+}
+
+.footer-inner { // 控制此處的欄位在 _layout.scss 中
+  padding: 0 gutter($total_columns);
+  @include at-breakpoint($desktop) {
+
+    padding: 0;
+  }
 }
 
 
 .footer-nav-group {
   @include pie-clearfix;
   @include trailer(1);
+  @include at-breakpoint($desktop) {
+    padding: 0 gutter(12);
+  }
+  @include at-breakpoint($wide-desktop) {
+    padding: 0;
+  }
 }
 .footer-nav {
   float: left;
@@ -39,9 +53,14 @@
   clear: both;
   @include padding-trailer(1.5);
   text-align: center;
-  color: #777;
+  color: $copyright-color;
   @include adjust-font-size-to(13px, 2/3);
   span {
     white-space: nowrap;
+  }
+  @include at-breakpoint($desktop) {
+    @include padding-trailer(.5);
+    padding-right: gutter(12);
+    text-align: right;
   }
 }

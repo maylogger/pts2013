@@ -206,6 +206,11 @@ $off-canvas-shows-columns: 4;
     clear: both;
   }
 
+  // footer-inner 設定與 .off-canvas-main 一致
+  .footer-inner {
+    @include span-columns($off-canvas-main omega);
+  }
+
 }
 
 
@@ -236,5 +241,11 @@ $off-canvas-shows-columns: 4;
     padding-right: gutter($off-canvas-main); // off-canvas-main 的欄數
     padding-left: 0;
   }
+
+  // footer-inner 設定與 .off-canvas-main 一致
+  .footer-inner {
+    @include span-columns($off-canvas-main omega);
+  }
+
 
 }
