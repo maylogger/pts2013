@@ -10,13 +10,10 @@ $grid-background-baseline-height: $base-line-height;
 @import "normalize";
 @include establish-baseline;
 
-// colors
 @import "colors";
-
+@import "mixin";
+@import "typography";
 @import "layout";
-@import "baseline";
-
-@import "basic/basic";
 
 
 // partials
@@ -38,7 +35,14 @@ $grid-background-baseline-height: $base-line-height;
   -webkit-font-smoothing: antialiased;
 }
 
-// 手機版隱藏工具
+
+
+// 隱藏工具
+
+.hide {
+  display: none;
+}
+
 .hide-mobile {
   display: none;
 }
