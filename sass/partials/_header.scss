@@ -4,22 +4,41 @@
     @include unstyled-link;
     cursor: pointer;
   }
+  @include at-breakpoint($desktop) {
+    // position: absolute;
+    // top: 0;
+    // right: 100%;
+    // width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
+  }
 }
 
 .logo {
   text-align: center;
+  @include pie-clearfix;
   @include adjust-font-size-to(24px, 2);
+  padding: 6px 0;
   a {
-    display: inline;
+    display: block;
+    position: relative;
+    left: 50%;
+
+    @include replace-text-with-dimensions("logo-small.png");
+    margin-left: -52.5px;
+    background-image: none, image-url("logo-small.svg");
   }
   @include at-breakpoint($desktop) {
     @include adjust-font-size-to(30px, 4);
+    background-color: $header-logo-bg;
+    margin: 0 -5px;
+    padding: 24px 0;
     a {
-      height: auto;
       display: block;
-      margin: 0 -5px;
-    };
+      margin-left: -70px;
+      @include replace-text-with-dimensions("logo.png");
+      background-image: none, image-url("logo.svg");
+    }
   }
+
 }
 
 %header-btn {
