@@ -40,12 +40,13 @@ $ex-wide-desktop: $ex-wide-desktop-break $ex-wide-desktop-columns;
 //   @include at-breakpoint($wide-desktop) {
 //     @include susy-grid-background;
 //   }
-//   @include at-breakpoint($ex-wide-desktop) {
-//     @include susy-grid-background;
-//   }
 // }
 
 $container-style: fluid;
+
+body {
+  background-color: $body-bg;
+}
 
 .container {
   @include container($total-columns, $pad, $desktop, $wide-desktop, $ex-wide-desktop);
@@ -74,8 +75,9 @@ $off-canvas-shows-columns: 4;
   left: 0; // for firefox
   right: 0; // for firefox
   z-index: 2;
-  @include trailer(1);
+  @include padding-trailer(1);
   width: 100%;
+  background-color: $main-content-bg;
   @include transition( right .3s, left .3s );
   .show-menu & {
     left: space($off-canvas-menu-columns);
@@ -217,10 +219,8 @@ $off-canvas-shows-columns: 4;
 @include at-breakpoint($wide-desktop) {
 
   $off-canvas-menu-columns: 4;
-  $off-canvas-main: $total-columns - $off-canvas-menu-columns - 1;
-  $main-columns: 11;
-  $sidebar-columns: $off-canvas-main - $main-columns - 1;
-
+  $off-canvas-main: $total-columns - $off-canvas-menu-columns;
+  $sidebar-width: 260px;
   .off-canvas-menu {
     width: columns($off-canvas-menu-columns) + gutter($total_columns);
     float: left;
@@ -229,23 +229,28 @@ $off-canvas-shows-columns: 4;
     @include span-columns($off-canvas-main omega);
   }
   .header {
+    // right: 100% + space(1, $off-canvas-main);
     width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
   }
   .main {
-    @include span-columns($main-columns, $off-canvas-main);
+    width: 100%;
+    float: left;
     padding: 0;
+    margin-right: -$sidebar-width;
+  }
+  .main-inner {
+    padding: 0 space(1, $total_columns);
+    margin-right: $sidebar-width;
   }
   .sidebar {
-    @include padding-leader(1);
-    @include span-columns($sidebar-columns omega, $off-canvas-main);
-    padding-right: gutter($off-canvas-main); // off-canvas-main 的欄數
-    padding-left: 0;
+    float: right;
+    width: $sidebar-width;
+    padding: rhythm(1) gutter($off-canvas-main) 0 0;
   }
 
   // footer-inner 設定與 .off-canvas-main 一致
   .footer-inner {
     @include span-columns($off-canvas-main omega);
   }
-
 
 }

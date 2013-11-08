@@ -1,13 +1,13 @@
 .footer {
-  @include leader(2);
-  border-top: 1px solid #ddd;
   @include padding-leader(2);
 }
 
 .footer-inner { // 控制此處的欄位在 _layout.scss 中
   padding: 0 gutter($total_columns);
+  @include at-breakpoint($pad) {
+    padding: 0 gutter($total_columns);
+  }
   @include at-breakpoint($desktop) {
-
     padding: 0;
   }
 }
@@ -59,7 +59,6 @@
     white-space: nowrap;
   }
   @include at-breakpoint($desktop) {
-    @include padding-trailer(.5);
     padding-right: gutter(12);
     text-align: right;
   }

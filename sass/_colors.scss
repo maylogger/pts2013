@@ -7,6 +7,10 @@ $divider-color: $color-white;
 $global-color: black;
 $global-muted-color: rgba(black, .5);
 
+$body-bg: $color-white;
+$main-content-bg: white;
+
+
 // nav header
 $header: $color-white;
 $header-light: lighten($header, 7%);
@@ -15,6 +19,8 @@ $header-hover-text: rgba(black, .6);
 $header-divider: darken($color-black, 5%);
 $header-divider-light: lighten($header-light, 5%);
 $header-search-bg: darken( $header, 10%);
+$header-logo-bg: $main-content-bg;
+
 
 // block
 $block-title: invert($global-color);
