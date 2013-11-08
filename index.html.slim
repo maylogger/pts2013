@@ -1,33 +1,34 @@
 /! main
 .main
-  /! 節目列表選單
-  ul.shows#shows
-    = render "/shows"
-  /! 節目列表選單 end
-  /! 主要內容區
-  .content
-    /! hero
-    .hero
-      = render "/hero"
-    /! hero end
+  .main-inner
+    /! 節目列表選單
+    ul.shows#shows
+      = render "/shows"
+    /! 節目列表選單 end
+    /! 主要內容區
+    .content
+      /! hero
+      .hero
+        = render "/hero"
+      /! hero end
 
-    /! 現正播映
-    .now-playing.hide-desktop
-      = render "/partials/now-playing"
-    /! 現正播映 end
+      /! 現正播映
+      .now-playing.hide-desktop
+        = render "/partials/now-playing"
+      /! 現正播映 end
 
-    /! 影片區
-    .video-group
-      = render "/video-group"
+      /! 影片區
+      .video-group
+        = render "/video-group"
 
-    /! 影片區 end
+      /! 影片區 end
 
-    /! 公視新聞 & 公民新聞
-    .news-group
-      = render "/news"
-    /! 公視新聞 & 公民新聞 end
+      /! 公視新聞 & 公民新聞
+      .news-group
+        = render "/news"
+      /! 公視新聞 & 公民新聞 end
 
-  /! 主要內容區 end
+    /! 主要內容區 end
 
 /! main end
 
