@@ -1,5 +1,7 @@
 .shows {
   @include trailer(1);
+  opacity: 1;
+  @include transition(opacity .25s); // multiple: comma-delimited
   > li {
     border-bottom: {
       width: 1px;
@@ -47,7 +49,11 @@
     }
   }
 
-} // show end
+  .img-loading & {
+    opacity: 0;
+  }
+
+} // shows end
 
 .shows-collapse {
   display: none;

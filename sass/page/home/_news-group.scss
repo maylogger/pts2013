@@ -1,6 +1,11 @@
 .news-group {
   @include trailer(1);
+  opacity: 1;
+  @include transition(opacity .5s .75s); // multiple: comma-delimited
 
+  .img-loading & {
+    opacity: 0;
+  }
   .news {
     @include trailer(1);
     @include at-breakpoint($pad) {

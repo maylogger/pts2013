@@ -1,7 +1,8 @@
 .video-group {
   @include pie-clearfix;
   @include trailer(1);
-
+  opacity: 1;
+  @include transition(opacity .5s  .25s); // multiple: comma-delimited
   .video-group-title {
     @include trailer(.5);
     border-bottom: 2px solid $color-black;
@@ -33,5 +34,10 @@
       }
     }
   } // video end
+
+  .img-loading & {
+    opacity: 0;
+  }
+
 
 }

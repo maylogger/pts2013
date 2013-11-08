@@ -1,0 +1,106 @@
+.sidebar {
+  @include pie-clearfix;
+  opacity: 1;
+  @include transition(opacity .5s .5s); // multiple: comma-delimited
+
+  .img-loading & {
+    opacity: 0;
+  }
+}
+
+.sidebar-pills-item {
+
+  @include trailer(1);
+
+  @include at-breakpoint($pad) {
+    @include span-columns(6);
+    @include nth-omega(2n);
+  }
+
+  @include at-breakpoint($wide-desktop) {
+    width: auto;
+    float: none;
+    margin-right: 0;
+    &:nth-child(2n) {
+      width: auto;
+      float: none;
+    }
+  }
+
+  .nav-pills {
+    border-bottom: 2px solid $color-black;
+  }
+
+  // .nav-pills {
+  //   li {
+  //     @include at-breakpoint($pad) {
+  //       @include span-columns(4);
+  //       @include nth-omega(3n);
+  //       padding: 0;
+  //       border-bottom: 2px solid $color-black;
+  //       &.active a {
+  //         color: $color-black;
+  //         background-color: transparent;
+  //       }
+  //     }
+  //   }
+  //   a {
+  //     @include at-breakpoint($pad) {
+  //       padding: 0;
+  //       @include adjust-font-size-to(16px);
+  //       cursor: default;
+  //       &:hover {
+  //         background-color: transparent;
+  //       }
+  //     }
+  //   }
+  // }
+
+  // .pill-panel {
+  //   display: none;
+  //   &.active {
+  //     display: block;
+  //   }
+  //   @include at-breakpoint($pad) {
+  //     display: block;
+  //     @include span-columns(4);
+  //     @include nth-omega(3n);
+  //   }
+  // }
+
+
+
+  // @include at-breakpoint($wide-desktop) {
+  //   .nav-pills {
+  //     margin-top: 10px;
+  //     border-bottom: 2px solid $color-black;
+  //     li {
+  //       @include reset-columns;
+  //       float: left;
+  //       border-bottom: 0;
+  //       padding-bottom: 6px;
+  //       &:nth-child(3n) {
+  //         float: left;
+  //       }
+  //       &.active a {
+  //         color: $color-white;
+  //         background-color: $color-black;
+  //       }
+  //     }
+  //     a {
+  //         padding: 3px 12px;
+  //         @include adjust-font-size-to(13px);
+  //         cursor: pointer;
+  //         &:hover {
+  //           background-color: rgba(white, 0.7);
+  //       }
+  //     }
+  //   }
+
+
+  // }
+
+}
+
+
+

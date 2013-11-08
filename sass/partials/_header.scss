@@ -21,7 +21,6 @@
     display: block;
     position: relative;
     left: 50%;
-
     @include replace-text-with-dimensions("logo-small.png");
     margin-left: -52.5px;
     background-image: none, image-url("logo-small.svg");

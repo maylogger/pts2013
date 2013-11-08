@@ -30,3 +30,11 @@ $(document).click(function(){
   menuItem.removeClass('open');
   $(".container").removeClass("show-menu").removeClass("show-shows");
 });
+
+
+// imageloaded
+
+$('body').imagesLoaded().done( function( instance ) {
+  console.log('all images successfully loaded');
+  $('body').removeClass('img-loading');
+});

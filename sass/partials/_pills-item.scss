@@ -31,9 +31,13 @@
   }
 
   .pill-panel {
+    display: none;
     .more {
       // float: right;
       @include adjust-font-size-to(13px);
+    }
+    &.active {
+      display: block;
     }
   }
 
