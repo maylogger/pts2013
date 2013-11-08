@@ -410,6 +410,10 @@ img {
   margin-bottom: 24px;
 }
 
+body {
+  background-color: #eeeeef;
+}
+
 .container {
   padding-left: 0em;
   padding-right: 0em;
@@ -444,8 +448,9 @@ img {
   left: 0;
   right: 0;
   z-index: 2;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
   width: 100%;
+  background-color: white;
   -webkit-transition: right 0.3s, left 0.3s;
   -moz-transition: right 0.3s, left 0.3s;
   -o-transition: right 0.3s, left 0.3s;
@@ -595,33 +600,35 @@ img {
   }
 
   .off-canvas-main {
-    width: 75.96154%;
+    width: 80.76923%;
     float: right;
     margin-right: 0;
   }
 
   .header {
-    width: 25.01217%;
+    width: 23.58059%;
   }
 
   .main {
-    width: 68.35443%;
+    width: 100%;
     float: left;
-    margin-right: 1.26582%;
     padding: 0;
+    margin-right: -260px;
+  }
+
+  .main-inner {
+    padding: 0 4.80769%;
+    margin-right: 260px;
   }
 
   .sidebar {
-    padding-top: 24px;
-    width: 24.05063%;
     float: right;
-    margin-right: 0;
-    padding-right: 1.26582%;
-    padding-left: 0;
+    width: 260px;
+    padding: 24px 1.19048% 0 0;
   }
 
   .footer-inner {
-    width: 75.96154%;
+    width: 80.76923%;
     float: right;
     margin-right: 0;
   }
@@ -644,19 +651,48 @@ img {
   text-align: center;
   font-size: 24px;
   line-height: 48px;
+  padding: 6px 0;
+}
+.logo:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 .logo a {
-  display: inline;
+  display: block;
+  position: relative;
+  left: 50%;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/logo-small.png?1383892608');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 105px;
+  height: 36px;
+  margin-left: -52.5px;
+  background-image: none, url('/images/logo-small.svg?1383892531');
 }
 @media (min-width: 960px) {
   .logo {
     font-size: 30px;
     line-height: 96px;
+    background-color: white;
+    margin: 0 -5px;
+    padding: 24px 0;
   }
   .logo a {
-    height: auto;
     display: block;
-    margin: 0 -5px;
+    margin-left: -70px;
+    text-indent: -119988px;
+    overflow: hidden;
+    text-align: left;
+    background-image: url('/images/logo.png?1373857455');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 140px;
+    height: 48px;
+    background-image: none, url('/images/logo.svg?1373857303');
   }
 }
 
@@ -713,13 +749,16 @@ img {
 }
 
 .footer {
-  margin-top: 48px;
-  border-top: 1px solid #ddd;
   padding-top: 48px;
 }
 
 .footer-inner {
   padding: 0 3.44828%;
+}
+@media (min-width: 640px) {
+  .footer-inner {
+    padding: 0 1.69492%;
+  }
 }
 @media (min-width: 960px) {
   .footer-inner {
@@ -787,7 +826,6 @@ img {
 }
 @media (min-width: 960px) {
   .copyright {
-    padding-bottom: 12px;
     padding-right: 1.69492%;
     text-align: right;
   }
