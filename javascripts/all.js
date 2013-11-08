@@ -1,9 +1,11 @@
 $(".menu-btn").click(function(){
+  event.stopPropagation();
   $(".container").toggleClass("show-menu");
   return false;
 });
 
 $(".shows-btn").click(function(){
+  event.stopPropagation();
   $(".container").toggleClass("show-shows");
   return false;
 });
@@ -18,12 +20,13 @@ menuItem.click(function(event){
   menuItem.not(target).removeClass('open');
   target.toggleClass('open');
 });
-$(document).click(function(){
-  menuItem.removeClass('open');
-});
-
 
 // video-light-box
 $('.popup-youtube').magnificPopup({
   type: 'iframe'
+});
+
+$(document).click(function(){
+  menuItem.removeClass('open');
+  $(".container").removeClass("show-menu").removeClass("show-shows");
 });
