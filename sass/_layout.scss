@@ -226,17 +226,15 @@ $off-canvas-shows-columns: 4;
   .off-canvas-menu {
     width: $off-canvas-menu-width;
     float: left;
-    position: static;
-    z-index: 0;
   }
   .off-canvas-main {
-    position: static;
     width: 100%;
     float: right;
     margin-right: -$off-canvas-menu-width;
-    z-index: -1;
+    background-color: white;
   }
   .off-canvas-main-inner {
+    max-width: 1200px;
     position: relative;
     margin-right: $off-canvas-menu-width;
     @include pie-clearfix;
@@ -267,6 +265,7 @@ $off-canvas-shows-columns: 4;
     float: none;
     margin-left: $off-canvas-menu-width;
     width: auto;
+    max-width: 1200px;
   }
 
 }

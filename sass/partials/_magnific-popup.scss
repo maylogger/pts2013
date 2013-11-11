@@ -1,0 +1,6 @@
+.mfp-image-holder .mfp-close, .mfp-iframe-holder .mfp-close {
+  width: 44px;
+  &:focus {
+    outline: none;
+  }
+}
