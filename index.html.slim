@@ -34,61 +34,61 @@
 
 /! sidebar
 .sidebar
+  .sidebar-inner
+    /! 特殊 banner 區
+    .campaigns
+      = render "/campaigns"
+    /! 特殊 banner 區 end
 
-  /! 特殊 banner 區
-  .campaigns
-    = render "/campaigns"
-  /! 特殊 banner 區 end
+    /! 公告區
+    .sidebar-pills-item
+      .pills-item
+        ul.nav-pills
+          li.active: a href="#new-message" data-toggle="tab" 最新消息
+          li: a href="#change" data-toggle="tab" 節目異動
+          li: a href="#bidding" data-toggle="tab" 招標訊息
+        .pill-content
+          .pill-panel#new-message.active
+            ul.pill-panel-list
+              - 5.times do
+                li: a href="#"= zh_lorem_words( rand(5) + 15 )
+            a.more href="#" read more →
+          .pill-panel#change
+            ul.pill-panel-list
+              - 5.times do
+                li: a href="#"= zh_lorem_words( rand(5) + 15 )
+            a.more href="#" read more →
+          .pill-panel#bidding
+            ul.pill-panel-list
+              - 5.times do
+                li: a href="#"= zh_lorem_words( rand(5) + 15 )
+            a.more href="#" read more →
+    /! 公告區 end
 
-  /! 公告區
-  .sidebar-pills-item
-    .pills-item
-      ul.nav-pills
-        li.active: a href="#new-message" data-toggle="tab" 最新消息
-        li: a href="#change" data-toggle="tab" 節目異動
-        li: a href="#bidding" data-toggle="tab" 招標訊息
-      .pill-content
-        .pill-panel#new-message.active
-          ul.pill-panel-list
-            - 5.times do
-              li: a href="#"= zh_lorem_words( rand(5) + 15 )
-          a.more href="#" read more →
-        .pill-panel#change
-          ul.pill-panel-list
-            - 5.times do
-              li: a href="#"= zh_lorem_words( rand(5) + 15 )
-          a.more href="#" read more →
-        .pill-panel#bidding
-          ul.pill-panel-list
-            - 5.times do
-              li: a href="#"= zh_lorem_words( rand(5) + 15 )
-          a.more href="#" read more →
-  /! 公告區 end
-
-  /! 其他訊息區
-  .sidebar-pills-item
-    .pills-item
-      ul.nav-pills
-        li.active: a href="#shop" data-toggle="tab" 網路商城
-        li: a href="#sponsor-pts" data-toggle="tab" 贊助公視
-        li: a href="#friend" data-toggle="tab" 公視之友
-      .pill-content
-        .pill-panel#shop.active
-          ul.pill-panel-list
-            - 5.times do
-              li: a href="#"= zh_lorem_words( rand(5) + 15 )
-          a.more href="#" read more →
-        .pill-panel#sponsor-pts
-          ul.pill-panel-list
-            - 5.times do
-              li: a href="#"= zh_lorem_words( rand(5) + 15 )
-          a.more href="#" read more →
-        .pill-panel#friend
-          ul.pill-panel-list
-            - 5.times do
-              li: a href="#"= zh_lorem_words( rand(5) + 15 )
-          a.more href="#" read more →
-  /! 其他訊息區 end
+    /! 其他訊息區
+    .sidebar-pills-item
+      .pills-item
+        ul.nav-pills
+          li.active: a href="#shop" data-toggle="tab" 網路商城
+          li: a href="#sponsor-pts" data-toggle="tab" 贊助公視
+          li: a href="#friend" data-toggle="tab" 公視之友
+        .pill-content
+          .pill-panel#shop.active
+            ul.pill-panel-list
+              - 5.times do
+                li: a href="#"= zh_lorem_words( rand(5) + 15 )
+            a.more href="#" read more →
+          .pill-panel#sponsor-pts
+            ul.pill-panel-list
+              - 5.times do
+                li: a href="#"= zh_lorem_words( rand(5) + 15 )
+            a.more href="#" read more →
+          .pill-panel#friend
+            ul.pill-panel-list
+              - 5.times do
+                li: a href="#"= zh_lorem_words( rand(5) + 15 )
+            a.more href="#" read more →
+    /! 其他訊息區 end
 
 /! sidebar end
 

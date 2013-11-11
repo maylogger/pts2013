@@ -7,8 +7,9 @@ html lang="zh-TW"
       .off-canvas-menu
         = render "/partials/menu"
       .off-canvas-main
-        = render "/partials/header"
-        = yield
+        .off-canvas-main-inner
+          = render "/partials/header"
+          = yield
       = render "/partials/footer"
     = render "/html-foot"
     = render "/livereload-js"

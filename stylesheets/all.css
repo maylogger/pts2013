@@ -448,9 +448,7 @@ body {
   left: 0;
   right: 0;
   z-index: 2;
-  padding-bottom: 24px;
   width: 100%;
-  background-color: white;
   -webkit-transition: right 0.3s, left 0.3s;
   -moz-transition: right 0.3s, left 0.3s;
   -o-transition: right 0.3s, left 0.3s;
@@ -465,6 +463,11 @@ body {
   left: -68.96552%;
 }
 
+.off-canvas-main-inner {
+  padding-bottom: 24px;
+  background-color: white;
+}
+
 .shows {
   position: absolute;
   z-index: 1;
@@ -475,11 +478,7 @@ body {
 }
 
 .main {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   margin-bottom: 24px;
-  padding: 24px 3.44828% 0;
 }
 .main:after {
   content: "";
@@ -487,10 +486,11 @@ body {
   clear: both;
 }
 
-.sidebar {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+.main-inner {
+  padding: 24px 3.44828% 0;
+}
+
+.sidebar-inner {
   padding: 0 3.44828%;
 }
 
@@ -521,11 +521,11 @@ body {
     width: 33.89831%;
   }
 
-  .main {
+  .main-inner {
     padding: 24px 1.69492% 0;
   }
 
-  .sidebar {
+  .sidebar-inner {
     padding: 0 1.69492%;
   }
 }
@@ -561,11 +561,11 @@ body {
     width: 25.08016%;
   }
 
-  .main {
+  .main-inner {
     padding: 0 1.69492%;
   }
 
-  .sidebar {
+  .sidebar-inner {
     padding: 0 1.69492%;
   }
 
@@ -595,18 +595,32 @@ body {
 }
 @media (min-width: 1240px) {
   .off-canvas-menu {
-    width: 19.23077%;
+    width: 260px;
     float: left;
+    position: static;
+    z-index: 0;
   }
 
   .off-canvas-main {
-    width: 80.76923%;
+    position: static;
+    width: 100%;
     float: right;
-    margin-right: 0;
+    margin-right: -260px;
+    z-index: -1;
+  }
+
+  .off-canvas-main-inner {
+    position: relative;
+    margin-right: 260px;
+  }
+  .off-canvas-main-inner:after {
+    content: "";
+    display: table;
+    clear: both;
   }
 
   .header {
-    width: 23.58059%;
+    width: 260px;
   }
 
   .main {
@@ -624,13 +638,16 @@ body {
   .sidebar {
     float: right;
     width: 260px;
-    padding: 24px 1.19048% 0 0;
+  }
+
+  .sidebar-inner {
+    padding: 24px 12px 0 0;
   }
 
   .footer-inner {
-    width: 80.76923%;
-    float: right;
-    margin-right: 0;
+    float: none;
+    margin-left: 260px;
+    width: auto;
   }
 }
 .header a {
@@ -693,6 +710,11 @@ body {
     width: 140px;
     height: 48px;
     background-image: none, url('/images/logo.svg?1373857303');
+  }
+}
+@media (min-width: 1240px) {
+  .logo {
+    margin: 0;
   }
 }
 
@@ -1404,6 +1426,11 @@ body {
   content: "";
   display: table;
   clear: both;
+}
+@media (min-width: 640px) {
+  .hero {
+    background-position: 50% 45%;
+  }
 }
 .hero .block {
   margin-bottom: 3.44828%;

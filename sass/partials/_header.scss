@@ -4,12 +4,6 @@
     @include unstyled-link;
     cursor: pointer;
   }
-  @include at-breakpoint($desktop) {
-    // position: absolute;
-    // top: 0;
-    // right: 100%;
-    // width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
-  }
 }
 
 .logo {
@@ -25,6 +19,7 @@
     margin-left: -52.5px;
     background-image: none, image-url("logo-small.svg");
   }
+
   @include at-breakpoint($desktop) {
     @include adjust-font-size-to(30px, 4);
     background-color: $header-logo-bg;
@@ -36,6 +31,10 @@
       @include replace-text-with-dimensions("logo.png");
       background-image: none, image-url("logo.svg");
     }
+  }
+
+  @include at-breakpoint($wide-desktop) {
+    margin: 0;
   }
 
 }

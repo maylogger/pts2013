@@ -75,9 +75,7 @@ $off-canvas-shows-columns: 4;
   left: 0; // for firefox
   right: 0; // for firefox
   z-index: 2;
-  @include padding-trailer(1);
   width: 100%;
-  background-color: $main-content-bg;
   @include transition( right .3s, left .3s );
   .show-menu & {
     left: space($off-canvas-menu-columns);
@@ -87,6 +85,10 @@ $off-canvas-shows-columns: 4;
     right: space($off-canvas-menu-columns);
     left: - space($off-canvas-shows-columns);
   }
+}
+.off-canvas-main-inner {
+  @include padding-trailer(1);
+  background-color: $main-content-bg;
 }
 
 .shows {
@@ -105,13 +107,13 @@ $off-canvas-shows-columns: 4;
 
 .main {
   @include pie-clearfix;
-  @include box-sizing(border-box);
   @include trailer(1);
+}
+.main-inner {
   padding: $base-line-height gutter($total_columns) 0;
 }
 
-.sidebar {
-  @include box-sizing(border-box);
+.sidebar-inner {
   padding: 0 gutter($total_columns);
 }
 
@@ -147,11 +149,11 @@ $off-canvas-shows-columns: 4;
     width: columns($off-canvas-shows-columns) + gutter($total-columns);
   }
 
-  .main {
+  .main-inner {
     padding: $base-line-height gutter($total_columns) 0;
   }
 
-  .sidebar {
+  .sidebar-inner {
     padding: 0 gutter($total_columns);
   }
 
@@ -187,11 +189,11 @@ $off-canvas-shows-columns: 4;
     right: 100%;
     width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
   }
-  .main {
+
+  .main-inner {
     padding: 0 gutter($off-canvas-main);
-    // @include box-shadow(0 0 20px rgba(#000, 0.25) );
   }
-  .sidebar {
+  .sidebar-inner {
     padding: 0 gutter($off-canvas-main);
   }
 
@@ -218,19 +220,29 @@ $off-canvas-shows-columns: 4;
 
 @include at-breakpoint($wide-desktop) {
 
-  $off-canvas-menu-columns: 4;
-  $off-canvas-main: $total-columns - $off-canvas-menu-columns;
+  $off-canvas-menu-width: 260px;
   $sidebar-width: 260px;
+
   .off-canvas-menu {
-    width: columns($off-canvas-menu-columns) + gutter($total_columns);
+    width: $off-canvas-menu-width;
     float: left;
+    position: static;
+    z-index: 0;
   }
   .off-canvas-main {
-    @include span-columns($off-canvas-main omega);
+    position: static;
+    width: 100%;
+    float: right;
+    margin-right: -$off-canvas-menu-width;
+    z-index: -1;
+  }
+  .off-canvas-main-inner {
+    position: relative;
+    margin-right: $off-canvas-menu-width;
+    @include pie-clearfix;
   }
   .header {
-    // right: 100% + space(1, $off-canvas-main);
-    width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
+    width: 260px;
   }
   .main {
     width: 100%;
@@ -245,12 +257,16 @@ $off-canvas-shows-columns: 4;
   .sidebar {
     float: right;
     width: $sidebar-width;
-    padding: rhythm(1) gutter($off-canvas-main) 0 0;
+  }
+  .sidebar-inner {
+    padding: rhythm(1) 12px 0 0;
   }
 
   // footer-inner 設定與 .off-canvas-main 一致
   .footer-inner {
-    @include span-columns($off-canvas-main omega);
+    float: none;
+    margin-left: $off-canvas-menu-width;
+    width: auto;
   }
 
 }
