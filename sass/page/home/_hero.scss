@@ -3,6 +3,9 @@
   @include trailer(.5);
   background-repeat: no-repeat;
   background-position: 50% 7.5%;
+  @include at-breakpoint($pad) {
+    background-position: 50% 45%;
+  }
   // 統一控制 .block 的 margin-bottom
   .block {
     margin-bottom: gutter($total-columns);
