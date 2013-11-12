@@ -24,10 +24,6 @@ menuItem.click(function(event){
   target.toggleClass('open');
 });
 
-// video-light-box
-$('.popup-youtube').magnificPopup({
-  type: 'iframe'
-});
 
 $(document).click(function(){
   menuItem.removeClass('open');
@@ -43,34 +39,13 @@ $('body').imagesLoaded().done( function( instance ) {
 });
 
 
-// test
-$('.video').magnificPopup({
-  type: 'iframe',
-
-
-  iframe: {
-    patterns: {
-      dailymotion: {
-
-        index: 'dailymotion.com',
-
-        id: function(url) {
-            var m = url.match(/^.+dailymotion.com\/(video|hub)\/([^_]+)[^#]*(#video=([^_&]+))?/);
-            if (m !== null) {
-                if(m[4] !== undefined) {
-
-                    return m[4];
-                }
-                return m[2];
-            }
-            return null;
-        },
-
-        src: 'http://www.dailymotion.com/embed/video/%id%'
-
-      }
-    }
-  }
-
-
+// lightbox
+$('.open-popup-link').magnificPopup({
+  type:'inline',
+  midClick: true,
+  mainClass: 'custom-popup-class'
+  // Optionally pass markup without attaching it to DOM
+  /*items: {
+    src: '<div id="popup-with-something" class="mfp-hide"><div class="some-element">Instead of this element you may put anything else and it\'ll scale proportionally (e.g. flash embed object or your custom video player) </div></div>'
+  }*/
 });
