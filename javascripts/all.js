@@ -32,7 +32,6 @@ $(document).click(function(){
 
 
 // imageloaded
-
 $('body').imagesLoaded().done( function( instance ) {
   console.log('all images successfully loaded');
   $('body').removeClass('img-loading');

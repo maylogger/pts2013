@@ -1,8 +1,8 @@
 /! lightbox 影片儲存區 （將影片專區點擊後所彈出的影片標簽放置此處，並對應其 id 編號）
 .popup-video-group.hide
-  .mfp-hide.popup-video id="popup-video0"
-    embed.popup-video-content src="http://www.pts.org.tw/_flash/mediaplayer.swf" allowfullscreen="true" flashvars="&file=http://media.pts.org.tw/ptsvideo/20131101_to00.flv&image=http://media.pts.org.tw/ptsvideo/20131101_to00.jpg&showeq=true&autostart=false&repeat=false" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"
+  .popup-video id="popup-video0"
+    embed.popup-video-content src="http://www.pts.org.tw/_flash/mediaplayer.swf" allowfullscreen="true" flashvars="&file=http://media.pts.org.tw/ptsvideo/20131101_to00.flv&image=http://media.pts.org.tw/ptsvideo/20131101_to00.jpg&showeq=false&autostart=false&repeat=false" pluginspage="http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash"
   - 10.times do |i|
-    .mfp-hide.popup-video id="popup-video#{i+1}"
+    .popup-video id="popup-video#{i+1}"
       iframe.popup-video-content src="//www.youtube.com/embed/UswiAlNr5UM" frameborder="0"
 /! lightbox 影片儲存區 end
