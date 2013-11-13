@@ -12,15 +12,19 @@
   }
 }
 
-
 .footer-nav-group {
   @include pie-clearfix;
-  @include trailer(1);
+  @include trailer(1.5);
+  @include at-breakpoint($pad) {
+
+    // padding-bottom: rhythm(1);
+  }
   @include at-breakpoint($desktop) {
-    padding: 0 gutter(12);
+    // padding: 0 gutter(12);
+    padding: 0;
   }
   @include at-breakpoint($wide-desktop) {
-    padding: 0;
+
   }
 }
 .footer-nav {
@@ -32,7 +36,29 @@
     width: 18%;
     padding-right: 2%;
   }
-  @include at-breakpoint($desktop) {
+  .e-newsletter {
+    margin-top: 12px;
+    margin-right: -20px;
+    input {
+      float: left;
+      width: 65%;
+      @include adjust-font-size-to(13px, 2/3);
+      margin: 0;
+      border: 1px solid #ccc;
+      border-right: none;
+      padding: 3px 3px;
+      @include box-shadow(none);
+      @include border-radius(0px);
+    }
+    button {
+      float: left;
+      @include adjust-font-size-to(13px, 2/3);
+      border: 1px solid #ccc;
+      border-left: none;
+      padding: 3px 6px;
+      background-color: #ddd;
+      @include border-radius(0px);
+    }
   }
 }
 .footer-nav-title {
@@ -49,17 +75,49 @@
   }
 }
 
-.copyright {
-  clear: both;
-  @include padding-trailer(1.5);
-  text-align: center;
-  color: $copyright-color;
+.footer-meta {
+  @include pie-clearfix;
+  @include trailer(1);
   @include adjust-font-size-to(13px, 2/3);
-  span {
-    white-space: nowrap;
+  color: $footer-meta-color;
+
+  li {
+    text-align: center;
   }
-  @include at-breakpoint($desktop) {
-    padding-right: gutter(12);
-    text-align: right;
+
+  .company-info {
+    span {
+      display: block;
+    }
+    @include at-breakpoint($pad) {
+      span {
+        display: inline;
+        margin-left: .75em;
+      }
+    }
+    @include at-breakpoint($desktop) {
+      float: left;
+      clear: left;
+    }
   }
+
+  .copyright {
+    @include leader(.5);
+    @include at-breakpoint($pad) {
+      padding-right: 12px;
+    }
+    @include at-breakpoint($desktop) {
+      @include leader(0);
+      float: right;
+      margin-left: 2em;
+    }
+    @include at-breakpoint($wide-desktop) {
+    }
+    span {
+      white-space: nowrap;
+    }
+  }
+
 }
+
+
