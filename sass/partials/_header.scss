@@ -64,17 +64,18 @@
   }
 }
 
-.menu-btn {
-  @extend %header-btn;
-  left: 0;
-  .show-menu & {
-    padding-right: 3em;
-    background: rgba(black, .1);
-  }
-  .icon {
-    margin-right: 2px;
-  }
-}
+// 暫時保留
+// .menu-btn {
+//   @extend %header-btn;
+//   left: 0;
+//   .show-menu & {
+//     padding-right: 3em;
+//     background: rgba(black, .1);
+//   }
+//   .icon {
+//     margin-right: 2px;
+//   }
+// }
 
 .shows-btn {
   @extend %header-btn;
@@ -88,14 +89,49 @@
   }
 }
 
-// 暫時先留著
-// .menu-btn-bar {
-//   $margin-width: 6px;
-//   display: block;
-//   height: 2px;
-//   background-color: $header-text;
-//   & + & {
-//     margin-top: $margin-width;
-//   }
-//   @include box-shadow( 0 1px 0 rgba(black, .5) );
-// }
+.menu-btn {
+  $menu-btn-width: 48px;
+  $menu-btn-height: 48px;
+  @extend %header-btn;
+  left: 0;
+  width: $menu-btn-width;
+  height: $menu-btn-height;
+  .show-menu & {
+    background: rgba(black, .1);
+  }
+}
+.menu-btn-bar {
+  $menu-btn-bar-width: 50%;
+  $margin-width: 6px;
+  display: block;
+  width: $menu-btn-bar-width;
+  height: 2px;
+  margin: auto;
+  background-color: $header-text;
+  @include transition(transform .5s, opacity .5s);
+  opacity: 1;
+  & + & {
+    margin-top: $margin-width;
+  }
+  @include box-shadow( 0 1px 0 rgba(black, .5) );
+  .show-menu & {
+    &:first-child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -1px 0 0 (-$menu-btn-bar-width/2);
+      @include transform( rotate(45deg) );
+    }
+    &:last-child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -1px 0 0 (-$menu-btn-bar-width/2);
+      @include transform( rotate(-45deg) );
+    }
+    &:nth-child(2n) {
+      opacity: 0;
+    }
+  }
+
+}
