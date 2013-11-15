@@ -3,7 +3,10 @@ $(".menu-btn").click(function(){
   $(".container").toggleClass("show-menu");
   return false;
 });
-
+$(".off-canvas-menu").click(function(){
+  event.stopPropagation();
+  return false;
+});
 $(".shows-btn").click(function(){
   event.stopPropagation();
   $(".container").toggleClass("show-shows");
@@ -21,10 +24,6 @@ menuItem.click(function(event){
   target.toggleClass('open');
 });
 
-// video-light-box
-$('.popup-youtube').magnificPopup({
-  type: 'iframe'
-});
 
 $(document).click(function(){
   menuItem.removeClass('open');
@@ -33,8 +32,19 @@ $(document).click(function(){
 
 
 // imageloaded
-
 $('body').imagesLoaded().done( function( instance ) {
   console.log('all images successfully loaded');
   $('body').removeClass('img-loading');
+});
+
+
+// lightbox
+$('.open-popup-link').magnificPopup({
+  type:'inline',
+  midClick: true,
+  mainClass: 'custom-popup-class'
+  // Optionally pass markup without attaching it to DOM
+  /*items: {
+    src: '<div id="popup-with-something" class="mfp-hide"><div class="some-element">Instead of this element you may put anything else and it\'ll scale proportionally (e.g. flash embed object or your custom video player) </div></div>'
+  }*/
 });

@@ -1,6 +1,11 @@
 .content {
   .now-playing {
     @include trailer(1);
+    opacity: 1;
+    @include transition(opacity .5s ease-in); // multiple: comma-delimited
+    .img-loading & {
+      opacity: 0;
+    }
   }
   .now-playing-title {
     border-bottom: 2px solid $color-black;

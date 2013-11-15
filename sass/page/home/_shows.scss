@@ -35,7 +35,7 @@
   }
 
   @include at-breakpoint($desktop) {
-    float: right;
+    float: left;
     > li {
       float: left;
       position: relative;
@@ -70,14 +70,6 @@
       opacity: 0.75;
     }
   }
-  time {
-    color: #a00;
-    display: inline;
-    margin-right: 6px;
-  }
-  .show {
-    display: inline;
-  }
   .open & {
     display: block;
   }
@@ -89,7 +81,7 @@
     z-index: 2;
     margin: 0;
     border-top: 0;
-    padding: 16px 24px;
+    padding: 16px 20px;
     background-color: $shows-collapse-bg;
     &.pull-right {
       left: auto;
