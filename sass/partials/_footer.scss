@@ -1,30 +1,8 @@
-.footer {
-  @include padding-leader(2);
-}
-
-.footer-inner { // 控制此處的欄位在 _layout.scss 中
-  padding: 0 gutter($total_columns);
-  @include at-breakpoint($pad) {
-    padding: 0 gutter($total_columns);
-  }
-  @include at-breakpoint($desktop) {
-    padding: 0;
-  }
-}
-
 .footer-nav-group {
   @include pie-clearfix;
   @include trailer(1.5);
-  @include at-breakpoint($pad) {
-
-    // padding-bottom: rhythm(1);
-  }
   @include at-breakpoint($desktop) {
-    // padding: 0 gutter(12);
     padding: 0;
-  }
-  @include at-breakpoint($wide-desktop) {
-
   }
 }
 .footer-nav {
@@ -35,30 +13,6 @@
   @include at-breakpoint($pad) {
     width: 18%;
     padding-right: 2%;
-  }
-  .e-newsletter {
-    margin-top: 12px;
-    margin-right: -20px;
-    input {
-      float: left;
-      width: 65%;
-      @include adjust-font-size-to(13px, 2/3);
-      margin: 0;
-      border: 1px solid #ccc;
-      border-right: none;
-      padding: 3px 3px;
-      @include box-shadow(none);
-      @include border-radius(0px);
-    }
-    button {
-      float: left;
-      @include adjust-font-size-to(13px, 2/3);
-      border: 1px solid #ccc;
-      border-left: none;
-      padding: 3px 6px;
-      background-color: #ddd;
-      @include border-radius(0px);
-    }
   }
 }
 .footer-nav-title {
@@ -74,6 +28,31 @@
     color: $footer-list-color;
   }
 }
+// 訂閱電子報
+.e-newsletter {
+  margin-top: 12px;
+  margin-right: -20px;
+  input {
+    float: left;
+    width: 65%;
+    @include adjust-font-size-to(13px, 2/3);
+    margin: 0;
+    border: 1px solid #ccc;
+    border-right: none;
+    padding: 3px 3px;
+    @include box-shadow(none);
+    @include border-radius(0px);
+  }
+  button {
+    float: left;
+    @include adjust-font-size-to(13px, 2/3);
+    border: 1px solid #ccc;
+    border-left: none;
+    padding: 3px 6px;
+    background-color: #ddd;
+    @include border-radius(0px);
+  }
+} // 訂閱電子報 end
 
 .footer-meta {
   @include pie-clearfix;

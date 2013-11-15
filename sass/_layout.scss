@@ -99,11 +99,7 @@ $off-canvas-shows-columns: 4;
   left: 100%;
   width: columns($off-canvas-shows-columns) + gutter($total-columns);
 }
-
 // end off-canvas
-
-.header {
-}
 
 .main {
   @include pie-clearfix;
@@ -124,6 +120,10 @@ $off-canvas-shows-columns: 4;
 .footer {
   min-height: 100px;
   clear: both;
+  @include padding-leader(2);
+}
+.footer-inner {
+  padding: 0 gutter($total_columns);
 }
 
 
@@ -154,6 +154,10 @@ $off-canvas-shows-columns: 4;
   }
 
   .sidebar-inner {
+    padding: 0 gutter($total_columns);
+  }
+
+  .footer-inner {
     padding: 0 gutter($total_columns);
   }
 
@@ -213,6 +217,7 @@ $off-canvas-shows-columns: 4;
   // footer-inner 設定與 .off-canvas-main 一致
   .footer-inner {
     @include span-columns($off-canvas-main omega);
+    padding: 0;
   }
 
 }
@@ -222,6 +227,7 @@ $off-canvas-shows-columns: 4;
 
   $off-canvas-menu-width: 260px;
   $sidebar-width: 260px;
+  $inner-max-width: 1200px;
 
   .off-canvas-menu {
     width: $off-canvas-menu-width;
@@ -234,13 +240,13 @@ $off-canvas-shows-columns: 4;
     background-color: white;
   }
   .off-canvas-main-inner {
-    max-width: 1200px;
+    max-width: $inner-max-width;
     position: relative;
     margin-right: $off-canvas-menu-width;
     @include pie-clearfix;
   }
   .header {
-    width: 260px;
+    width: $off-canvas-menu-width;
   }
   .main {
     width: 100%;
@@ -265,7 +271,7 @@ $off-canvas-shows-columns: 4;
     float: none;
     margin-left: $off-canvas-menu-width;
     width: auto;
-    max-width: 1200px;
+    max-width: $inner-max-width;
   }
 
 }
