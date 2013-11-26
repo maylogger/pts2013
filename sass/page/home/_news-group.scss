@@ -17,9 +17,9 @@
 
   .news-title {
     $border-bottom-width: 2px;
-    border-bottom: $border-bottom-width solid $color-black;
+    border-bottom: $border-bottom-width solid $pts-color-blue;
     a {
-      @include adjust-font-size-to(16px);
+      @include adjust-font-size-to(18px);
       color: $color-black;
       &:hover {
         text-decoration: none;

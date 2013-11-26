@@ -1,0 +1,23 @@
+.states-bar {
+	width: 100%;
+	@include box-shadow(0 1px 3px rgba(black, .25));
+	&.normal { 
+		border-bottom: 1px solid lighten($pts-color-blue, 10%);
+		background: $pts-color-blue; 
+	}
+	&.important { 
+		border-bottom: 1px solid lighten($pts-color-red, 10%);
+		background: $pts-color-red; 
+	}
+	&.warning { 
+		border-bottom: 1px solid lighten($pts-color-yellow, 10%);
+		background: $pts-color-yellow; 
+	}
+	&.warning .info { color: $color-black; }
+	.info {
+		padding: 0 12px;
+		@include adjust-font-size-to(12px, 1.2);
+		@include ellipsis;
+		color: white;
+	}
+}

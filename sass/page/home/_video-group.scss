@@ -5,8 +5,8 @@
   @include transition(opacity .5s  .25s); // multiple: comma-delimited
   .video-group-title {
     @include trailer(.5);
-    border-bottom: 2px solid $color-black;
-    @include adjust-font-size-to(16px);
+    border-bottom: 2px solid $pts-color-blue;
+    @include adjust-font-size-to(18px);
     a {
       color: $color-black;
       @include unstyled-link;

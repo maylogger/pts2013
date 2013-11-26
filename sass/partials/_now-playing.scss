@@ -10,7 +10,8 @@
       padding: 0 $base-line-height / 2;
       @include padding-leader($padding);
       @include padding-trailer($padding);
-      margin-top: -1px;
+      @extend %tile;
+      margin-top: 0;
     }
     li + li {
       @include leading-border(1px, $padding);

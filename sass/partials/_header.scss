@@ -24,8 +24,8 @@
 
   @include at-breakpoint($desktop) {
     @include adjust-font-size-to(30px, 4);
-    background-color: $header-logo-bg;
-    margin: 0 -5px;
+    background-color: #FAFAFA;
+    margin: 0px;
     padding: 24px 0;
     a {
       top: 0;

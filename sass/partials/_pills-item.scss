@@ -9,20 +9,20 @@
 
     li {
       float: left;
-      padding-bottom: 6px;
+      // padding-bottom: 6px;
       // pill 被選取時的樣式
       &.active a {
         color: $color-white;
-        background-color: $color-black;
+        background-color: $pts-color-blue;
       }
     }
 
     a {
       display: block;
-      padding: 3px 12px;
+      padding: 3px 12px 1px 12px;
       @include adjust-font-size-to(13px);
       color: $color-black;
-      @include border-radius(5px);
+      @include border-radius(3px 3px 0 0);
       &:hover {
         text-decoration: none;
         background-color: $color-white;

@@ -50,6 +50,7 @@ body {
 
 .container {
   @include container($total-columns, $pad, $desktop, $wide-desktop, $ex-wide-desktop);
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -263,7 +264,7 @@ $off-canvas-shows-columns: 4;
     width: $sidebar-width;
   }
   .sidebar-inner {
-    padding: rhythm(3) 12px 0 0;
+    padding: rhythm(4) 12px 0 0;
   }
 
   // footer-inner 設定與 .off-canvas-main 一致

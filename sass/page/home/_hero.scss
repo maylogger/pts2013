@@ -73,6 +73,7 @@
   .block-content {
     position: static;
     padding: 0;
+    @include text-shadow(none); // multiple: comma-delimited
   }
   .block-title {
     @include adjust-font-size-to(14px, 5/6);
