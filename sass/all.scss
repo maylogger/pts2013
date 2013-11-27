@@ -27,6 +27,7 @@ $grid-background-baseline-height: $base-line-height;
 @import "partials/news-item";
 @import "partials/pills-item";
 @import "partials/states-bar";
+@import "partials/gsc-custom";
 
 @import "page";
 
@@ -36,6 +37,9 @@ $grid-background-baseline-height: $base-line-height;
   -webkit-font-smoothing: antialiased;
 }
 
+%subpixel {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
 
 
 // 隱藏工具

@@ -82,7 +82,7 @@
   right: 0;
   .show-shows & {
     padding-left: 3em;
-    background: rgba(black, .1);
+    background: $pts-color-yellow;
   }
   .icon {
     margin-left: 2px;
@@ -97,7 +97,7 @@
   width: $menu-btn-width;
   height: $menu-btn-height;
   .show-menu & {
-    background: rgba(black, .1);
+    background: $pts-color-yellow;
   }
 }
 .menu-btn-bar {

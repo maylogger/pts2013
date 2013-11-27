@@ -63,4 +63,4 @@ $pill-list-link-hover-color: lighten($global-color, 50%);
 // pts ci color
 $pts-color-red: #EC1C24;
 $pts-color-blue: #034EA2;
-$pts-color-yellow: #FAA74A;
+$pts-color-yellow: lighten(#FAA74A, 5%);

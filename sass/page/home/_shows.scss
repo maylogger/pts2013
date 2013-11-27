@@ -8,7 +8,6 @@
       style: solid;
     }
     @extend %tile; // 引用 _off-canvas-menu 內的 %tile
-    @include box-shadow(none);
   }
 
   .shows-title {
@@ -19,7 +18,8 @@
     line-height: rhythm(2) - $border-size;
     padding: 0 $base-line-height / 2;
     color: $shows-link-color;
-    @include transition( all .2s );
+    cursor: pointer;
+    @include transition( background .2s );
     &:after {
       content: "▾";
       float: right;
@@ -29,24 +29,50 @@
       text-decoration: none;
     }
   } // shows-title end
-
   > .open > .shows-title {
-    background-color: $shows-hover-bg;
+    color: $color-white;
+    line-height: rhythm(2);
+    background-color: $pts-color-blue;
   }
 
   @include at-breakpoint($desktop) {
     @include leader(1);
     float: left;
+    width: 120%;
     > li {
       float: left;
       position: relative;
+      border-bottom-color: transparent;
     }
     .shows-title {
+      line-height: rhythm(2);
       @include transition(none);
-      padding: 0 8px;
+      padding: 0 12px;
       &:after {
         margin-left: 6px;
+      }  
+    }
+    > .open > .shows-title {
+      line-height: rhythm(2);
+      color: $color-white;
+      background-color: $pts-color-blue;
+    }
+    > .open .shows-collapse {
+      background-color: $pts-color-blue; 
+    }
+    > .open .shows-collapse .show {
+      &:hover {
+        color: $color-black;
+        opacity: 1;
+        background: $pts-color-yellow;
       }
+      &:hover a {
+        color: $color-black;
+        opacity: 1;
+      }
+    }
+    > .open .shows-collapse .show a {
+      color: $color-white;
     }
   }
 
@@ -60,7 +86,7 @@
   display: none;
   border-top: 1px solid $divider-color;
   padding: ($base-line-height / 2);
-  @include adjust-font-size-to(13px);
+  @include adjust-font-size-to(13px, 1.25);
   > li {
     @include ellipsis;
   }
@@ -80,14 +106,20 @@
     top: 100%;
     left: 0;
     z-index: 2;
-    margin: 0;
+    margin: -8px 0 0 0;
     border-top: 0;
-    padding: 16px 20px;
+    padding: 8px 12px;
     background-color: $shows-collapse-bg;
     &.pull-right {
       left: auto;
       right: 0;
     }
+  @include at-breakpoint($wide-desktop) {
+    &.pull-right {
+      left: 0;
+      right: auto;
+    }
+  }
   }
 
 } // show-collapse end

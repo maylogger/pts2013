@@ -64,7 +64,6 @@ $off-canvas-shows-columns: 4;
   top: 0;
   left: 0;
   width: columns($off-canvas-menu-columns) + gutter($total-columns);
-  height: 100%;
   @include transition( right .3s, left .3s );
   .show-shows & {
     left: -100%;

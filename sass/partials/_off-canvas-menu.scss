@@ -31,9 +31,9 @@
       border: 0;
       padding-left: $base-line-height / 2;
       padding-right: 36px;
-      @include input-placeholder-color( #999 );
+      @include input-placeholder-color( #CCC );
       color: white;
-      background-color: rgba(black, .5);
+      background-color: $pts-color-blue;
       &:focus {
         outline: none;
       }
@@ -123,10 +123,10 @@
   .pts2, .pts-hd {
     position: relative;
     a {
-      max-width: 80px;
+      max-width: 70px;
       width: 100%;
       height: auto;
-      margin: rhythm(1) auto;
+      margin: rhythm(.5) auto rhythm(.4) auto;
       padding: 0;
       display: block;
       @include hide-text;
