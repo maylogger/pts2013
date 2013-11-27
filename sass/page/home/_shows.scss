@@ -61,18 +61,20 @@
       background-color: $pts-color-blue; 
     }
     > .open .shows-collapse .show {
+      margin: 0 -12px;
+      padding: 0 12px;
+    }
+    > .open .shows-collapse .show a {
+      margin: 0 -12px;
+      padding: 0 12px;
+      display: block;
+      color: $color-white;
+      @include adjust-font-size-to(13px, 1.25);
       &:hover {
         color: $color-black;
         opacity: 1;
         background: $pts-color-yellow;
       }
-      &:hover a {
-        color: $color-black;
-        opacity: 1;
-      }
-    }
-    > .open .shows-collapse .show a {
-      color: $color-white;
     }
   }
 
@@ -108,7 +110,7 @@
     z-index: 2;
     margin: -8px 0 0 0;
     border-top: 0;
-    padding: 8px 12px;
+    padding: 4px 12px;
     background-color: $shows-collapse-bg;
     &.pull-right {
       left: auto;

@@ -1726,17 +1726,22 @@ label.footer-nav-title {
   .shows > .open .shows-collapse {
     background-color: #034ea2;
   }
-  .shows > .open .shows-collapse .show:hover {
+  .shows > .open .shows-collapse .show {
+    margin: 0 -12px;
+    padding: 0 12px;
+  }
+  .shows > .open .shows-collapse .show a {
+    margin: 0 -12px;
+    padding: 0 12px;
+    display: block;
+    color: #eeeeef;
+    font-size: 13px;
+    line-height: 30px;
+  }
+  .shows > .open .shows-collapse .show a:hover {
     color: #393333;
     opacity: 1;
     background: #fbb363;
-  }
-  .shows > .open .shows-collapse .show:hover a {
-    color: #393333;
-    opacity: 1;
-  }
-  .shows > .open .shows-collapse .show a {
-    color: #eeeeef;
   }
 }
 .img-loading .shows {
@@ -1775,7 +1780,7 @@ label.footer-nav-title {
     z-index: 2;
     margin: -8px 0 0 0;
     border-top: 0;
-    padding: 8px 12px;
+    padding: 4px 12px;
     background-color: #eeeeef;
   }
   .shows-collapse.pull-right {
