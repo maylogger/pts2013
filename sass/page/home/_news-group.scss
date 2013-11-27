@@ -17,13 +17,23 @@
 
   .news-title {
     $border-bottom-width: 2px;
-    border-bottom: $border-bottom-width solid $pts-color-blue;
-    a {
-      @include adjust-font-size-to(18px);
+    padding: rhythm(.5) 0;
+    border-bottom: 2px solid $pts-color-blue;
+    &.pts-news a {
+      display: block;
       color: $color-black;
-      &:hover {
-        text-decoration: none;
-      }
+      @include unstyled-link;
+      @include replace-text-with-dimensions("pts-news.png");
+      background-image: none, image-url("pts-news.svg");
+      cursor: pointer;
+    }
+    &.citizen-news a {
+      display: block;
+      color: $color-black;
+      @include unstyled-link;
+      @include replace-text-with-dimensions("citizen-news.png");
+      background-image: none, image-url("citizen-news.svg");
+      cursor: pointer;
     }
   }
 

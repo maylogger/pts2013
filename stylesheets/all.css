@@ -569,7 +569,7 @@ body {
     position: absolute;
     top: 0;
     right: 100%;
-    width: 25.08016%;
+    width: 26%;
   }
 
   .main-inner {
@@ -1998,16 +1998,27 @@ label.footer-nav-title {
   clear: both;
 }
 .video-group .video-group-title {
-  margin-bottom: 12px;
-  border-bottom: 2px solid #034ea2;
+  margin-top: 48px;
+  margin-bottom: 24px;
+  border-bottom: none;
   font-size: 18px;
   line-height: 24px;
 }
 .video-group .video-group-title a {
+  display: block;
   color: #393333;
   color: inherit;
   text-decoration: inherit;
   cursor: inherit;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/videos.png?1385536014');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 200px;
+  height: 50px;
+  background-image: none, url('/images/videos.svg?1385566948');
   cursor: pointer;
 }
 .video-group .video-group-title a:active, .video-group .video-group-title a:focus {
@@ -2067,15 +2078,48 @@ label.footer-nav-title {
   }
 }
 .news-group .news-title {
+  padding: 12px 0;
   border-bottom: 2px solid #034ea2;
 }
-.news-group .news-title a {
-  font-size: 18px;
-  line-height: 24px;
+.news-group .news-title.pts-news a {
+  display: block;
   color: #393333;
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/pts-news.png?1385536288');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 200px;
+  height: 50px;
+  background-image: none, url('/images/pts-news.svg?1385566945');
+  cursor: pointer;
 }
-.news-group .news-title a:hover {
-  text-decoration: none;
+.news-group .news-title.pts-news a:active, .news-group .news-title.pts-news a:focus {
+  outline: none;
+}
+.news-group .news-title.citizen-news a {
+  display: block;
+  color: #393333;
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/citizen-news.png?1385536312');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 200px;
+  height: 50px;
+  background-image: none, url('/images/citizen-news.svg?1385566946');
+  cursor: pointer;
+}
+.news-group .news-title.citizen-news a:active, .news-group .news-title.citizen-news a:focus {
+  outline: none;
 }
 .news-group .more {
   display: inline-block;
