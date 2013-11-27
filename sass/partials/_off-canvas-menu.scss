@@ -87,7 +87,7 @@
         line-height: rhythm(1.5) - $border-size;
       }
       &:after {
-        content: "→";
+        content: "▸";
         float: right;
         position: relative;
         right: -2em;
@@ -108,7 +108,7 @@
         width: 50%;
         float: left;
         overflow: hidden; 
-        @include box-sizing(border-box);;
+        @include box-sizing(border-box);
         @extend %tile;
       }
       li:first-child {

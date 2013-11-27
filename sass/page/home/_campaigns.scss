@@ -9,9 +9,6 @@
   color: $campaign-color;
   background-repeat: no-repeat;
   background-position: center;
-  &:nth-child(2n) {
-    margin-right: 0;
-  }
   &:hover {
     color: $campaign-hover-color;
     text-decoration: none;
