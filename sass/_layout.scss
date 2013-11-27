@@ -121,6 +121,8 @@ $off-canvas-shows-columns: 4;
 .footer {
   min-height: 100px;
   clear: both;
+  position: relative;
+  z-index: 3;
   @include padding-leader(2);
 }
 .footer-inner {
