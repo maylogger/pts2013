@@ -25,12 +25,11 @@
       float: right;
     }
     &:hover {
-      background-color: $shows-hover-bg;
       text-decoration: none;
     }
   } // shows-title end
   > .open > .shows-title {
-    color: $shows-link-color;
+    color: $shows-title-color;
     line-height: rhythm(2);
     background-color: $shows-open-bg;
   }

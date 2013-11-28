@@ -37,9 +37,10 @@ $block-text: darken(white, 15%);
 $block-content-bg: linear-gradient( bottom, rgba(black, .5) 0, rgba(black, .25) 15%,rgba(black, 0) 35% );
 
 // shows
+$shows-title-color: $color-white;
 $shows-link-color: $color-black;
-$shows-hover-bg: $pts-color-superlightblue;
-$shows-open-bg: $shows-hover-bg;
+$shows-hover-bg: $pts-color-lightblue3;
+$shows-open-bg: $pts-color-blue;
 $shows-collapse-bg: $shows-open-bg;
 
 // news

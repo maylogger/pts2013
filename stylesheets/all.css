@@ -1686,13 +1686,12 @@ label.footer-nav-title {
   float: right;
 }
 .shows .shows-title:hover {
-  background-color: #e8eef6;
   text-decoration: none;
 }
 .shows > .open > .shows-title {
-  color: #393333;
+  color: #eeeeef;
   line-height: 48px;
-  background-color: #e8eef6;
+  background-color: #034ea2;
 }
 @media (min-width: 960px) {
   .shows {
@@ -1779,7 +1778,7 @@ label.footer-nav-title {
     margin: -8px 0 0 0;
     border-top: 0;
     padding: 4px 12px;
-    background-color: #e8eef6;
+    background-color: #034ea2;
   }
   .shows-collapse.pull-right {
     left: auto;
