@@ -193,8 +193,8 @@ $off-canvas-shows-columns: 4;
     position: absolute;
     top: 0;
     right: 100%;
-    // width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
-    width: 26%;
+    width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
+    // width: 26%;
   }
 
   .main-inner {
