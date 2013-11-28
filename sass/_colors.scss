@@ -2,6 +2,11 @@ $color-red: #a00;
 $color-white: #eeeeef;
 $color-black: #393333;
 
+// pts ci color
+$pts-color-red: #EC1C24;
+$pts-color-blue: #034EA2;
+$pts-color-yellow: lighten(#FAA74A, 5%);
+
 // global
 $divider-color: $color-white;
 $global-color: black;
@@ -60,7 +65,3 @@ $pill-list-divider-color: $divider-color;
 $pill-list-link-color: $global-color;
 $pill-list-link-hover-color: lighten($global-color, 50%);
 
-// pts ci color
-$pts-color-red: #EC1C24;
-$pts-color-blue: #034EA2;
-$pts-color-yellow: lighten(#FAA74A, 5%);
