@@ -695,13 +695,13 @@ body {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/logo-small.png?1384762449');
+  background-image: url('/images/logo-small.png?1383901907');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 105px;
   height: 36px;
   margin-left: -52.5px;
-  background-image: none, url('/images/logo-small.svg?1384762449');
+  background-image: none, url('/images/logo-small.svg?1383901907');
 }
 @media (min-width: 960px) {
   .logo {
@@ -717,12 +717,12 @@ body {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/logo.png?1384762449');
+    background-image: url('/images/logo.png?1383901907');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 140px;
     height: 48px;
-    background-image: none, url('/images/logo.svg?1384762449');
+    background-image: none, url('/images/logo.svg?1383901907');
   }
 }
 @media (min-width: 1240px) {
@@ -1251,14 +1251,14 @@ label.footer-nav-title {
   padding-left: 0;
 }
 .main-navigation .pts2 a {
-  background: url('/images/logo-pts2.png?1385568998') 50% 50% no-repeat;
+  background: url('/images/logo-pts2.png?1385632593') 50% 50% no-repeat;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
   background-size: contain;
 }
 .main-navigation .pts-hd a {
-  background: url('/images/logo-pts-hd.png?1385568990') 50% 50% no-repeat;
+  background: url('/images/logo-pts-hd.png?1385632593') 50% 50% no-repeat;
   -webkit-background-size: contain;
   -moz-background-size: contain;
   -o-background-size: contain;
@@ -1984,7 +1984,6 @@ label.footer-nav-title {
 }
 
 .video-group {
-  margin-bottom: 24px;
   opacity: 1;
   -webkit-transition: opacity 0.5s;
   -webkit-transition-delay: 0.25s;
@@ -2013,12 +2012,12 @@ label.footer-nav-title {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/videos.png?1385536014');
+  background-image: url('/images/videos.png?1385632593');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 200px;
   height: 50px;
-  background-image: none, url('/images/videos.svg?1385566948');
+  background-image: none, url('/images/videos.svg?1385632593');
   cursor: pointer;
 }
 .video-group .video-group-title a:active, .video-group .video-group-title a:focus {
@@ -2078,7 +2077,7 @@ label.footer-nav-title {
   }
 }
 .news-group .news-title {
-  padding: 12px 0;
+  padding: 48px 0 24px;
   border-bottom: 2px solid #034ea2;
 }
 .news-group .news-title.pts-news a {
@@ -2090,12 +2089,12 @@ label.footer-nav-title {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/pts-news.png?1385536288');
+  background-image: url('/images/pts-news.png?1385632593');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 200px;
   height: 50px;
-  background-image: none, url('/images/pts-news.svg?1385566945');
+  background-image: none, url('/images/pts-news.svg?1385632593');
   cursor: pointer;
 }
 .news-group .news-title.pts-news a:active, .news-group .news-title.pts-news a:focus {
@@ -2110,12 +2109,12 @@ label.footer-nav-title {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/citizen-news.png?1385536312');
+  background-image: url('/images/citizen-news.png?1385632593');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 200px;
   height: 50px;
-  background-image: none, url('/images/citizen-news.svg?1385566946');
+  background-image: none, url('/images/citizen-news.svg?1385632593');
   cursor: pointer;
 }
 .news-group .news-title.citizen-news a:active, .news-group .news-title.citizen-news a:focus {
