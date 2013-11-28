@@ -4,7 +4,7 @@
 
   &:hover {
     text-decoration: none;
-    background-color: lighten($pts-color-yellow, 30%);
+    background-color: $pill-list-link-hover-bg-color;
   }
 }
 

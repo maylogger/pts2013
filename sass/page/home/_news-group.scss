@@ -35,6 +35,9 @@
       background-image: none, image-url("citizen-news.svg");
       cursor: pointer;
     }
+    a:hover {
+      background-color: $pts-color-superlightblue;
+    }
   }
 
   .more {

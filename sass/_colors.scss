@@ -5,6 +5,10 @@ $color-black: #393333;
 // pts ci color
 $pts-color-red: #EC1C24;
 $pts-color-blue: #034EA2;
+$pts-color-lightblue: #4f80ba;
+$pts-color-lightblue2: #7da2cc;
+$pts-color-lightblue3: #b9cde4;
+$pts-color-superlightblue: #e8eef6;
 $pts-color-yellow: lighten(#FAA74A, 5%);
 
 // global
@@ -34,7 +38,7 @@ $block-content-bg: linear-gradient( bottom, rgba(black, .5) 0, rgba(black, .25) 
 
 // shows
 $shows-link-color: $color-black;
-$shows-hover-bg: $color-white;
+$shows-hover-bg: $pts-color-superlightblue;
 $shows-open-bg: $shows-hover-bg;
 $shows-collapse-bg: $shows-open-bg;
 
@@ -60,8 +64,13 @@ $video-play-icon-bg-color: rgba(black, 0.5);
 $video-play-icon-hover-color: rgba(white, 0.95);
 $video-play-icon-hover-bg-color: rgba(black, 0.75);
 
+// pill-nav
+$nav-pills-item-active-bg-color: $pts-color-blue;
+$nav-pills-item-hover-bg-color: $pts-color-superlightblue;
+$nav-pills-border-color: $pts-color-blue;
 // pill-item
 $pill-list-divider-color: $divider-color;
 $pill-list-link-color: $global-color;
-$pill-list-link-hover-color: lighten($global-color, 50%);
+$pill-list-link-hover-color: $global-color;
+$pill-list-link-hover-bg-color: $pts-color-superlightblue;
 

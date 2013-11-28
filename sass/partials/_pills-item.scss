@@ -2,17 +2,13 @@
 
   .nav-pills {
     @include pie-clearfix;
-    border-bottom: 2px solid $color-black;
-    @include at-breakpoint($pad) {
-      border-bottom: 0;
-    }
-
+    border-bottom: 2px solid $nav-pills-border-color;
     li {
       float: left;
       // pill 被選取時的樣式
       &.active a {
         color: $color-white;
-        background-color: $pts-color-blue;
+        background-color: $nav-pills-item-active-bg-color;
       }
     }
 
@@ -24,7 +20,7 @@
       @include border-radius(3px 3px 0 0);
       &:hover {
         text-decoration: none;
-        background-color: $color-white;
+        background-color: $nav-pills-item-hover-bg-color;
       }
     }
   }
@@ -51,6 +47,9 @@
         padding: 6px 0 5px;
         @include unstyled-link;
         @include link-colors( $pill-list-link-color, $pill-list-link-hover-color );
+        &:hover {
+          background-color: $pill-list-link-hover-bg-color;
+        }
       }
     }
   }

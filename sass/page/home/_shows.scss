@@ -30,9 +30,9 @@
     }
   } // shows-title end
   > .open > .shows-title {
-    color: $color-white;
+    color: $shows-link-color;
     line-height: rhythm(2);
-    background-color: $pts-color-blue;
+    background-color: $shows-open-bg;
   }
 
   @include at-breakpoint($desktop) {
@@ -50,7 +50,7 @@
       padding: 0 12px;
       &:after {
         margin-left: 6px;
-      }  
+      }
     }
     > .open > .shows-title {
       line-height: rhythm(2);
@@ -58,7 +58,7 @@
       background-color: $pts-color-blue;
     }
     > .open .shows-collapse {
-      background-color: $pts-color-blue; 
+      background-color: $pts-color-blue;
     }
     > .open .shows-collapse .show {
       margin: 0 -12px;
@@ -71,9 +71,9 @@
       color: $color-white;
       @include adjust-font-size-to(13px, 1.25);
       &:hover {
-        color: $color-black;
+        color: $color-white;
         opacity: 1;
-        background: $pts-color-yellow;
+        background: $pts-color-lightblue;
       }
     }
   }

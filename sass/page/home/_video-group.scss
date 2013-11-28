@@ -7,14 +7,11 @@
     @include trailer(1);
     border-bottom: none;
     @include adjust-font-size-to(18px);
-    a {
-      display: block;
-      color: $color-black;
-      @include unstyled-link;
-      @include replace-text-with-dimensions("videos.png");
-      background-image: none, image-url("videos.svg");
-      cursor: pointer;
-    }
+    display: block;
+    color: $color-black;
+    @include unstyled-link;
+    @include replace-text-with-dimensions("videos.png");
+    background-image: none, image-url("videos.svg");
   }
 
   .video {
