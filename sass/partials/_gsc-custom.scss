@@ -41,7 +41,6 @@
 .gsc-search-button {
 	width: 44px;
 	height: 26px;
-	margin-right: -24px;
 	font-family: 'Glyphicons Halflings';
 	font-style: normal;
 	font-weight: normal;
@@ -50,9 +49,15 @@
 	background: $pts-color-blue;
 	-webkit-font-smoothing: antialiased;
 	&:before {
-		margin-left: 12px;
+		margin-left: 4px;
 		@include adjust-font-size-to(16px);
 		content: "\e003";
 		color: rgba(white, .7);
 	}
+}
+input.gsc-search-button {
+	width:20px;
+}
+.gsc-clear-button {
+	display: none;
 }

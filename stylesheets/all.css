@@ -695,13 +695,13 @@ body {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/logo-small.png?1383901907');
+  background-image: url('/images/logo-small.png?1384762449');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 105px;
   height: 36px;
   margin-left: -52.5px;
-  background-image: none, url('/images/logo-small.svg?1383901907');
+  background-image: none, url('/images/logo-small.svg?1384762449');
 }
 @media (min-width: 960px) {
   .logo {
@@ -717,12 +717,12 @@ body {
     text-indent: -119988px;
     overflow: hidden;
     text-align: left;
-    background-image: url('/images/logo.png?1383901907');
+    background-image: url('/images/logo.png?1384762449');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     width: 140px;
     height: 48px;
-    background-image: none, url('/images/logo.svg?1383901907');
+    background-image: none, url('/images/logo.svg?1384762449');
   }
 }
 @media (min-width: 1240px) {
@@ -1005,7 +1005,6 @@ label.footer-nav-title {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 2;
   padding: 0 12px 8px;
   text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
 }
@@ -1224,11 +1223,9 @@ label.footer-nav-title {
   position: relative;
 }
 .main-navigation .pts2 a, .main-navigation .pts-hd a {
-  max-width: 70px;
   width: 100%;
   height: auto;
-  margin: 12px auto 9px auto;
-  padding: 0;
+  padding: 14px 0 14px 0;
   display: block;
   text-indent: -119988px;
   overflow: hidden;
@@ -1238,31 +1235,23 @@ label.footer-nav-title {
   background-color: transparent;
   padding-left: 0;
 }
-.main-navigation .pts2 a:after, .main-navigation .pts-hd a:after {
-  width: 100%;
-  height: 100%;
-  content: " ";
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 .main-navigation .pts2:hover, .main-navigation .pts-hd:hover {
   background-color: rgba(255, 255, 255, 0.3);
   padding-left: 0;
 }
 .main-navigation .pts2 a {
-  background: url('/images/logo-pts2.png?1385632593') 50% 50% no-repeat;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
+  background: url('/images/logo-pts2.png?1385976882') 50% 55% no-repeat;
+  -webkit-background-size: 82px 24px;
+  -moz-background-size: 82px 24px;
+  -o-background-size: 82px 24px;
+  background-size: 82px 24px;
 }
 .main-navigation .pts-hd a {
-  background: url('/images/logo-pts-hd.png?1385632593') 50% 50% no-repeat;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  -o-background-size: contain;
-  background-size: contain;
+  background: url('/images/logo-pts-hd.png?1385977046') 50% 55% no-repeat;
+  -webkit-background-size: 82px 24px;
+  -moz-background-size: 82px 24px;
+  -o-background-size: 82px 24px;
+  background-size: 82px 24px;
 }
 @media (min-width: 960px) {
   .main-navigation {
@@ -1640,7 +1629,6 @@ label.footer-nav-title {
 .gsc-search-button {
   width: 44px;
   height: 26px;
-  margin-right: -24px;
   font-family: 'Glyphicons Halflings';
   font-style: normal;
   font-weight: normal;
@@ -1650,11 +1638,19 @@ label.footer-nav-title {
   -webkit-font-smoothing: antialiased;
 }
 .gsc-search-button:before {
-  margin-left: 12px;
+  margin-left: 4px;
   font-size: 16px;
   line-height: 24px;
   content: "\e003";
   color: rgba(255, 255, 255, 0.7);
+}
+
+input.gsc-search-button {
+  width: 20px;
+}
+
+.gsc-clear-button {
+  display: none;
 }
 
 .shows {
@@ -2007,12 +2003,12 @@ label.footer-nav-title {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/videos.png?1385632593');
+  background-image: url('/images/videos.png?1385536014');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 200px;
   height: 50px;
-  background-image: none, url('/images/videos.svg?1385632593');
+  background-image: none, url('/images/videos.svg?1385566948');
 }
 .video-group .video-group-title:active, .video-group .video-group-title:focus {
   outline: none;
@@ -2083,12 +2079,12 @@ label.footer-nav-title {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/pts-news.png?1385632593');
+  background-image: url('/images/pts-news.png?1385536288');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 200px;
   height: 50px;
-  background-image: none, url('/images/pts-news.svg?1385632593');
+  background-image: none, url('/images/pts-news.svg?1385566945');
   cursor: pointer;
 }
 .news-group .news-title.pts-news a:active, .news-group .news-title.pts-news a:focus {
@@ -2103,12 +2099,12 @@ label.footer-nav-title {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/citizen-news.png?1385632593');
+  background-image: url('/images/citizen-news.png?1385536312');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 200px;
   height: 50px;
-  background-image: none, url('/images/citizen-news.svg?1385632593');
+  background-image: none, url('/images/citizen-news.svg?1385566946');
   cursor: pointer;
 }
 .news-group .news-title.citizen-news a:active, .news-group .news-title.citizen-news a:focus {
