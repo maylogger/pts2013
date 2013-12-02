@@ -123,24 +123,14 @@
   .pts2, .pts-hd {
     position: relative;
     a {
-      max-width: 70px;
       width: 100%;
       height: auto;
-      margin: rhythm(.5) auto rhythm(.4) auto;
-      padding: 0;
+      padding: rhythm(.6) 0 rhythm(.6) 0;
       display: block;
       @include hide-text;
       &:hover {
         background-color: transparent;
         padding-left: 0;
-      }
-      &:after {
-        width: 100%;
-        height: 100%;
-        content: " ";
-        position: absolute;
-        top: 0;
-        left: 0;
       }
     }
     &:hover {
@@ -150,13 +140,17 @@
   }
 
   .pts2 a {
-    background: image-url("logo-pts2.png") 50% 50% no-repeat;
-    @include background-size(contain);
+    // background: image-url("logo-pts2-new.png") 50% 50% no-repeat;
+    // @include background-size(88px 40px);
+    background: image-url("logo-pts2.png") 50% 55% no-repeat;
+    @include background-size(82px 24px);
   }
 
   .pts-hd a {
-    background: image-url("logo-pts-hd.png") 50% 50% no-repeat;
-    @include background-size(contain);
+    // background: image-url("logo-pts-hd-new.png") 50% 50% no-repeat;
+    // @include background-size(88px 40px);
+    background: image-url("logo-pts-hd.png") 50% 55% no-repeat;
+    @include background-size(82px 24px);
   }
   @include at-breakpoint($desktop) {
     background-color: transparent;
