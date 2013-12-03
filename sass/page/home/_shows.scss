@@ -13,7 +13,7 @@
   .shows-title {
     display: block;
     $border-size: 1px;
-    $font-size: 13px;
+    $font-size: 14px;
     font-size: $font-size;
     line-height: rhythm(2) - $border-size;
     padding: 0 $base-line-height / 2;
@@ -37,11 +37,11 @@
   @include at-breakpoint($desktop) {
     @include leader(1);
     float: left;
-    width: 120%;
+    width: 125%;
     > li {
       float: left;
       position: relative;
-      border-bottom-color: transparent;
+      border-bottom: none;
     }
     .shows-title {
       line-height: rhythm(2);
