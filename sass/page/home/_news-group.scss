@@ -17,7 +17,7 @@
 
   .news-title {
     $border-bottom-width: 2px;
-    padding: rhythm(2) 0 rhythm(1);
+    padding: rhythm(1.25) 0 rhythm(.5);
     border-bottom: 2px solid $pts-color-blue;
     &.pts-news a {
       display: block;
@@ -52,7 +52,11 @@
       border-bottom: 1px solid $news-list-divider;
     }
     a {
-      padding: 12px 0;
+      padding: 12px 12px 12px 0px;
+      @include transition(padding .15s ease-in);
+      &:hover {
+        padding:12px 4px 12px 8px;
+      }
     }
   }
 

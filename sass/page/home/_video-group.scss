@@ -3,8 +3,8 @@
   opacity: 1;
   @include transition(opacity .5s  .25s); // multiple: comma-delimited
   .video-group-title {
-    @include leader(2);
-    @include trailer(1);
+    @include leader(1.25);
+    @include trailer(.5);
     border-bottom: none;
     @include adjust-font-size-to(18px);
     display: block;
