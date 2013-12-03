@@ -1151,7 +1151,7 @@ label.footer-nav-title {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.main-navigation .main-navigation-list li, .main-navigation .main-navigation-list.channel li, .main-navigation .main-navigation-list.channel li:first-child, .now, .now-playing .now-playing-list li, .now-playing .now-playing-list li + li, .shows > li {
+.main-navigation .main-navigation-list li, .now, .now-playing .now-playing-list li, .now-playing .now-playing-list li + li, .shows > li {
   border-color: rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.7);
   -moz-box-shadow: inset 0 1px rgba(255, 255, 255, 0.7);
@@ -1219,13 +1219,10 @@ label.footer-nav-title {
   border-right-width: 1px;
   border-right-style: solid;
 }
-.main-navigation .pts2, .main-navigation .pts-hd {
-  position: relative;
-}
 .main-navigation .pts2 a, .main-navigation .pts-hd a {
   width: 100%;
   height: auto;
-  padding: 14px 0 14px 0;
+  padding: 3px 0 3px 0;
   display: block;
   text-indent: -119988px;
   overflow: hidden;
@@ -1241,17 +1238,17 @@ label.footer-nav-title {
 }
 .main-navigation .pts2 a {
   background: url('/images/logo-pts2.png?1385976882') 50% 55% no-repeat;
-  -webkit-background-size: 82px 24px;
-  -moz-background-size: 82px 24px;
-  -o-background-size: 82px 24px;
-  background-size: 82px 24px;
+  -webkit-background-size: 68px 20px;
+  -moz-background-size: 68px 20px;
+  -o-background-size: 68px 20px;
+  background-size: 68px 20px;
 }
 .main-navigation .pts-hd a {
   background: url('/images/logo-pts-hd.png?1385977046') 50% 55% no-repeat;
-  -webkit-background-size: 82px 24px;
-  -moz-background-size: 82px 24px;
-  -o-background-size: 82px 24px;
-  background-size: 82px 24px;
+  -webkit-background-size: 68px 20px;
+  -moz-background-size: 68px 20px;
+  -o-background-size: 68px 20px;
+  background-size: 68px 20px;
 }
 @media (min-width: 960px) {
   .main-navigation {
@@ -1351,6 +1348,31 @@ label.footer-nav-title {
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
+  vertical-align: middle;
+}
+.now-playing .now-playing-list .show:hover {
+  color: rgba(0, 0, 0, 0.75);
+  text-decoration: none;
+}
+.now-playing .now-playing-list .show .live {
+  margin-bottom: -4px;
+  display: inline-block;
+  color: #393333;
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/livetag.png?1386083193');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 36px;
+  height: 18px;
+  background-image: none, url('/images/livetag.svg?1386083181');
+}
+.now-playing .now-playing-list .show .live:active, .now-playing .now-playing-list .show .live:focus {
+  outline: none;
 }
 
 .video {
@@ -1667,7 +1689,7 @@ input.gsc-search-button {
 }
 .shows .shows-title {
   display: block;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 47px;
   padding: 0 12px;
   color: #393333;
@@ -1693,12 +1715,12 @@ input.gsc-search-button {
   .shows {
     margin-top: 24px;
     float: left;
-    width: 120%;
+    width: 125%;
   }
   .shows > li {
     float: left;
     position: relative;
-    border-bottom-color: transparent;
+    border-bottom: none;
   }
   .shows .shows-title {
     line-height: 48px;
@@ -1922,7 +1944,7 @@ input.gsc-search-button {
   .hero-sub-tile .block-content {
     position: absolute;
     padding: 0 12px 6px;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
   }
   .hero-sub-tile .block-title {
     color: white;
@@ -1990,8 +2012,8 @@ input.gsc-search-button {
   clear: both;
 }
 .video-group .video-group-title {
-  margin-top: 48px;
-  margin-bottom: 24px;
+  margin-top: 30px;
+  margin-bottom: 12px;
   border-bottom: none;
   font-size: 18px;
   line-height: 24px;
@@ -2003,12 +2025,12 @@ input.gsc-search-button {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/videos.png?1385536014');
+  background-image: url('/images/videos.png?1386079961');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  width: 200px;
-  height: 50px;
-  background-image: none, url('/images/videos.svg?1385566948');
+  width: 140px;
+  height: 35px;
+  background-image: none, url('/images/videos.svg?1386079472');
 }
 .video-group .video-group-title:active, .video-group .video-group-title:focus {
   outline: none;
@@ -2067,7 +2089,7 @@ input.gsc-search-button {
   }
 }
 .news-group .news-title {
-  padding: 48px 0 24px;
+  padding: 30px 0 12px;
   border-bottom: 2px solid #034ea2;
 }
 .news-group .news-title.pts-news a {
@@ -2079,12 +2101,12 @@ input.gsc-search-button {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/pts-news.png?1385536288');
+  background-image: url('/images/pts-news.png?1386079946');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  width: 200px;
-  height: 50px;
-  background-image: none, url('/images/pts-news.svg?1385566945');
+  width: 140px;
+  height: 35px;
+  background-image: none, url('/images/pts-news.svg?1386079381');
   cursor: pointer;
 }
 .news-group .news-title.pts-news a:active, .news-group .news-title.pts-news a:focus {
@@ -2099,12 +2121,12 @@ input.gsc-search-button {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/citizen-news.png?1385536312');
+  background-image: url('/images/citizen-news.png?1386079919');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  width: 200px;
-  height: 50px;
-  background-image: none, url('/images/citizen-news.svg?1385566946');
+  width: 140px;
+  height: 35px;
+  background-image: none, url('/images/citizen-news.svg?1386079222');
   cursor: pointer;
 }
 .news-group .news-title.citizen-news a:active, .news-group .news-title.citizen-news a:focus {
@@ -2123,7 +2145,14 @@ input.gsc-search-button {
   border-bottom: 1px solid #eeeeef;
 }
 .news-group .news-list a {
-  padding: 12px 0;
+  padding: 12px 12px 12px 0px;
+  -webkit-transition: padding 0.15s ease-in;
+  -moz-transition: padding 0.15s ease-in;
+  -o-transition: padding 0.15s ease-in;
+  transition: padding 0.15s ease-in;
+}
+.news-group .news-list a:hover {
+  padding: 12px 4px 12px 8px;
 }
 
 .campaigns {
