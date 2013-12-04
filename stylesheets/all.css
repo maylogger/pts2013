@@ -1364,12 +1364,12 @@ label.footer-nav-title {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/livetag.png?1386149117');
+  background-image: url('/images/livetag.png?1386149449');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 36px;
   height: 18px;
-  background-image: none, url('/images/livetag.svg?1386149283');
+  background-image: none, url('/images/livetag.svg?1386153864');
 }
 .now-playing .now-playing-list .show .live:active, .now-playing .now-playing-list .show .live:focus {
   outline: none;
