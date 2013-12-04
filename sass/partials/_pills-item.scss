@@ -40,14 +40,16 @@
     // padding-top: 3px;
     @include adjust-font-size-to(13px);
     li {
-      @include ellipsis;
       border-bottom: 1px solid $pill-list-divider-color;
       a {
         display: block;
-        padding: 6px 0 5px;
+        padding: 6px 7px 5px 0px;
+        @include ellipsis;
         @include unstyled-link;
         @include link-colors( $pill-list-link-color, $pill-list-link-hover-color );
+        @include transition(padding .15s ease-in);
         &:hover {
+          padding: 6px 2px 5px 5px;
           background-color: $pill-list-link-hover-bg-color;
         }
       }
@@ -55,9 +57,6 @@
   }
 
 }
-
-
-
 
 
 
