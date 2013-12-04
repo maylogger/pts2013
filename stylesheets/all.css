@@ -1355,7 +1355,7 @@ label.footer-nav-title {
   text-decoration: none;
 }
 .now-playing .now-playing-list .show .live {
-  margin-bottom: -4px;
+  margin-bottom: -5px;
   display: inline-block;
   color: #393333;
   color: inherit;
@@ -1364,12 +1364,12 @@ label.footer-nav-title {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/livetag.png?1386083193');
+  background-image: url('/images/livetag.png?1386149117');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 36px;
   height: 18px;
-  background-image: none, url('/images/livetag.svg?1386083181');
+  background-image: none, url('/images/livetag.svg?1386149283');
 }
 .now-playing .now-playing-list .show .live:active, .now-playing .now-playing-list .show .live:focus {
   outline: none;
