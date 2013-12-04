@@ -1222,7 +1222,7 @@ label.footer-nav-title {
 .main-navigation .pts2 a, .main-navigation .pts-hd a {
   width: 100%;
   height: auto;
-  padding: 3px 0 3px 0;
+  padding: 5px 0 4px 0;
   display: block;
   text-indent: -119988px;
   overflow: hidden;
@@ -1355,7 +1355,7 @@ label.footer-nav-title {
   text-decoration: none;
 }
 .now-playing .now-playing-list .show .live {
-  margin-bottom: -5px;
+  margin-bottom: -4px;
   display: inline-block;
   color: #393333;
   color: inherit;
@@ -1364,7 +1364,7 @@ label.footer-nav-title {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/livetag.png?1386149449');
+  background-image: url('/images/livetag.png?1386154046');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 36px;
@@ -1414,7 +1414,7 @@ label.footer-nav-title {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
   border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.75);
   text-align: center;
   -webkit-transition: background-color 0.3s;
   -moz-transition: background-color 0.3s;
@@ -1425,7 +1425,7 @@ label.footer-nav-title {
   position: relative;
   top: 9px;
   left: 1px;
-  color: rgba(255, 255, 255, 0.75);
+  color: #034ea2;
   font-size: 18px;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
@@ -1436,10 +1436,10 @@ label.footer-nav-title {
   text-decoration: none;
 }
 .video:hover .play-icon {
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: white;
 }
 .video:hover .glyphicon-play {
-  color: rgba(255, 255, 255, 0.95);
+  color: #034ea2;
 }
 
 .news-item {
@@ -1524,20 +1524,24 @@ label.footer-nav-title {
   line-height: 24px;
 }
 .pills-item .pill-panel-list li {
+  border-bottom: 1px solid #eeeeef;
+}
+.pills-item .pill-panel-list li a {
+  display: block;
+  padding: 6px 7px 5px 0px;
   white-space: nowrap;
   overflow: hidden;
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  border-bottom: 1px solid #eeeeef;
-}
-.pills-item .pill-panel-list li a {
-  display: block;
-  padding: 6px 0 5px;
   color: inherit;
   text-decoration: inherit;
   cursor: inherit;
   color: black;
+  -webkit-transition: padding 0.15s ease-in;
+  -moz-transition: padding 0.15s ease-in;
+  -o-transition: padding 0.15s ease-in;
+  transition: padding 0.15s ease-in;
 }
 .pills-item .pill-panel-list li a:active, .pills-item .pill-panel-list li a:focus {
   outline: none;
@@ -1546,6 +1550,7 @@ label.footer-nav-title {
   color: black;
 }
 .pills-item .pill-panel-list li a:hover {
+  padding: 6px 2px 5px 5px;
   background-color: #e8eef6;
 }
 

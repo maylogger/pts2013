@@ -60,10 +60,10 @@ $footer-meta-color: rgba($global-muted-color, .3);
 
 // video
 $video-title-color: $global-color;
-$video-play-icon-color: rgba(white, 0.75);
-$video-play-icon-bg-color: rgba(black, 0.5);
-$video-play-icon-hover-color: rgba(white, 0.95);
-$video-play-icon-hover-bg-color: rgba(black, 0.75);
+$video-play-icon-color: $pts-color-blue;
+$video-play-icon-bg-color: rgba(white, 0.75);
+$video-play-icon-hover-color: $pts-color-blue;
+$video-play-icon-hover-bg-color: white;
 
 // pill-nav
 $nav-pills-item-active-bg-color: $pts-color-blue;
