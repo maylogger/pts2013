@@ -50,6 +50,7 @@ body {
 
 .container {
   @include container($total-columns, $pad, $desktop, $wide-desktop, $ex-wide-desktop);
+  position: relative;
   overflow-x: hidden;
 }
 
@@ -63,7 +64,6 @@ $off-canvas-shows-columns: 4;
   top: 0;
   left: 0;
   width: columns($off-canvas-menu-columns) + gutter($total-columns);
-  height: 100%;
   @include transition( right .3s, left .3s );
   .show-shows & {
     left: -100%;
@@ -120,6 +120,8 @@ $off-canvas-shows-columns: 4;
 .footer {
   min-height: 100px;
   clear: both;
+  position: relative;
+  z-index: 3;
   @include padding-leader(2);
 }
 .footer-inner {
@@ -192,6 +194,7 @@ $off-canvas-shows-columns: 4;
     top: 0;
     right: 100%;
     width: columns($off-canvas-menu-columns, $off-canvas-main) + gutter($total_columns);
+    // width: 26%;
   }
 
   .main-inner {
@@ -263,7 +266,7 @@ $off-canvas-shows-columns: 4;
     width: $sidebar-width;
   }
   .sidebar-inner {
-    padding: rhythm(3) 12px 0 0;
+    padding: rhythm(4) 12px 0 0;
   }
 
   // footer-inner 設定與 .off-canvas-main 一致

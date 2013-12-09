@@ -10,7 +10,8 @@
       padding: 0 $base-line-height / 2;
       @include padding-leader($padding);
       @include padding-trailer($padding);
-      margin-top: -1px;
+      @extend %tile;
+      margin-top: 0;
     }
     li + li {
       @include leading-border(1px, $padding);
@@ -22,7 +23,7 @@
       float: left;
       margin-right: 5px;
       font-weight: bold;
-      color: #a00;
+      color: $pts-color-red;
     }
     .channel, p {
       margin: 0;
@@ -31,8 +32,23 @@
     }
     .show {
       display: block;
+      padding-left: 40px;
       color: rgba(black, .5);
-      @include ellipsis;
+      vertical-align: middle;
+      &:hover {
+        color: rgba(black, .75);
+        text-decoration: none;
+      }
+      .live {
+        display: inline-block;
+        padding: 0 6px;
+        @include adjust-font-size-to(12px, .7);
+        font-weight: bold;
+        @include unstyled-link;
+        color: white;
+        background-color: $pts-color-blue;
+        @include border-radius(3px);
+      }
     }
   }
 }

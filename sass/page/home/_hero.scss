@@ -73,6 +73,7 @@
   .block-content {
     position: static;
     padding: 0;
+    @include text-shadow(none);
   }
   .block-title {
     @include adjust-font-size-to(14px, 5/6);
@@ -115,6 +116,7 @@
     .block-content {
       position: absolute;
       padding: 0 12px 6px;
+      @include text-shadow(0 2px 3px rgba(black, .5));
     }
     .block-title {
       color: $block-title;

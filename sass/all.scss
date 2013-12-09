@@ -20,13 +20,14 @@ $grid-background-baseline-height: $base-line-height;
 @import "partials/header";
 @import "partials/footer";
 @import "partials/block";
-@import "partials/_magnific-popup";
+@import "partials/magnific-popup";
 @import "partials/off-canvas-menu";
 @import "partials/now-playing"; //一定要在 off-canvas-menu 的下方
 @import "partials/video";
 @import "partials/news-item";
 @import "partials/pills-item";
-
+@import "partials/states-bar";
+@import "partials/gsc-custom";
 
 @import "page";
 
@@ -36,6 +37,9 @@ $grid-background-baseline-height: $base-line-height;
   -webkit-font-smoothing: antialiased;
 }
 
+%subpixel {
+  -webkit-font-smoothing: subpixel-antialiased;
+}
 
 
 // 隱藏工具

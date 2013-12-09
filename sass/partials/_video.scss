@@ -1,7 +1,7 @@
 .video {
   display: block;
   .video-title {
-    color: rgba(black, 0.75);
+    color: $color-black;
     @include leader(.25);
     @include adjust-font-size-to(12px, 2/3);
     max-height: (2/3) * $base-line-height * 2;

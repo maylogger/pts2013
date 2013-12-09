@@ -13,7 +13,6 @@
     color: $campaign-hover-color;
     text-decoration: none;
   }
-
   .campaign-media {
     @include at-breakpoint($pad) {
       position: relative;
@@ -36,6 +35,10 @@
   .campaign-title {
     @include leader(.25);
     @include adjust-font-size-to(12px, 2/3);
+    @include at-breakpoint($pad) {
+      max-width: none;
+      width: auto;
+    }
   }
 
   @include at-breakpoint($pad) {

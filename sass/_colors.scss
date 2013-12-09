@@ -2,6 +2,15 @@ $color-red: #a00;
 $color-white: #eeeeef;
 $color-black: #393333;
 
+// pts ci color
+$pts-color-red: #EC1C24;
+$pts-color-blue: #034EA2;
+$pts-color-lightblue: #4f80ba;
+$pts-color-lightblue2: #7da2cc;
+$pts-color-lightblue3: #b9cde4;
+$pts-color-superlightblue: #e8eef6;
+$pts-color-yellow: lighten(#FAA74A, 5%);
+
 // global
 $divider-color: $color-white;
 $global-color: black;
@@ -24,13 +33,14 @@ $header-logo-bg: $main-content-bg;
 
 // block
 $block-title: invert($global-color);
-$block-text: invert($global-muted-color);
+$block-text: darken(white, 15%);
 $block-content-bg: linear-gradient( bottom, rgba(black, .5) 0, rgba(black, .25) 15%,rgba(black, 0) 35% );
 
 // shows
+$shows-title-color: $color-white;
 $shows-link-color: $color-black;
-$shows-hover-bg: $color-white;
-$shows-open-bg: $shows-hover-bg;
+$shows-hover-bg: $pts-color-lightblue3;
+$shows-open-bg: $pts-color-blue;
 $shows-collapse-bg: $shows-open-bg;
 
 // news
@@ -39,8 +49,8 @@ $news-item-title-color: $global-color;
 $news-item-text-color: lighten($global-color, 50%);
 
 // campaigns
-$campaign-color: $global-color;
-$campaign-hover-color: rgba($color-black, 0.5);
+$campaign-color: rgba($color-black, 0.85);
+$campaign-hover-color: lighten($global-color, 50%);
 
 // footer
 $footer-title-color: $global-color;
@@ -50,12 +60,18 @@ $footer-meta-color: rgba($global-muted-color, .3);
 
 // video
 $video-title-color: $global-color;
-$video-play-icon-color: rgba(white, 0.75);
-$video-play-icon-bg-color: rgba(black, 0.5);
-$video-play-icon-hover-color: rgba(white, 0.95);
-$video-play-icon-hover-bg-color: rgba(black, 0.75);
+$video-play-icon-color: $pts-color-blue;
+$video-play-icon-bg-color: rgba(white, 0.75);
+$video-play-icon-hover-color: $pts-color-blue;
+$video-play-icon-hover-bg-color: white;
 
+// pill-nav
+$nav-pills-item-active-bg-color: $pts-color-blue;
+$nav-pills-item-hover-bg-color: $pts-color-superlightblue;
+$nav-pills-border-color: $pts-color-blue;
 // pill-item
 $pill-list-divider-color: $divider-color;
 $pill-list-link-color: $global-color;
-$pill-list-link-hover-color: lighten($global-color, 50%);
+$pill-list-link-hover-color: $global-color;
+$pill-list-link-hover-bg-color: $pts-color-superlightblue;
+

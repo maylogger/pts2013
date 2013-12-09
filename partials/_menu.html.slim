@@ -1,11 +1,11 @@
 /! 主選單
 .main-navigation
-  h3.main-navigation-title 電視頻道
+  / h3.main-navigation-title 電視頻道
   ul.main-navigation-list.channel
-    li.pts: a.active href="" 公視
+    / li.pts: a.active href="" 公視
     li.pts2: a href="" 公視 2
     li.pts-hd: a href="" 公視 HD
-  h3.main-navigation-title 其他連結
+  / h3.main-navigation-title 其他連結
   ul.main-navigation-list.links
     li: a href="" 節目表
     li: a href="" 討論區
@@ -14,12 +14,25 @@
 /! 主選單 end
 
 form.search
-  label.glyphicon.glyphicon-search for="search"
-  input.search-input#search placeholder="站內搜尋"
+  / label.glyphicon.glyphicon-search for="search"
+  / input.search-input#search placeholder="站內搜尋"
+  #cse-search-form style="width: 100%" 
+    | Loading
+    script src="//www.google.com/jsapi" type="text/javascript"
+    javascript:
+        google.load('search', '1', { language: 'zh-Hant', style: google.loader.themes.MINIMALIST });
+        google.setOnLoadCallback(function () {
+            var customSearchOptions = {};
+            var customSearchControl = new google.search.CustomSearchControl('015042921252931929020:6zt_aijyxqo', customSearchOptions);
+            customSearchControl.setResultSetSize(google.search.Search.FILTERED_CSE_RESULTSET);
+            var options = new google.search.DrawOptions();
+            options.enableSearchboxOnly('http://www.pts.org.tw/~search/', 'q');
+            customSearchControl.draw('cse-search-form', options);
+        }, true);
 
 /! 現在時間
 .now.hide-mobile.hide-pad
-  small Now
+  / small Now
   time 21:45
 /! 現在時間 end
 

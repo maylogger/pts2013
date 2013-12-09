@@ -27,13 +27,13 @@
       $height: 2;
       display: block;
       width: 100%;
-      height: $base-line-height * $height;
+      height: $base-line-height * $height - 2;
       border: 0;
       padding-left: $base-line-height / 2;
       padding-right: 36px;
-      @include input-placeholder-color( #999 );
+      @include input-placeholder-color( #CCC );
       color: white;
-      background-color: rgba(black, .5);
+      background-color: $pts-color-blue;
       &:focus {
         outline: none;
       }
@@ -87,7 +87,7 @@
         line-height: rhythm(1.5) - $border-size;
       }
       &:after {
-        content: "→";
+        content: "▸";
         float: right;
         position: relative;
         right: -2em;
@@ -102,6 +102,48 @@
         }
       }
     }
+    &.channel { 
+      @include pie-clearfix;
+      li {
+        width: 50%;
+        float: left;
+        overflow: hidden; 
+        @include box-sizing(border-box);
+      }
+      li:first-child {
+        border-right: {
+          width: 1px;
+          style: solid;
+        }
+      }
+    }
+  }
+  .pts2, .pts-hd {
+    a {
+      width: 100%;
+      height: auto;
+      padding: rhythm(.22) 0 rhythm(.20) 0;
+      display: block;
+      @include hide-text;
+      &:hover {
+        background-color: transparent;
+        padding-left: 0;
+      }
+    }
+    &:hover {
+      background-color: rgba(white, .3);
+      padding-left: 0;
+    }
+  }
+
+  .pts2 a {
+    background: image-url("logo-pts2.png") 50% 55% no-repeat;
+    @include background-size(68px 20px);
+  }
+
+  .pts-hd a {
+    background: image-url("logo-pts-hd.png") 50% 55% no-repeat;
+    @include background-size(68px 20px);
   }
   @include at-breakpoint($desktop) {
     background-color: transparent;
@@ -112,6 +154,11 @@
   padding: 0 $base-line-height / 2;
   @include nowrap;
   overflow: hidden;
+  border-bottom: {
+        width: 1px;
+        style: solid;
+  }
+  @extend %tile;
   small {
     font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
     font-weight: 400;

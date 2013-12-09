@@ -6,45 +6,79 @@
     border-bottom: {
       width: 1px;
       style: solid;
+      color: #ccc;
     }
-    @extend %tile; // 引用 _off-canvas-menu 內的 %tile
-    @include box-shadow(none);
   }
-
+  .open {
+    border-bottom: none;
+  }
   .shows-title {
     display: block;
     $border-size: 1px;
-    $font-size: 13px;
+    $font-size: 14px;
     font-size: $font-size;
     line-height: rhythm(2) - $border-size;
     padding: 0 $base-line-height / 2;
     color: $shows-link-color;
-    @include transition( all .2s );
+    cursor: pointer;
+    @include transition( background .2s );
     &:after {
       content: "▾";
       float: right;
     }
     &:hover {
-      background-color: $shows-hover-bg;
       text-decoration: none;
     }
   } // shows-title end
-
   > .open > .shows-title {
-    background-color: $shows-hover-bg;
+    color: $shows-title-color;
+    line-height: rhythm(2);
+    background-color: $shows-open-bg;
+  }
+  > .open .shows-collapse {
+    border: none;
+    background-color: $pts-color-lightblue3;
   }
 
   @include at-breakpoint($desktop) {
+    @include leader(1);
     float: left;
+    width: 125%;
     > li {
       float: left;
       position: relative;
+      border-bottom: none;
     }
     .shows-title {
+      line-height: rhythm(2);
       @include transition(none);
-      padding: 0 8px;
+      padding: 0 12px;
       &:after {
         margin-left: 6px;
+      }
+    }
+    > .open > .shows-title {
+      line-height: rhythm(2);
+      color: $color-white;
+      background-color: $pts-color-blue;
+    }
+    > .open .shows-collapse {
+      background-color: $pts-color-blue;
+    }
+    > .open .shows-collapse .show {
+      margin: 0 -12px;
+      padding: 0 12px;
+    }
+    > .open .shows-collapse .show a {
+      margin: 0 -12px;
+      padding: 0 12px;
+      display: block;
+      color: $color-white;
+      @include adjust-font-size-to(13px, 1.25);
+      &:hover {
+        color: $color-white;
+        opacity: 1;
+        background: $pts-color-lightblue;
       }
     }
   }
@@ -59,7 +93,7 @@
   display: none;
   border-top: 1px solid $divider-color;
   padding: ($base-line-height / 2);
-  @include adjust-font-size-to(13px);
+  @include adjust-font-size-to(13px, 1.25);
   > li {
     @include ellipsis;
   }
@@ -79,14 +113,20 @@
     top: 100%;
     left: 0;
     z-index: 2;
-    margin: 0;
+    margin: -8px 0 0 0;
     border-top: 0;
-    padding: 16px 20px;
+    padding: 4px 12px;
     background-color: $shows-collapse-bg;
     &.pull-right {
       left: auto;
       right: 0;
     }
+  @include at-breakpoint($wide-desktop) {
+    &.pull-right {
+      left: 0;
+      right: auto;
+    }
+  }
   }
 
 } // show-collapse end

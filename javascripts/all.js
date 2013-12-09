@@ -1,6 +1,8 @@
+var container = $(".container");
+
 $(".menu-btn").click(function(){
-  event.stopPropagation();
-  $(".container").toggleClass("show-menu");
+  // event.stopPropagation();
+  container.toggleClass("show-menu");
   return false;
 });
 $(".off-canvas-menu").click(function(){
@@ -8,8 +10,8 @@ $(".off-canvas-menu").click(function(){
   return false;
 });
 $(".shows-btn").click(function(){
-  event.stopPropagation();
-  $(".container").toggleClass("show-shows");
+  // event.stopPropagation();
+  container.toggleClass("show-shows");
   return false;
 });
 
@@ -22,12 +24,13 @@ menuItem.click(function(event){
   event.stopPropagation();
   menuItem.not(target).removeClass('open');
   target.toggleClass('open');
+  event.preventDefault();  
 });
 
 
 $(document).click(function(){
   menuItem.removeClass('open');
-  $(".container").removeClass("show-menu").removeClass("show-shows");
+  container.removeClass("show-menu").removeClass("show-shows");
 });
 
 

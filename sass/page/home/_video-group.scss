@@ -1,17 +1,17 @@
 .video-group {
   @include pie-clearfix;
-  @include trailer(1);
   opacity: 1;
   @include transition(opacity .5s  .25s); // multiple: comma-delimited
   .video-group-title {
+    @include leader(1.25);
     @include trailer(.5);
-    border-bottom: 2px solid $color-black;
-    @include adjust-font-size-to(16px);
-    a {
-      color: $color-black;
-      @include unstyled-link;
-      cursor: pointer;
-    }
+    border-bottom: none;
+    @include adjust-font-size-to(18px);
+    display: block;
+    color: $color-black;
+    @include unstyled-link;
+    @include replace-text-with-dimensions("videos.png");
+    background-image: none, image-url("videos.svg");
   }
 
   .video {
