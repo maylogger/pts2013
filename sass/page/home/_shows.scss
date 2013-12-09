@@ -6,10 +6,12 @@
     border-bottom: {
       width: 1px;
       style: solid;
+      color: #ccc;
     }
-    @extend %tile; // 引用 _off-canvas-menu 內的 %tile
   }
-
+  .open {
+    border-bottom: none;
+  }
   .shows-title {
     display: block;
     $border-size: 1px;
@@ -32,6 +34,10 @@
     color: $shows-title-color;
     line-height: rhythm(2);
     background-color: $shows-open-bg;
+  }
+  > .open .shows-collapse {
+    border: none;
+    background-color: $pts-color-lightblue3;
   }
 
   @include at-breakpoint($desktop) {
