@@ -1363,7 +1363,6 @@ label.footer-nav-title {
   color: inherit;
   text-decoration: inherit;
   cursor: inherit;
-<<<<<<< HEAD
   color: white;
   background-color: #034ea2;
   -webkit-border-radius: 3px;
@@ -1371,17 +1370,6 @@ label.footer-nav-title {
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-=======
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('/images/livetag.png?1386592191');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 36px;
-  height: 18px;
-  background-image: none, url('/images/livetag.svg?1386592191');
->>>>>>> faee3f20729a595690c07dda57bd7e766876a3e7
 }
 .now-playing .now-playing-list .show .live:active, .now-playing .now-playing-list .show .live:focus {
   outline: none;
