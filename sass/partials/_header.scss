@@ -80,12 +80,14 @@
 .shows-btn {
   @extend %header-btn;
   right: 0;
-  .show-shows & {
-    padding-left: 3em;
-    background: $pts-color-yellow;
-  }
   .icon {
     margin-left: 2px;
+  }
+  .show-shows & {
+    padding-left: 3em;
+    background-color: $pts-color-lightblue3;
+    color: $pts-color-blue;
+    .icon { color: $pts-color-blue; }
   }
 }
 
@@ -97,7 +99,7 @@
   width: $menu-btn-width;
   height: $menu-btn-height;
   .show-menu & {
-    background: $pts-color-yellow;
+    background: $pts-color-lightblue2;
   }
 }
 .menu-btn-bar {
@@ -113,8 +115,8 @@
   & + & {
     margin-top: $margin-width;
   }
-  @include box-shadow( 0 1px 0 rgba(black, .5) );
   .show-menu & {
+    background-color: $pts-color-blue;
     &:first-child {
       position: absolute;
       top: 50%;
