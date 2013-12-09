@@ -32,20 +32,22 @@
     }
     .show {
       display: block;
+      padding-left: 40px;
       color: rgba(black, .5);
-      @include ellipsis;
       vertical-align: middle;
       &:hover {
         color: rgba(black, .75);
         text-decoration: none;
       }
       .live {
-        margin-bottom: -4px;
         display: inline-block;
-        color: $color-black;
+        padding: 0 6px;
+        @include adjust-font-size-to(12px, .7);
+        font-weight: bold;
         @include unstyled-link;
-        @include replace-text-with-dimensions("livetag.png");
-        background-image: none, image-url("livetag.svg");
+        color: white;
+        background-color: $pts-color-blue;
+        @include border-radius(3px);
       }
     }
   }

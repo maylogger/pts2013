@@ -1342,12 +1342,8 @@ label.footer-nav-title {
 }
 .now-playing .now-playing-list .show {
   display: block;
+  padding-left: 40px;
   color: rgba(0, 0, 0, 0.5);
-  white-space: nowrap;
-  overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
-  text-overflow: ellipsis;
   vertical-align: middle;
 }
 .now-playing .now-playing-list .show:hover {
@@ -1355,21 +1351,21 @@ label.footer-nav-title {
   text-decoration: none;
 }
 .now-playing .now-playing-list .show .live {
-  margin-bottom: -4px;
   display: inline-block;
-  color: #393333;
+  padding: 0 6px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: bold;
   color: inherit;
   text-decoration: inherit;
   cursor: inherit;
-  text-indent: -119988px;
-  overflow: hidden;
-  text-align: left;
-  background-image: url('/images/livetag.png?1386154046');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 36px;
-  height: 18px;
-  background-image: none, url('/images/livetag.svg?1386153864');
+  color: white;
+  background-color: #034ea2;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
 }
 .now-playing .now-playing-list .show .live:active, .now-playing .now-playing-list .show .live:focus {
   outline: none;
