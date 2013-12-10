@@ -1241,14 +1241,14 @@ label.footer-nav-title {
   padding-left: 0;
 }
 .main-navigation .pts2 a {
-  background: url('/images/logo-pts2.png?1386592191') 50% 55% no-repeat;
+  background: url('/images/logo-pts2.png?1386597763') 50% 55% no-repeat;
   -webkit-background-size: 68px 20px;
   -moz-background-size: 68px 20px;
   -o-background-size: 68px 20px;
   background-size: 68px 20px;
 }
 .main-navigation .pts-hd a {
-  background: url('/images/logo-pts-hd.png?1386592191') 50% 55% no-repeat;
+  background: url('/images/logo-pts-hd.png?1386597763') 50% 55% no-repeat;
   -webkit-background-size: 68px 20px;
   -moz-background-size: 68px 20px;
   -o-background-size: 68px 20px;
@@ -2038,12 +2038,12 @@ input.gsc-search-button {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/videos.png?1386592191');
+  background-image: url('/images/videos.png?1386597763');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 140px;
   height: 35px;
-  background-image: none, url('/images/videos.svg?1386592191');
+  background-image: none, url('/images/videos.svg?1386597763');
 }
 .video-group .video-group-title:active, .video-group .video-group-title:focus {
   outline: none;
@@ -2114,12 +2114,12 @@ input.gsc-search-button {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/pts-news.png?1386592191');
+  background-image: url('/images/pts-news.png?1386597763');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 140px;
   height: 35px;
-  background-image: none, url('/images/pts-news.svg?1386592191');
+  background-image: none, url('/images/pts-news.svg?1386597763');
   cursor: pointer;
 }
 .news-group .news-title.pts-news a:active, .news-group .news-title.pts-news a:focus {
@@ -2134,12 +2134,12 @@ input.gsc-search-button {
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
-  background-image: url('/images/citizen-news.png?1386592191');
+  background-image: url('/images/citizen-news.png?1386597763');
   background-repeat: no-repeat;
   background-position: 50% 50%;
   width: 140px;
   height: 35px;
-  background-image: none, url('/images/citizen-news.svg?1386592191');
+  background-image: none, url('/images/citizen-news.svg?1386597763');
   cursor: pointer;
 }
 .news-group .news-title.citizen-news a:active, .news-group .news-title.citizen-news a:focus {
