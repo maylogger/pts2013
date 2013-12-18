@@ -1345,8 +1345,7 @@ label.footer-nav-title {
   color: black;
 }
 .now-playing .now-playing-list .show {
-  display: block;
-  padding-left: 40px;
+  display: inline-block;
   color: rgba(0, 0, 0, 0.5);
   vertical-align: middle;
 }
@@ -1354,8 +1353,9 @@ label.footer-nav-title {
   color: rgba(0, 0, 0, 0.75);
   text-decoration: none;
 }
-.now-playing .now-playing-list .show .live {
+.now-playing .now-playing-list .live {
   display: inline-block;
+  margin-left: 6px;
   padding: 0 6px;
   font-size: 12px;
   line-height: 16px;
@@ -1371,7 +1371,7 @@ label.footer-nav-title {
   -o-border-radius: 3px;
   border-radius: 3px;
 }
-.now-playing .now-playing-list .show .live:active, .now-playing .now-playing-list .show .live:focus {
+.now-playing .now-playing-list .live:active, .now-playing .now-playing-list .live:focus {
   outline: none;
 }
 
