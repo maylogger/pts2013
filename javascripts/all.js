@@ -6,7 +6,7 @@ $(".menu-btn").click(function(){
   return false;
 });
 $(".off-canvas-menu").click(function(){
-  event.stopPropagation();
+  // event.stopPropagation();
   return false;
 });
 $(".shows-btn").click(function(){
