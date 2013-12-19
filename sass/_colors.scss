@@ -34,7 +34,8 @@ $header-logo-bg: $main-content-bg;
 // block
 $block-title: invert($global-color);
 $block-text: darken(white, 15%);
-$block-content-bg: linear-gradient( bottom, rgba(black, .5) 0, rgba(black, .25) 15%,rgba(black, 0) 35% );
+$block-content-bg: linear-gradient( top, rgba(black, 0) 0%, rgba(black, .25) 35%, rgba(black, .5) 100% );
+$block-content-filter-bg: rgba(black,0), black; // for ie8
 
 // shows
 $shows-title-color: $color-white;

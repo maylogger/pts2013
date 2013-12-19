@@ -1,14 +1,19 @@
 #cse-search-form {
+	padding-left: 12px;
 	@include adjust-font-size-to(16px, 2);
-	padding-left: rhythm(.5);
 	color: $color-white;
 	background: $pts-color-blue;
 }
 .gsc-branding { 
 	display: none; 
 }
-.gsc-search-box {
+table.gsc-search-box {
+	margin-left: -12px;
 	width: 100%;
+}
+td.gsc-input {
+	padding-left: 12px;
+	position: relative;
 	background: transparent;
 	&:after {
 		content: "google search";
@@ -18,7 +23,7 @@
 		z-index: 0;
 	}
 }
-.gsc-input {
+input.gsc-input {
 	@include border-box-sizing;
 	@include border-radius(0);
 	$height: 2;
@@ -26,19 +31,23 @@
 	width: 100%;
 	height: $base-line-height * $height;
 	border: 0;
-	padding-right: 36px;
+	padding: 0;
 	@include input-placeholder-color( #CCC );
 	color: white;
 	background-color: transparent !important;
 	background-image: none !important;
 	position: relative;
+	top: 0;
+	left: 0;
 	z-index: 2;
+	margin: 0; // for ie
 	&:focus {
 		outline: none;
 		background: $pts-color-blue !important;
 	}
 }
-.gsc-search-button {
+td.gsc-search-button:before {
+	display: block;
 	width: 44px;
 	height: 26px;
 	font-family: 'Glyphicons Halflings';
@@ -48,15 +57,16 @@
 	border: none;
 	background: $pts-color-blue;
 	-webkit-font-smoothing: antialiased;
-	&:before {
-		margin-left: 4px;
-		@include adjust-font-size-to(16px);
-		content: "\e003";
-		color: rgba(white, .7);
-	}
+	@include adjust-font-size-to(16px);
+	content: "\e003";
+	color: rgba(white, .7);
+	text-align: center;
+}
+td.gsc-search-button {
+	width: 10%;
 }
 input.gsc-search-button {
-	width:20px;
+	display: none;
 }
 .gsc-clear-button {
 	display: none;

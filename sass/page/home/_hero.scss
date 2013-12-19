@@ -67,8 +67,9 @@
   }
   .block-content-bg {
     position: static;
-    overflow: hidden;
     background: transparent;
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)";
+    width: auto;
   }
   .block-content {
     position: static;
@@ -110,12 +111,12 @@
     }
     .block-content-bg {
       position: absolute;
-      overflow: visible;
       @include background-image($block-content-bg);
+      @include filter-gradient(rgba(black,0), black);
+      width: 100%;
     }
     .block-content {
-      position: absolute;
-      padding: 0 12px 6px;
+      padding: 12px 12px 6px;
       @include text-shadow(0 2px 3px rgba(black, .5));
     }
     .block-title {

@@ -1,7 +1,7 @@
 .shows {
   @include trailer(1);
   opacity: 1;
-  @include transition(opacity .25s); // multiple: comma-delimited
+  @include transition(opacity .25s);
   > li {
     border-bottom: {
       width: 1px;
@@ -13,6 +13,7 @@
     border-bottom: none;
   }
   .shows-title {
+    position: relative;
     display: block;
     $border-size: 1px;
     $font-size: 14px;
@@ -23,8 +24,9 @@
     cursor: pointer;
     @include transition( background .2s );
     &:after {
+      position: absolute;
+      right: 12px;
       content: "▾";
-      float: right;
     }
     &:hover {
       text-decoration: none;
@@ -52,7 +54,7 @@
     .shows-title {
       line-height: rhythm(2);
       @include transition(none);
-      padding: 0 12px;
+      padding: 0 24px 0 12px;
       &:after {
         margin-left: 6px;
       }
