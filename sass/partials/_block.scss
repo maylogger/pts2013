@@ -28,20 +28,16 @@
 
 .block-content-bg {
   position: absolute;
-  top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
+  width: 100%;
   @include background-image($block-content-bg);
+  @include filter-gradient(rgba(black,0), rgba(black,.5));
+  // background-image: -ms-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.25) 15%, rgba(0, 0, 0, 0) 35%); // ms prefix
 }
 
 .block-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  // z-index: 2;
-  padding: 0 12px 8px;
+  padding: 12px 12px 6px;
   @include text-shadow(0 2px 3px rgba(black, .5));
   @extend %subpixel;
 }
