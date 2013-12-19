@@ -7,16 +7,6 @@ body {
   padding-bottom: 24px;
 }
 
-.block-content-bg {
-  position: absolute;
-  top: 350px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #333333;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=85)";
-}
-
 .video-group .video {
   margin: 0.75%;
 }
@@ -39,27 +29,14 @@ body {
   transform: rotate(0deg);
 }
 
-#cse-search-form {
+td.gsc-input {
   height: 48px;
-  overflow: hidden;
 }
 
-.gsc-input {
-  position: absolute;
-  top: 10%;
-}
-
-.gsc-search-box {
+input.gsc-input {
   position: relative;
-  width: 100%;
-  background: transparent;
-}
-.gsc-search-box:after {
-  content: "google search";
-  position: absolute;
-  top: 0;
-  left: 12px;
-  z-index: 0;
+  height: 24px;
+  top: 5px;
 }
 
 .main-navigation .pts2 a {
