@@ -106,7 +106,7 @@ $off-canvas-shows-columns: 4;
   @include trailer(1);
 }
 .main-inner {
-  padding: $base-line-height gutter($total_columns) 0;
+  padding: gutter($total_columns) gutter($total_columns) 0;
 }
 
 .sidebar-inner {
@@ -152,7 +152,7 @@ $off-canvas-shows-columns: 4;
   }
 
   .main-inner {
-    padding: $base-line-height gutter($total_columns) 0;
+    padding: gutter($total_columns) gutter($total_columns) 0;
   }
 
   .sidebar-inner {
