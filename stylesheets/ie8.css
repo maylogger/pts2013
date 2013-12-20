@@ -1,8 +1,3 @@
-body {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
 .hero-tile .block {
   padding-bottom: 24px;
 }
@@ -29,14 +24,22 @@ body {
   transform: rotate(0deg);
 }
 
+td.gsc-search-button {
+  width: 15%;
+  background: url('/images/icon-searchbar.png?1387541143') center no-repeat;
+}
+td.gsc-search-button:before {
+  display: none;
+}
+
 td.gsc-input {
   height: 48px;
 }
 
 input.gsc-input {
   position: relative;
+  top: 3px;
   height: 24px;
-  top: 5px;
 }
 
 .main-navigation .pts2 a {
@@ -65,4 +68,40 @@ input.gsc-input {
 
 .video .video-thumbnail .play-icon {
   background-color: #FFF;
+}
+
+@media (min-width: 440px) {
+  .campaign {
+    margin-right: 1.13%;
+  }
+
+  .sidebar-pills-item {
+    margin-right: 0.75%;
+  }
+}
+@media (min-width: 640px) {
+  .hero-tile .block {
+    padding-bottom: 0;
+    margin-right: 0.75%;
+  }
+
+  .hero-sub-tile .block {
+    margin-right: 1.13%;
+  }
+
+  .video-group .video {
+    margin-right: 1.13%;
+  }
+
+  .news-group .news {
+    margin-right: 0.75%;
+  }
+
+  .now-playing .now-playing-list li + li {
+    border-color: #CCC;
+  }
+
+  .now {
+    border-color: #CCC;
+  }
 }

@@ -9,18 +9,11 @@
   // 統一控制 .block 的 margin-bottom
   .block {
     margin-bottom: gutter($total-columns);
-    opacity: 1;
-    @include transition(opacity .5s ease-in); // multiple: comma-delimited
+    @include opaque;
+    @include transition(opacity .5s ease-in);
     @include at-breakpoint($pad) {
       margin-bottom: gutter($total-columns);
       background-position: center;
-    }
-  }
-  // 圖片載入
-  .img-loading & {
-    background-image: url(/images/loading.gif);
-    .block {
-      opacity: 0;
     }
   }
 } // hero end
@@ -67,9 +60,9 @@
   }
   .block-content-bg {
     position: static;
-    background: transparent;
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(enabled=false)";
     width: auto;
+    background: transparent;
+    @include gradient( rgba(black,0), rgba(black,0) );
   }
   .block-content {
     position: static;
@@ -111,9 +104,8 @@
     }
     .block-content-bg {
       position: absolute;
-      @include background-image($block-content-bg);
-      @include filter-gradient(rgba(black,0), black);
       width: 100%;
+      @include gradient( $block-content-bg-gradient-start, $block-content-bg-gradient-end );
     }
     .block-content {
       padding: 12px 12px 6px;

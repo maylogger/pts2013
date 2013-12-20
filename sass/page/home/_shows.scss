@@ -1,6 +1,5 @@
 .shows {
   @include trailer(1);
-  opacity: 1;
   @include transition(opacity .25s);
   > li {
     border-bottom: {
@@ -16,7 +15,7 @@
     position: relative;
     display: block;
     $border-size: 1px;
-    $font-size: 14px;
+    $font-size: 15px;
     font-size: $font-size;
     line-height: rhythm(2) - $border-size;
     padding: 0 $base-line-height / 2;
@@ -80,16 +79,11 @@
       @include adjust-font-size-to(13px, 1.25);
       &:hover {
         color: $color-white;
-        opacity: 1;
+        @include opaque;
         background: $pts-color-lightblue;
       }
     }
   }
-
-  .img-loading & {
-    opacity: 0;
-  }
-
 } // shows end
 
 .shows-collapse {

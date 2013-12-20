@@ -178,15 +178,11 @@
 .language {
   color: $global-muted-color;
   @include adjust-font-size-to(13px);
-  opacity: 1;
   @include transition(opacity .5s); // multiple: comma-delimited
 
   &:hover {
     text-decoration: none;
     color: lighten($global-muted-color, 30%);
-  }
-  .img-loading & {
-    opacity: 0;
   }
   @include at-breakpoint($desktop) {
     position: absolute;
