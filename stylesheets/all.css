@@ -1732,12 +1732,6 @@ input.gsc-search-button {
   padding-left: 6px;
   content: "▾";
 }
-@media (min-width: 640px) {
-  .shows .shows-title:after {
-    float: none;
-    display: inline;
-  }
-}
 .shows .shows-title:hover {
   text-decoration: none;
 }
@@ -1768,6 +1762,10 @@ input.gsc-search-button {
     -o-transition: none;
     transition: none;
     padding: 0 12px;
+  }
+  .shows .shows-title:after {
+    float: none;
+    display: inline;
   }
   .shows > .open > .shows-title {
     line-height: 48px;
