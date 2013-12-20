@@ -1,6 +1,6 @@
 .hero {
   @include pie-clearfix;
-  @include trailer(.5);
+  // @include trailer(.5);
   background-repeat: no-repeat;
   background-position: 50% 7.5%;
   @include at-breakpoint($pad) {
@@ -50,10 +50,11 @@
       padding-top: gutter($total_columns);
     }
     .block-media {
-      padding-top: gutter($total_columns);
+      margin-top: gutter($total_columns);
     }
   }
   .block-media {
+    padding-top: 0;
     float: left;
     margin-right: 8px;
     width: 80px;
@@ -91,7 +92,7 @@
     }
     .block + .block {
       .block-media {
-        padding-top: 75%;
+        margin-top: 0;
       }
       .block-content-bg {
         border-top: none;
@@ -99,6 +100,8 @@
       }
     }
     .block-media {
+      margin-top: 0;
+      padding-top: 75%;
       width: 100%;
       margin-right: 0;
     }
