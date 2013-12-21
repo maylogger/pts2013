@@ -35,7 +35,7 @@ $header-logo-bg: $main-content-bg;
 
 // block
 $block-title: invert($global-color);
-$block-text: darken(white, 15%);
+$block-text: darken(white, 5%);
 $block-content-bg-gradient-start: rgba(black, 0);
 $block-content-bg-gradient-end: rgba(black, .5);
 $block-content-filter-bg: rgba(black,0), black; // for ie8
