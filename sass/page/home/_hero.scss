@@ -45,8 +45,8 @@
     @include pie-clearfix;
   }
   .block + .block {
+    border-top: 1px solid #ccc;
     .block-content-bg {
-      border-top: 1px solid $divider-color;
       padding-top: gutter($total_columns);
     }
     .block-media {
@@ -64,6 +64,7 @@
     width: auto;
     background: transparent;
     @include gradient( rgba(black,0), rgba(black,0) );
+    filter: none;
   }
   .block-content {
     position: static;
