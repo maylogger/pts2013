@@ -41,6 +41,8 @@
 .block-title {
   @include adjust-font-size-to(16px);
   color: $block-title;
+  padding-top: .5em;
+  font-weight: bold;
   .date {
     @include nowrap;
   }
