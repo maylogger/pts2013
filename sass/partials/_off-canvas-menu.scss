@@ -48,6 +48,7 @@
 }
 
 %tile { // 讓 menu 呈現專塊塊狀
+  border-color: #ccc;
   border-color: rgba(black, .1);
   @include box-shadow( inset 0 1px rgba(white, .7) );
 }
@@ -102,12 +103,12 @@
         }
       }
     }
-    &.channel { 
+    &.channel {
       @include pie-clearfix;
       li {
         width: 50%;
         float: left;
-        overflow: hidden; 
+        overflow: hidden;
         @include box-sizing(border-box);
       }
       li:first-child {
