@@ -743,7 +743,7 @@ body {
   font-size: 16px;
   line-height: 48px;
   border: 0;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #eeeeef;
   -webkit-transition: background-color 0.3s, padding 0.3s 0.4s;
   -webkit-transition-delay: 0.4s, ease-out;
   -moz-transition: background-color 0.3s 0.4s, padding 0.3s 0.4s ease-out;
@@ -1020,6 +1020,8 @@ label.footer-nav-title {
   font-size: 16px;
   line-height: 24px;
   color: white;
+  padding-top: .5em;
+  font-weight: bold;
 }
 .block-title .date {
   white-space: nowrap;
@@ -1034,7 +1036,7 @@ label.footer-nav-title {
   text-overflow: ellipsis;
   font-size: 13px;
   line-height: 24px;
-  color: #d9d9d9;
+  color: #f2f2f2;
 }
 
 .custom-popup-class .mfp-container {
@@ -1160,6 +1162,7 @@ label.footer-nav-title {
 }
 
 .main-navigation .main-navigation-list li, .now, .now-playing .now-playing-list li, .now-playing .now-playing-list li + li {
+  border-color: #ccc;
   border-color: rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.7);
   -moz-box-shadow: inset 0 1px rgba(255, 255, 255, 0.7);
@@ -1843,7 +1846,6 @@ input.gsc-search-button {
 
 .hero {
   *zoom: 1;
-  margin-bottom: 12px;
   background-repeat: no-repeat;
   background-position: 50% 7.5%;
 }
@@ -1904,14 +1906,17 @@ input.gsc-search-button {
   display: table;
   clear: both;
 }
+.hero-sub-tile .block + .block {
+  border-top: 1px solid #ccc;
+}
 .hero-sub-tile .block + .block .block-content-bg {
-  border-top: 1px solid #eeeeef;
   padding-top: 3.44828%;
 }
 .hero-sub-tile .block + .block .block-media {
-  padding-top: 3.44828%;
+  margin-top: 3.44828%;
 }
 .hero-sub-tile .block-media {
+  padding-top: 0;
   float: left;
   margin-right: 8px;
   width: 80px;
@@ -1927,6 +1932,7 @@ input.gsc-search-button {
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
   *zoom: 1;
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#00000000', endColorstr='#00000000');
+  filter: none;
 }
 .hero-sub-tile .block-content {
   position: static;
@@ -1946,7 +1952,7 @@ input.gsc-search-button {
   margin-bottom: 0;
   font-size: 12px;
   line-height: 20px;
-  color: #262626;
+  color: #0d0d0d;
 }
 @media (min-width: 640px) {
   .hero-sub-tile .block {
@@ -1959,13 +1965,15 @@ input.gsc-search-button {
     margin-right: 0;
   }
   .hero-sub-tile .block + .block .block-media {
-    padding-top: 75%;
+    margin-top: 0;
   }
   .hero-sub-tile .block + .block .block-content-bg {
     border-top: none;
     padding-top: 0;
   }
   .hero-sub-tile .block-media {
+    margin-top: 0;
+    padding-top: 75%;
     width: 100%;
     margin-right: 0;
   }
@@ -1991,7 +1999,7 @@ input.gsc-search-button {
     display: inline;
   }
   .hero-sub-tile .block-text {
-    color: #d9d9d9;
+    color: #f2f2f2;
   }
 }
 
@@ -2041,7 +2049,6 @@ input.gsc-search-button {
   }
   .content .now-playing-list li + li {
     border-top: 0;
-    border-left: 1px solid #eeeeef;
     padding-top: 12px;
   }
 }

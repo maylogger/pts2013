@@ -26,7 +26,7 @@
 
 td.gsc-search-button {
   width: 15%;
-  background: url('/images/icon-searchbar.png?1387541143') center no-repeat;
+  background: url('/images/icon-searchbar.png?1387561990') center no-repeat;
 }
 td.gsc-search-button:before {
   display: none;
@@ -43,7 +43,7 @@ input.gsc-input {
 }
 
 .main-navigation .pts2 a {
-  background: url('/images/logo-pts2-small.png?1387361423') 50% 55% no-repeat;
+  background: url('/images/logo-pts2-small.png?1387438610') 50% 55% no-repeat;
   -webkit-background-size: 68px 20px;
   -moz-background-size: 68px 20px;
   -o-background-size: 68px 20px;
@@ -51,7 +51,7 @@ input.gsc-input {
 }
 
 .main-navigation .pts-hd a {
-  background: url('/images/logo-pts-hd-small.png?1387361434') 50% 55% no-repeat;
+  background: url('/images/logo-pts-hd-small.png?1387438610') 50% 55% no-repeat;
   -webkit-background-size: 68px 20px;
   -moz-background-size: 68px 20px;
   -o-background-size: 68px 20px;
