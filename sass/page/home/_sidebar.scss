@@ -1,10 +1,10 @@
 .sidebar {
   @include pie-clearfix;
-  opacity: 1;
-  @include transition(opacity .5s .5s); // multiple: comma-delimited
+  @include opaque;
+  @include transition(opacity 1s); // multiple: comma-delimited
 
   .img-loading & {
-    opacity: 0;
+    @include transparent;
   }
 }
 

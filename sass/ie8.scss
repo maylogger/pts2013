@@ -1,19 +1,13 @@
 @import "compass";
 
-// body size fix
-body {
-	max-width: 600px;
-	margin: 0 auto;
-}
-
 // block video bug fix
 .hero-tile .block {
-	padding-bottom: 24px;
+  padding-bottom: 24px;
 }
 
 // video-group 2 column layout fix
 .video-group .video {
-	margin: 0.75%;
+  margin: 0.75%;
 }
 
 // mobile menu button fix
@@ -29,16 +23,22 @@ body {
     }
 }
 
-// google search bar fix
+// Google Search Custom search icon fix
+td.gsc-search-button {
+  width: 15%;
+  background: image-url("icon-searchbar.png") center no-repeat;
+  &:before {
+    display: none;
+  }
+}
 td.gsc-input {
-	height: 48px;
+  height: 48px;
 }
 input.gsc-input {
-	position: relative;
-	height: 24px;
-	top: 5px;
+  position: relative;
+  top: 3px;
+  height: 24px;
 }
-
 
 // pts channel logo size fix
 .main-navigation .pts2 a {
@@ -62,4 +62,48 @@ input.gsc-input {
 // video play icon background opacity fix
 .video .video-thumbnail .play-icon {
 	background-color: #FFF;
+}
+@media (min-width: 440px) {
+  // campaign 3 column layout fix
+  .campaign {
+    margin-right: 1.13%;
+  }
+  // sidebar pills item 2 column layout fix
+  .sidebar-pills-item {
+    margin-right: 0.75%
+  }
+}
+
+@media (min-width: 640px) {
+  // hero block 2 column layout fix
+  .hero-tile .block {
+    padding-bottom: 0;
+    margin-right: 0.75%;
+  }
+
+  // hero sub block 3 column layout fix
+  .hero-sub-tile .block {
+    margin-right: 1.13%;
+  }
+
+  // video-group 3 column layout fix
+  .video-group .video {
+    margin-right: 1.13%;
+  }
+
+  // news-group 2 column layout fix
+  .news-group .news {
+    margin-right: 0.75%;
+  }
+
+  // off canvas menu now playing list li border color fix
+  .now-playing .now-playing-list li + li {
+    border-color: #CCC;
+  }
+
+  // off canvas menu time now border color fix
+  .now {
+    border-color: #CCC;
+  }
+
 }

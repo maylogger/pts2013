@@ -48,6 +48,7 @@
 }
 
 %tile { // 讓 menu 呈現專塊塊狀
+  border-color: #ccc;
   border-color: rgba(black, .1);
   @include box-shadow( inset 0 1px rgba(white, .7) );
 }
@@ -102,12 +103,12 @@
         }
       }
     }
-    &.channel { 
+    &.channel {
       @include pie-clearfix;
       li {
         width: 50%;
         float: left;
-        overflow: hidden; 
+        overflow: hidden;
         @include box-sizing(border-box);
       }
       li:first-child {
@@ -178,15 +179,11 @@
 .language {
   color: $global-muted-color;
   @include adjust-font-size-to(13px);
-  opacity: 1;
   @include transition(opacity .5s); // multiple: comma-delimited
 
   &:hover {
     text-decoration: none;
     color: lighten($global-muted-color, 30%);
-  }
-  .img-loading & {
-    opacity: 0;
   }
   @include at-breakpoint($desktop) {
     position: absolute;

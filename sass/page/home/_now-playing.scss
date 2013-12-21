@@ -1,24 +1,32 @@
 .content {
   .now-playing {
-    @include trailer(1);
-    opacity: 1;
-    @include transition(opacity .5s ease-in); // multiple: comma-delimited
-    .img-loading & {
-      opacity: 0;
+    // @include trailer(1);
+    @include transition(opacity .5s ease-in);
+    background: #eeeeef;
+    margin-left: -(gutter($total_columns));
+    margin-right: -(gutter($total_columns));
+    .now-playing-title {
+      border-bottom: 2px solid $color-black;
+      padding: 0;
+      @include adjust-font-size-to(16px);
+      color: $color-black;
+      background-color: transparent;
+    }
+    .now-playing-list {
+      @include pie-clearfix;
+      li {
+        @include box-shadow(none);
+      }
     }
   }
-  .now-playing-title {
-    border-bottom: 2px solid $color-black;
-    padding: 0;
-    @include adjust-font-size-to(16px);
-    color: $color-black;
-    background-color: transparent;
-  }
-  .now-playing-list {
-    @include pie-clearfix;
-  }
+
 
   @include at-breakpoint($pad) {
+    .now-playing {
+      margin-left: -(gutter($total_columns));
+      margin-right: -(gutter($total_columns));
+      padding: 0 gutter($total_columns);
+    }
     .now-playing-list {
       li {
         @include box-sizing(border-box);
@@ -28,7 +36,6 @@
       }
       li + li {
         border-top: 0;
-        border-left: 1px solid $color-white;
         padding-top: 12px;
       }
     }

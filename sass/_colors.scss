@@ -1,6 +1,7 @@
 $color-red: #a00;
 $color-white: #eeeeef;
 $color-black: #393333;
+$color-gray: #ccc;
 
 // pts ci color
 $pts-color-red: #EC1C24;
@@ -19,6 +20,7 @@ $global-muted-color: rgba(black, .5);
 $body-bg: $color-white;
 $main-content-bg: white;
 
+$img-holder-color: $color-gray;
 
 // nav header
 $header: $color-white;
@@ -33,8 +35,9 @@ $header-logo-bg: $main-content-bg;
 
 // block
 $block-title: invert($global-color);
-$block-text: darken(white, 15%);
-$block-content-bg: linear-gradient( top, rgba(black, 0) 0%, rgba(black, .25) 35%, rgba(black, .5) 100% );
+$block-text: darken(white, 5%);
+$block-content-bg-gradient-start: rgba(black, 0);
+$block-content-bg-gradient-end: rgba(black, .5);
 $block-content-filter-bg: rgba(black,0), black; // for ie8
 
 // shows

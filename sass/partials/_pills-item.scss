@@ -42,12 +42,13 @@
     li {
       border-bottom: 1px solid $pill-list-divider-color;
       a {
+        @include has-layout;
         display: block;
         padding: 6px 7px 5px 0px;
         @include ellipsis;
         @include unstyled-link;
         @include link-colors( $pill-list-link-color, $pill-list-link-hover-color );
-        @include transition(padding .15s ease-in);
+        @include transition(padding .15s linear);
         &:hover {
           padding: 6px 2px 5px 5px;
           background-color: $pill-list-link-hover-bg-color;
