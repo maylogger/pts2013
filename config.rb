@@ -13,6 +13,14 @@ the_hold_options = {
 
 preferred_syntax = :scss
 
+# Compass will automatically add cache busters to your images based on image timestamps.
+# This will keep browser caches from displaying the wrong image if you change the image but not the url.
+# If you don’t want this behavior, it's easy to configure or disable:
+# UNCOMMENT THE NEXT THREE LINES
+asset_cache_buster do |http_path, real_path|
+ nil
+end
+
 css_dir = "stylesheets" # by Fire.app
 sass_dir = "sass" # by Fire.app
 images_dir = "images" # by Fire.app
