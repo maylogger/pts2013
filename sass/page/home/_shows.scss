@@ -55,7 +55,7 @@
     .shows-title {
       line-height: rhythm(2);
       @include transition(none);
-      padding: 0 12px;
+      padding: 0 8px;
     }
     > .open > .shows-title {
       line-height: rhythm(2);
@@ -88,11 +88,13 @@
   display: none;
   border-top: 1px solid $divider-color;
   padding: ($base-line-height / 2);
+  max-width: 250px;
   @include adjust-font-size-to(13px, 1.25);
   > li {
     @include ellipsis;
   }
   a {
+    @include ellipsis;
     color: $shows-link-color;
     &:hover {
       text-decoration: none;
@@ -115,13 +117,14 @@
     &.pull-right {
       left: auto;
       right: 0;
+      background: red;
     }
+  }
   @include at-breakpoint($wide-desktop) {
     &.pull-right {
       left: 0;
       right: auto;
     }
-  }
   }
 
 } // show-collapse end
