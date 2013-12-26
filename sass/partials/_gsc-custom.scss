@@ -4,8 +4,8 @@
 	color: $color-white;
 	background: $pts-color-blue;
 }
-.gsc-branding { 
-	display: none; 
+.gsc-branding {
+	display: none;
 }
 table.gsc-search-box {
 	margin-left: -12px;
@@ -16,6 +16,7 @@ td.gsc-input {
 	position: relative;
 	background: transparent;
 	&:after {
+    @include ellipsis;
 		content: "google search";
 		position: absolute;
 		top: 0;
