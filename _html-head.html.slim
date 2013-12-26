@@ -3,8 +3,10 @@ meta charset="utf-8"
 meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"
 
 title untitled project
-= stylesheet_link_tag "/vender/magnific-popup/magnific-popup.css", "/vender/bootstrap/css/bootstrap-glyphicons.css", "all"
+= stylesheet_link_tag "all", "/vender/magnific-popup/magnific-popup.css", "/vender/bootstrap/css/bootstrap-glyphicons.css"
 /[if lt IE 9]
 	= stylesheet_link_tag "ie8"
 /[if lt IE 9]
-  = javascript_include_tag "//html5shim.googlecode.com/svn/trunk/html5.js", "respond.min"
+  = javascript_include_tag "//html5shim.googlecode.com/svn/trunk/html5.js"
+/[if IE 8]
+  = javascript_include_tag "respond.min"
