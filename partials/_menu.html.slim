@@ -1,11 +1,8 @@
 /! 主選單
 .main-navigation
-  / h3.main-navigation-title 電視頻道
   ul.main-navigation-list.channel
-    / li.pts: a.active href="" 公視
     li.pts2: a href="" 公視 2
     li.pts-hd: a href="" 公視 HD
-  / h3.main-navigation-title 其他連結
   ul.main-navigation-list.links
     li: a href="" 節目表
     li: a href="" 討論區
@@ -13,10 +10,8 @@
     li: a href="" English
 /! 主選單 end
 
-form.search
-  / label.glyphicon.glyphicon-search for="search"
-  / input.search-input#search placeholder="站內搜尋"
-  #cse-search-form style="width: 100%" 
+.search
+  #cse-search-form style="width: 100%"
     | Loading
     script src="//www.google.com/jsapi" type="text/javascript"
     javascript:
