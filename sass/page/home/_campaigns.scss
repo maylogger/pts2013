@@ -34,10 +34,11 @@
 
   .campaign-title {
     @include leader(.25);
-    @include adjust-font-size-to(12px, 2/3);
+    @include adjust-font-size-to(16px, 1);
     @include at-breakpoint($pad) {
       max-width: none;
       width: auto;
+      @include adjust-font-size-to(12px, 2/3);
     }
   }
 

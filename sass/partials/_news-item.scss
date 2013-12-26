@@ -12,7 +12,10 @@
   float: left;
   margin-right: 12px;
   width: 48px;
-  height: 36px;
+  height: 48px;
+  @include at-breakpoint($pad) {
+    height: (2/3) * $base-line-height * 2;
+  }
   img {
     margin-bottom: 0;
   }
@@ -23,10 +26,13 @@
 }
 
 .news-item-title {
-  padding: 2px 0;
   color: $news-item-title-color;
-  @include adjust-font-size-to(13px, 2/3);
-  max-height: (2/3) * $base-line-height * 2;
+  @include adjust-font-size-to(16px, 1);
+  max-height: $base-line-height * 2;
   overflow: hidden;
+  @include at-breakpoint($pad) {
+     @include adjust-font-size-to(13px, 2/3);
+     max-height: (2/3) * $base-line-height * 2;
+  }
 }
 

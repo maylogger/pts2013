@@ -77,11 +77,14 @@
     a {
       display: block;
       $border-size: 1px;
-      $font-size: 15px;
+      $font-size: 18px;
+      @include at-breakpoint($desktop) {
+        font-size: 15px;
+      }
       font-size: $font-size;
       line-height: rhythm(2) - $border-size;
       padding: 0 $base-line-height / 2;
-      color: rgba(black, .5);
+      color: rgba(black, .75);
       @include transition( all .2s );
       @media (max-height: 380px) {
         // 針對過低的瀏覽器高度調整

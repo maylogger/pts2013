@@ -37,8 +37,12 @@
 
   .more {
     display: inline-block;
+    @include ellipsis;
     @include leader(.25);
-    @include adjust-font-size-to(13px);
+    @include adjust-font-size-to(16px);
+    @include at-breakpoint($pad) {
+      @include adjust-font-size-to(13px);
+    }
   }
 
 

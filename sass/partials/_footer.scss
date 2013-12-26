@@ -27,7 +27,10 @@ label.footer-nav-title {
 .footer-nav-list {
   li {
     padding: 4px 0;
-    @include adjust-font-size-to(13px, 2/3);
+    @include adjust-font-size-to(16px);
+    @include at-breakpoint($pad) {
+      @include adjust-font-size-to(13px, 2/3);
+    }
   }
   a {
     color: $footer-list-color;

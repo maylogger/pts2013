@@ -14,8 +14,12 @@
 
     a {
       display: block;
-      padding: 3px 12px 1px 12px;
-      @include adjust-font-size-to(13px);
+      padding: 5px 12px 3px 12px;
+      @include adjust-font-size-to(16px);
+      @include at-breakpoint($pad) {
+        padding: 3px 12px 1px 12px;
+        @include adjust-font-size-to(13px);
+      }
       color: $color-black;
       @include border-radius(3px 3px 0 0);
       &:hover {
@@ -29,7 +33,10 @@
     display: none;
     .more {
       // float: right;
-      @include adjust-font-size-to(13px);
+      @include adjust-font-size-to(16px);
+      @include at-breakpoint($pad) {
+        @include adjust-font-size-to(13px);
+      }
     }
     &.active {
       display: block;
@@ -38,7 +45,10 @@
 
   .pill-panel-list {
     // padding-top: 3px;
-    @include adjust-font-size-to(13px);
+    @include adjust-font-size-to(16px);
+    @include at-breakpoint($pad) {
+      @include adjust-font-size-to(13px);
+    }
     li {
       border-bottom: 1px solid $pill-list-divider-color;
       a {

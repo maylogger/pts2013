@@ -3,8 +3,10 @@
     @include navigation-title; // code 在 _off-canvas-menu.scss 設定
   }
   .now-playing-list {
-    @include adjust-font-size-to(13px);
-    color: rgba(black, .5);
+    @include adjust-font-size-to(16px);
+    @include at-breakpoint($pad) {
+      @include adjust-font-size-to(13px);
+    }
     $padding: 1/2;
     li {
       padding: 0 $base-line-height / 2;
@@ -33,7 +35,7 @@
     .show {
       display: inline-block;
       // padding-left: 40px;
-      color: rgba(black, .5);
+      color: rgba(black, .75);
       vertical-align: middle;
       &:hover {
         color: rgba(black, .75);
