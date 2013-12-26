@@ -24,8 +24,10 @@
     @include transition( background .2s );
     &:after {
       float: right;
-      padding-left: 6px;
-      content: "▾";
+      padding-left: 3px;
+      content: "▼";
+      font-size: .7em;
+      @include transform( scale(1, .7) );
     }
     &:hover {
       text-decoration: none;
@@ -54,10 +56,6 @@
       line-height: rhythm(2);
       @include transition(none);
       padding: 0 12px;
-      &:after {
-        float: none;
-        display: inline;
-      }
     }
     > .open > .shows-title {
       line-height: rhythm(2);

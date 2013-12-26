@@ -1732,8 +1732,14 @@ input.gsc-search-button {
 }
 .shows .shows-title:after {
   float: right;
-  padding-left: 6px;
-  content: "▾";
+  padding-left: 3px;
+  content: "▼";
+  font-size: .7em;
+  -webkit-transform: scale(1, 0.7);
+  -moz-transform: scale(1, 0.7);
+  -ms-transform: scale(1, 0.7);
+  -o-transform: scale(1, 0.7);
+  transform: scale(1, 0.7);
 }
 .shows .shows-title:hover {
   text-decoration: none;
@@ -1765,10 +1771,6 @@ input.gsc-search-button {
     -o-transition: none;
     transition: none;
     padding: 0 12px;
-  }
-  .shows .shows-title:after {
-    float: none;
-    display: inline;
   }
   .shows > .open > .shows-title {
     line-height: 48px;

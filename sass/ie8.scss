@@ -1,11 +1,5 @@
 @import "compass";
 
-// fix shows menu triangle
-.shows .shows-title:after {
-  content: "▼";
-  font-size: .7em;
-}
-
 // block video bug fix
 .hero-tile .block {
   padding-bottom: 24px;
