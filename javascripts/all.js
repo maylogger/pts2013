@@ -1,32 +1,30 @@
 var container = $(".container");
 
 $(".menu-btn").click(function(){
-  // event.stopPropagation();
   container.toggleClass("show-menu");
-  return false;
+  event.stopPropagation();
 });
 $(".off-canvas-menu").click(function(){
-  // event.stopPropagation();
-  return false;
+  event.stopPropagation();
 });
 $(".shows-btn").click(function(){
-  // event.stopPropagation();
   container.toggleClass("show-shows");
-  return false;
+  event.stopPropagation();
 });
 
 
 // 執行開啓第二層選單
-var menuItem = $('#shows > li');
+var menuItem = $('#shows .shows-title');
 menuItem.click(function(event){
-  // console.log(event);
   var target = $(event.currentTarget);
+  menuItem.not(target).parent().removeClass('open');
+  target.parent().toggleClass('open');
   event.stopPropagation();
-  menuItem.not(target).removeClass('open');
-  target.toggleClass('open');
-  event.preventDefault();  
+  event.preventDefault();
 });
-
+$(".shows-collapse").click(function(event){
+  event.stopPropagation();
+});
 
 $(document).click(function(){
   menuItem.removeClass('open');
@@ -46,8 +44,4 @@ $('.open-popup-link').magnificPopup({
   type:'inline',
   midClick: true,
   mainClass: 'custom-popup-class'
-  // Optionally pass markup without attaching it to DOM
-  /*items: {
-    src: '<div id="popup-with-something" class="mfp-hide"><div class="some-element">Instead of this element you may put anything else and it\'ll scale proportionally (e.g. flash embed object or your custom video player) </div></div>'
-  }*/
 });
