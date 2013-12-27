@@ -1,33 +1,43 @@
 var container = $(".container");
 
-$(".menu-btn").click(function(){
+// 防止click穿透到上層
+function StopBubble(e) {
+  if (e && e.stopPropagation) {//非IE
+    e.stopPropagation();
+  }
+  else {//IE
+    window.event.cancelBubble = true;
+  }
+}
+
+$(".menu-btn").on("click", function(){
   container.toggleClass("show-menu");
-  event.stopPropagation();
+  return false;
 });
-$(".off-canvas-menu").click(function(){
-  event.stopPropagation();
+$(".off-canvas-menu").on("click", function(event){
+  StopBubble(event);
 });
-$(".shows-btn").click(function(){
+$(".shows-btn").on("click", function(){
   container.toggleClass("show-shows");
-  event.stopPropagation();
+  return false;
 });
 
 
 // 執行開啓第二層選單
 var menuItem = $('#shows .shows-title');
-menuItem.click(function(event){
+menuItem.on("click", function(event){
   var target = $(event.currentTarget);
   menuItem.not(target).parent().removeClass('open');
   target.parent().toggleClass('open');
-  event.stopPropagation();
+  StopBubble(event);
   event.preventDefault();
 });
-$(".shows-collapse").click(function(event){
+$(".shows-collapse").on("click", function(event){
   event.stopPropagation();
 });
 
-$(document).click(function(){
-  menuItem.removeClass('open');
+$(document).on("click", function(){
+  menuItem.parent().removeClass('open');
   container.removeClass("show-menu").removeClass("show-shows");
 });
 
