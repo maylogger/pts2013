@@ -22,6 +22,7 @@
       }
       color: $color-black;
       @include border-radius(3px 3px 0 0);
+      @include transition(background .3s);
       &:hover {
         text-decoration: none;
         background-color: $nav-pills-item-hover-bg-color;
@@ -58,9 +59,8 @@
         @include ellipsis;
         @include unstyled-link;
         @include link-colors( $pill-list-link-color, $pill-list-link-hover-color );
-        @include transition(padding .15s linear);
+        @include transition(background .15s linear);
         &:hover {
-          padding: 6px 2px 5px 5px;
           background-color: $pill-list-link-hover-bg-color;
         }
       }
