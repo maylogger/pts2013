@@ -1,6 +1,5 @@
 .news-group {
   @include trailer(1);
-  @include transition(opacity .5s .75s); // multiple: comma-delimited
   .news {
     @include trailer(1);
     @include at-breakpoint($pad) {
