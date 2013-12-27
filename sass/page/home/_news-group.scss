@@ -37,7 +37,7 @@
 
   .more {
     display: inline-block;
-    @include ellipsis;
+    @include nowrap;
     @include leader(.25);
     @include adjust-font-size-to(16px);
     @include at-breakpoint($pad) {

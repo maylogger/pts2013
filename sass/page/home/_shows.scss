@@ -53,6 +53,7 @@
       border-bottom: none;
     }
     .shows-title {
+      @include nowrap;
       line-height: rhythm(2);
       @include transition(none);
       padding: 0 8px;
