@@ -38,7 +38,7 @@
       @include transition(background-color .3s);
     }
 
-    .glyphicon-play {
+    .play-triangle {
       position: relative;
       top: 50%;
       left: 50%;
@@ -57,9 +57,5 @@
     .play-icon {
       background-color: $video-play-icon-hover-bg-color;
     }
-    .glyphicon-play {
-      // color: $video-play-icon-hover-color;
-    }
   }
-
 }
