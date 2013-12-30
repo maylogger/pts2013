@@ -1733,9 +1733,10 @@ input.gsc-input:focus {
   background: #034ea2 !important;
 }
 
-td.gsc-search-button:before {
-  content: '';
+input.gsc-search-button {
   display: block;
+  border: none;
+  background-color: transparent;
   text-indent: -119988px;
   overflow: hidden;
   text-align: left;
@@ -1749,10 +1750,6 @@ td.gsc-search-button:before {
 
 td.gsc-search-button {
   width: 12.5%;
-}
-
-input.gsc-search-button {
-  display: none;
 }
 
 .gsc-clear-button {

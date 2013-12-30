@@ -47,18 +47,20 @@ input.gsc-input {
 		background: $pts-color-blue !important;
 	}
 }
-td.gsc-search-button:before {
-  content: '';
+input.gsc-search-button {
+  // content: '';
   display: block;
+  border: none;
+  background-color: transparent;
   @include replace-text-with-dimensions("gsc-search.png");
   background-image: none, image-url("gsc-search.svg");
 }
 td.gsc-search-button {
 	width: 12.5%;
 }
-input.gsc-search-button {
-	display: none;
-}
+// input.gsc-search-button {
+// 	display: none;
+// }
 .gsc-clear-button {
 	display: none;
 }
