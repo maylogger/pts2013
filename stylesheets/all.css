@@ -1447,10 +1447,19 @@ label.footer-nav-title {
 }
 .video .video-thumbnail .glyphicon-play {
   position: relative;
-  top: 9px;
-  left: 1px;
-  color: #034ea2;
+  top: 50%;
+  left: 50%;
+  margin: -9px 0 0 -6px;
   font-size: 18px;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/video-play.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 18px;
+  height: 18px;
+  background-image: none, url('/images/video-play.svg');
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
   -o-transition: color 0.3s;
@@ -1461,9 +1470,6 @@ label.footer-nav-title {
 }
 .video:hover .play-icon {
   background-color: white;
-}
-.video:hover .glyphicon-play {
-  color: #034ea2;
 }
 
 .news-item {
