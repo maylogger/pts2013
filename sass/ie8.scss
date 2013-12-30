@@ -24,13 +24,13 @@
 }
 
 // Google Search Custom search icon fix
-td.gsc-search-button {
-  width: 15%;
-  background: image-url("icon-searchbar.png") center no-repeat;
-  &:before {
-    display: none;
-  }
-}
+// td.gsc-search-button {
+//   width: 15%;
+//   background: image-url("icon-searchbar.png") center no-repeat;
+//   &:before {
+//     display: none;
+//   }
+// }
 td.gsc-input {
   height: 48px;
 }

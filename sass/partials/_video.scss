@@ -40,10 +40,13 @@
 
     .glyphicon-play {
       position: relative;
-      top: 9px;
-      left: 1px;
-      color: $video-play-icon-color;
+      top: 50%;
+      left: 50%;
+      margin: -9px 0 0 -6px;
+      // color: $video-play-icon-color;
       font-size: 18px;
+      @include replace-text-with-dimensions("video-play.png");
+      background-image: none, image-url("video-play.svg");
       @include transition(color .3s);
     }
   } // .video-thumbnail end
@@ -55,7 +58,7 @@
       background-color: $video-play-icon-hover-bg-color;
     }
     .glyphicon-play {
-      color: $video-play-icon-hover-color;
+      // color: $video-play-icon-hover-color;
     }
   }
 
