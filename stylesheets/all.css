@@ -1447,7 +1447,7 @@ label.footer-nav-title {
   -o-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-.video .video-thumbnail .glyphicon-play {
+.video .video-thumbnail .play-triangle {
   position: relative;
   top: 50%;
   left: 50%;
