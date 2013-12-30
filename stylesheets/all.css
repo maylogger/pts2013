@@ -1728,25 +1728,21 @@ input.gsc-input:focus {
 }
 
 td.gsc-search-button:before {
+  content: '';
   display: block;
-  width: 44px;
-  height: 26px;
-  font-family: 'Glyphicons Halflings';
-  font-style: normal;
-  font-weight: normal;
-  color: #034ea2;
-  border: none;
-  background: #034ea2;
-  -webkit-font-smoothing: antialiased;
-  font-size: 16px;
-  line-height: 24px;
-  content: "\e003";
-  color: rgba(255, 255, 255, 0.7);
-  text-align: center;
+  text-indent: -119988px;
+  overflow: hidden;
+  text-align: left;
+  background-image: url('/images/gsc-search.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  width: 17px;
+  height: 17px;
+  background-image: none, url('/images/gsc-search.svg');
 }
 
 td.gsc-search-button {
-  width: 10%;
+  width: 12.5%;
 }
 
 input.gsc-search-button {

@@ -24,14 +24,6 @@
   transform: rotate(0deg);
 }
 
-td.gsc-search-button {
-  width: 15%;
-  background: url('/images/icon-searchbar.png') center no-repeat;
-}
-td.gsc-search-button:before {
-  display: none;
-}
-
 td.gsc-input {
   height: 48px;
 }
