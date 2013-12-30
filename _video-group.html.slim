@@ -1,24 +1,21 @@
 .video-group-title 影片
 .row
-  a.video.open-popup-link< href="#popup-video0"
+  a.video.open-popup-link< href="/videos/video0.html"
     .video-thumbnail
       img src="http://hhhhold.com/320x180/#{rand(20)}"
-      / = image_tag lorem_image("320x180", :text => "Video", :random_color => true)
       .play-icon
         .glyphicon.glyphicon-play
     .video-title= zh_lorem_words( 14 + rand(20))
   - 10.times do |i|
-    a.video.open-popup-link href="#popup-video#{i+1}"
+    a.video.open-popup-link href="/videos/video1.html"
       .video-thumbnail
         img src="http://hhhhold.com/320x180/#{rand(20)}"
-        / = image_tag lorem_image("320x180", :text => "Video", :random_color => true)
         .play-icon
           .glyphicon.glyphicon-play
       .video-title= zh_lorem_words( 14 + rand(20))
   a.video href="https://www.youtube.com/user/pts?feature=watch"
     .video-thumbnail
       img src="http://hhhhold.com/320x180/#{rand(20)}"
-      / = image_tag lorem_image("320x180", :text => "More Video")
       .play-icon
         .glyphicon.glyphicon-play
     .video-title 觀看更多的影片 →
