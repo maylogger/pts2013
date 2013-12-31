@@ -1,11 +1,5 @@
 .sidebar {
   @include pie-clearfix;
-  @include opaque;
-  @include transition(opacity 1s); // multiple: comma-delimited
-
-  .img-loading & {
-    @include transparent;
-  }
 }
 
 .sidebar-pills-item {

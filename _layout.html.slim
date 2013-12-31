@@ -2,7 +2,7 @@ doctype 5
 html lang="zh-TW"
   head
     = render "/html-head"
-  body.img-loading
+  body
     = render "/partials/states-bar"
     .container
       .off-canvas-menu
@@ -13,6 +13,5 @@ html lang="zh-TW"
           = yield
       = render "/partials/footer"
 
-    = render "/partials/popup-video-group"
     = render "/html-foot"
     = render "/livereload-js"
