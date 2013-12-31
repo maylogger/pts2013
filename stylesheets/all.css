@@ -2403,21 +2403,11 @@ td.gsc-search-button {
 
 .sidebar {
   *zoom: 1;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-  -webkit-transition: opacity 1s;
-  -moz-transition: opacity 1s;
-  -o-transition: opacity 1s;
-  transition: opacity 1s;
 }
 .sidebar:after {
   content: "";
   display: table;
   clear: both;
-}
-.img-loading .sidebar {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
 }
 
 .sidebar-pills-item {
