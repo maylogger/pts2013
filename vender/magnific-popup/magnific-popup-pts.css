@@ -28,7 +28,7 @@
   height: 100%;
   left: 0;
   top: 0;
-  padding: 0 8px;
+  padding: 40px 8px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
@@ -48,11 +48,12 @@
   vertical-align: middle;
   margin: 0 auto;
   text-align: left;
-  z-index: 1045; }
+  z-index: 1045;
+  max-width: 1200px; }
 
 .mfp-inline-holder .mfp-content,
 .mfp-ajax-holder .mfp-content {
-  width: 100%;
+  width: 80%;
   cursor: auto; }
 
 .mfp-ajax-cur {
@@ -133,9 +134,9 @@ button::-moz-focus-inner {
   line-height: 44px;
   position: absolute;
   right: 0;
-  top: 0;
+  top: -44px;
   text-decoration: none;
-  text-align: center;
+  text-align: right;
   opacity: 0.65;
   padding: 0 0 18px 10px;
   color: white;
@@ -145,10 +146,11 @@ button::-moz-focus-inner {
   .mfp-close:hover, .mfp-close:focus {
     @include opaque; }
   .mfp-close:active {
-    top: 1px; }
+    top: -43px; }
 
 .mfp-close-btn-in .mfp-close {
-  color: #333333; }
+  /* color: #333333; */
+  /* 不知道這裡為何要修改為 #333 的黑色 */ }
 
 .mfp-image-holder .mfp-close,
 .mfp-iframe-holder .mfp-close {
@@ -395,42 +397,22 @@ img.mfp-img {
   right: 0;
   padding-top: 0; }
 
-
-
 /* for pts */
-.mfp-container {
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.mfp-content {
-  max-width: 1200px;
-}
-
+/* 固定比例卡位、外框樣式 */
 .popup-video {
   width: 100%;
   height: 0;
   overflow: hidden;
   padding-top: 56.25%;
   background-color: black;
-}
-
-.popup-video .mfp-close {
-  top: -44px;
-  color: #FFF !important;
-  text-align: right;
-  right: 1px;
-}
-.popup-video .mfp-close:focus {
-  outline: none;
-}
-
-.popup-video-content {
-  background: rgba(0, 0, 0, 0.75);
-  position: absolute;
-  top: -3px;
-  left: 0;
-  width: 100%;
-  height: 100%;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
+/* 內容物滿版 */
+.popup-video .popup-video-content {
+  /* 因為是修改未知嵌入內容，因此加上 important 確保可覆蓋 inline style */
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
 }
