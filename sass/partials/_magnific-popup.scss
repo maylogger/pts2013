@@ -1,15 +1,15 @@
-.custom-popup-class {
-  // This adds padding from top and bottom
-  .mfp-container {
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  // This adds max-width to popup content
-  .mfp-content {
-    width: 80%;
-    max-width: 1200px;
-  }
+
+// This adds padding from top and bottom
+.mfp-container {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
+// This adds max-width to popup content
+.mfp-content {
+  width: 80%;
+  max-width: 1200px;
+}
+
 // This makes "#popup-video" scale down proportionally
 .popup-video {
   width: 100%;
@@ -17,11 +17,12 @@
   overflow: hidden;
   // This is scale ratio
   padding-top: 56.25%;
+  background-color: black;
 }
 // This shifts close button outside of the container
 .popup-video .mfp-close {
   top: -44px;
-  color: #FFF;
+  color: #FFF !important;
   text-align: right;
   right: 1px;
   &:focus {
