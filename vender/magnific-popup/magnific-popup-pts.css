@@ -53,8 +53,15 @@
 
 .mfp-inline-holder .mfp-content,
 .mfp-ajax-holder .mfp-content {
-  width: 80%;
-  cursor: auto; }
+  width: 100%;
+  cursor: auto;
+}
+@media (min-width: 640px) {
+  .mfp-inline-holder .mfp-content,
+  .mfp-ajax-holder .mfp-content {
+    width: 80%;
+  }
+}
 
 .mfp-ajax-cur {
   cursor: progress; }
