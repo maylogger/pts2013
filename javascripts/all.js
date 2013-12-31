@@ -41,14 +41,6 @@ $(document).on("click", function(){
   container.removeClass("show-menu").removeClass("show-shows");
 });
 
-
-// imageloaded
-$('.sidebar').imagesLoaded().done( function( instance ) {
-  // console.log('all images successfully loaded');
-  $('body').removeClass('img-loading');
-});
-
-
 // lightbox
 $('.open-popup-link').magnificPopup({
   type: 'ajax'
