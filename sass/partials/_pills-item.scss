@@ -13,6 +13,7 @@
     }
 
     a {
+      cursor: pointer;
       display: block;
       padding: 5px 12px 3px 12px;
       @include adjust-font-size-to(16px);
@@ -33,6 +34,7 @@
   .pill-panel {
     display: none;
     .more {
+      cursor: pointer;
       // float: right;
       @include adjust-font-size-to(16px);
       @include at-breakpoint($pad) {
@@ -53,11 +55,12 @@
     li {
       border-bottom: 1px solid $pill-list-divider-color;
       a {
+        @include unstyled-link;
         @include has-layout;
+        cursor: pointer;
         display: block;
         padding: 6px 7px 5px 0px;
         @include ellipsis;
-        @include unstyled-link;
         @include link-colors( $pill-list-link-color, $pill-list-link-hover-color );
         @include transition(background .15s linear);
         &:hover {
