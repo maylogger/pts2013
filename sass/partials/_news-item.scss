@@ -26,13 +26,14 @@
 }
 
 .news-item-title {
+  @include ellipsis;
   color: $news-item-title-color;
   @include adjust-font-size-to(16px, 1);
-  max-height: $base-line-height * 2;
+  font-size: 16px;
+  line-height: 36px;
   overflow: hidden;
   @include at-breakpoint($pad) {
-     @include adjust-font-size-to(13px, 2/3);
-     max-height: (2/3) * $base-line-height * 2;
+    font-size: 15px;
   }
 }
 
