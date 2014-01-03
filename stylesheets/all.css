@@ -1470,17 +1470,21 @@ label.footer-nav-title {
 }
 
 .news-item-title {
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
   color: black;
   font-size: 16px;
   line-height: 24px;
-  max-height: 48px;
+  font-size: 16px;
+  line-height: 36px;
   overflow: hidden;
 }
 @media (min-width: 640px) {
   .news-item-title {
-    font-size: 13px;
-    line-height: 16px;
-    max-height: 32px;
+    font-size: 15px;
   }
 }
 
@@ -2242,7 +2246,7 @@ td.gsc-search-button {
 }
 .news-group .news-list .news-item {
   display: block;
-  padding: 12px 12px 12px 0px;
+  padding: 8px 0;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;

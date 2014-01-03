@@ -51,7 +51,7 @@
     }
     .news-item {
       display: block;
-      padding: 12px 12px 12px 0px;
+      padding: 8px 0;
       @include transform-style(preserve-3d);
       @include perspective(100px);
       @include transition(background .3s); // multiple: comma-delimited

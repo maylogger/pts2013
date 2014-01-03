@@ -1,20 +1,20 @@
 .news
   .news-title.pts-news: a href="#" 公視新聞
   ul.news-list
-    - @image_news = rand(10)
+    - @image_news = 10
     - @image_news.times do
       li= render "/partials/news-item"
-    - (10 - @image_news).times do
-      li= render "/partials/news-item-no-image"
+    / - (10 - @image_news).times do
+    /   li= render "/partials/news-item-no-image"
 
   a.more href="#" 觀看更多公視新聞 →
 
 .news
   .news-title.citizen-news: a href="#" 公民新聞
   ul.news-list
-    - @image_news = rand(10)
+    - @image_news = 10
     - @image_news.times do
       li= render "/partials/news-item"
-    - (10 - @image_news).times do
-      li= render "/partials/news-item-no-image"
+    / - (10 - @image_news).times do
+    /   li= render "/partials/news-item-no-image"
   a.more href="#" 觀看更多公民新聞 →
